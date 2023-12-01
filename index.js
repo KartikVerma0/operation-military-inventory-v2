@@ -15,17 +15,17 @@ app.get("/", (req, res) => {
 app.get("/equipments/:service", (req, res) => {
     const { service } = req.params;
     switch (service) {
-        case "indianArmyEquipmentsPage":
+        case "IA":
             res.render("indianArmyEquipmentsPage");
             break;
-        case "indianAirforceEquipments":
+        case "IAF":
             res.render("indianAirforceEquipments");
             break;
-        case "indianNavyEquipmentsPage":
+        case "IN":
             res.render("indianNavyEquipmentsPage");
             break;
-
         default:
+            res.render("404");
             break;
     }
 });
