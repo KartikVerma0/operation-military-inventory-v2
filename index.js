@@ -12,6 +12,26 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+app.get("/blog", (req, res) => {
+    res.render("blog");
+});
+
+app.get("/team", (req, res) => {
+    res.render("team");
+});
+
+app.get("/feedback", (req, res) => {
+    res.render("feedback_page");
+});
+
+app.get("/contact", (req, res) => {
+    res.render("contact_page");
+});
+
+app.get("/signIn", (req, res) => {
+    res.render("sign_in_page");
+});
+
 app.get("/equipments/:service", (req, res) => {
     const { service } = req.params;
     switch (service) {
