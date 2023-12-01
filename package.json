@@ -1,0 +1,20 @@
+{
+    "name": "operation-military-inventory",
+    "version": "1.0.0",
+    "description": "This Project/Website was made with the aim to provide Information about all the Equipment which the Indian Armed Forces hold. For Suggestions mail me at katik2129.be21@chitkara.edu.in  . <br>\r Click the link to visit the hoisted page : https://kartikverma0.github.io/operation-military-inventory/",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.9",
+        "express": "^4.18.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    }
+}
