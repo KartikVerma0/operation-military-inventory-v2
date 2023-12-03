@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+/*footer starts*/
+.footer-box {
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    border-top-left-radius: 100px;
+    position: relative;
+    bottom: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid grey;
+    direction: row;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.flex-item {
+    text-align: justify;
+}
+
+.footer-description-section {
+    width: 50%; /* width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-description-section img {
+    width: 15rem;
+}
+
+.footer-description {
+    text-align: justify;
+    font-family: "roboto", sans-serif;
+    font-weight: lighter;
+    width: 100%;
+}
+
+.team-section {
+    width: min-content;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.team-section h2 {
+    text-decoration: none;
+    color: white;
+}
+
+.team-section h2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.team-section ul {
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.team-section li {
+    margin-top: 0.7rem;
+}
+
+.links-section {
+    width: min-content;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.links-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.links-section li {
+    margin-top: 0.7rem;
+}
+
+.links-section li a {
+    text-decoration: none;
+    color: white;
+}
+.newsletter-section {
+    width: max-content;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.7rem;
+}
+
+.newsletter-section form input[type="email"] {
+    background-color: transparent;
+    border-style: none;
+    width: 50%;
+    height: 1.5rem;
+    margin-top: 10px;
+    border-bottom: 1px solid grey;
+    color: grey;
+}
+
+.newsletter-section form input[type="email"]:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+.newsletter-section form button {
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+}
+
+.newsletter-section .social-icons img {
+    cursor: pointer;
+}
+
+.footer-box .footer-note {
+    text-align: center;
+}
+
+.footer-note p {
+    font-family: "roboto", sans-serif;
+    font-weight: lighter;
+}
+
+.team-member-name {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.team-member-name li {
+    font-family: "roboto", sans-serif;
+    font-weight: lighter;
+}
+
+.links-list li {
+    font-family: "roboto", sans-serif;
+    font-weight: lighter;
+}
+
+.flex-item h2 {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+}
+
+/*footer ends*/
