@@ -36,18 +36,36 @@ app.get("/equipments/:service", (req, res) => {
     const { service } = req.params;
     switch (service) {
         case "IA":
-            res.render("indianArmyEquipmentsPage");
+            res.render("indianArmyEquipmentsPage", {
+                title: "Indian Army Equipments",
+            });
             break;
         case "IAF":
-            res.render("indianAirforceEquipments");
+            res.render("indianAirforceEquipments", {
+                title: "Indian Airforce Equipments",
+            });
             break;
         case "IN":
-            res.render("indianNavyEquipmentsPage");
+            res.render("indianNavyEquipmentsPage", {
+                title: "Indian Navy Equipments",
+            });
             break;
         default:
-            res.render("404");
+            res.render("404 - Page Not Found", {
+                title: "404 - Page Not Found",
+            });
             break;
     }
+});
+
+//temp
+app.get("/equipments/:service/:equipment", (req, res) => {
+    const { service, equipment } = req.params;
+    res.render(equipment, { title: equipment });
+});
+
+app.get("*", (req, res) => {
+    res.render("404 - Page Not Found", { title: "404 - Page Not Found" });
 });
 
 app.listen(port, () => {
