@@ -1,36 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Feedback</title>
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="css/feedback_page_style.css"
-        />
-        <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+        <%- include('partials/commonHead',{title}) %>
     </head>
     <body>
-        <div class="navbar">
-            <a href="index.html"
-                ><img
-                    src="images/page_logo2.png"
-                    alt="LOGO"
-                    class="nav-image"
-                    title="Operation Military Inventory"
-            /></a>
-            <p class="nav-logo">OP MILITARY INVENTORY</p>
-            <div class="nav-links">
-                <a href="index.html">HOME</a>
-                <a href="blog.html">BLOG</a>
-                <a href="feedback_page.html">FEEDBACK</a>
-                <a href="contact_page.html">CONTACT US</a>
-                <div class="sign-button">
-                    <a href="sign_in_page.html"><h3>SIGN IN</h3></a>
-                </div>
-            </div>
-        </div>
+        <!-- Navbar Starts -->
+        <%- include('partials/commonNavbar') %>
+        <!-- Navbar Ends -->
 
         <div id="feedback-box">
             <h1>FEEDBACK FORM</h1>

@@ -1,37 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Combat Aircraft</title>
-        <link rel="icon" type="image/x-icon" href="images/favicon.png" />
-        <link rel="stylesheet" href="css/CombatAircraftCategoryPageStyle.css" />
+        <%- include('partials/commonHead',{title}) %>
         <script
             src="https://kit.fontawesome.com/0487bece73.js"
             crossorigin="anonymous"
         ></script>
     </head>
     <body>
-        <div class="navbar">
-            <a href="index.html"
-                ><img
-                    src="images/page_logo2.png"
-                    alt="LOGO"
-                    class="nav-image"
-                    title="Operation Military Inventory"
-            /></a>
-            <p class="nav-logo">OP MILITARY INVENTORY</p>
-            <div class="nav-links">
-                <a href="index.html">HOME</a>
-                <a href="blog.html">BLOG</a>
-                <a href="feedback_page.html">FEEDBACK</a>
-                <a href="contact_page.html">CONTACT US</a>
-                <div class="sign-button">
-                    <a href="sign_in_page.html"><h3>SIGN IN</h3></a>
-                </div>
-            </div>
-        </div>
+        <!-- Navbar Starts -->
+        <%- include('partials/commonNavbar') %>
+        <!-- Navbar Ends -->
+
         <div class="equipment-category-box">
             <h1>COMBAT AIRCRAFT :</h1>
             <div class="equipments-main-container-div">
@@ -39,13 +19,13 @@
                     <h3>MiG-21</h3>
                     <a href="https://en.m.wikipedia.org/wiki/MiG-21"
                         ><img
-                            src="images/Combat Aircraft/MiG-21.png"
+                            src="/images/Combat Aircraft/MiG-21.png"
                             alt="MiG-21"
                     /></a>
                     <div class="equipment-info">
                         <a href="https://en.m.wikipedia.org/wiki/MiG-21"
                             ><img
-                                src="images/Combat Aircraft/MiG-21'.jpg"
+                                src="/images/Combat Aircraft/MiG-21'.jpg"
                                 alt="MiG-21"
                         /></a>
                         <p>
@@ -72,13 +52,13 @@
                     <h3>MiG-29</h3>
                     <a href="https://en.m.wikipedia.org/wiki/MiG-29"
                         ><img
-                            src="images/Combat Aircraft/MiG-29.png"
+                            src="/images/Combat Aircraft/MiG-29.png"
                             alt="MiG-29"
                     /></a>
                     <div class="equipment-info">
                         <a href="https://en.m.wikipedia.org/wiki/MiG-29"
                             ><img
-                                src="images/Combat Aircraft/MiG-29'.jpg"
+                                src="/images/Combat Aircraft/MiG-29'.jpg"
                                 alt="MiG-29"
                         /></a>
                         <p>
@@ -105,13 +85,13 @@
                     <h3>HAL Tejas</h3>
                     <a href="https://en.m.wikipedia.org/wiki/HAL_Tejas"
                         ><img
-                            src="images/Combat Aircraft/HAL Tejas.png"
+                            src="/images/Combat Aircraft/HAL Tejas.png"
                             alt="HAL Tejas"
                     /></a>
                     <div class="equipment-info">
                         <a href="https://en.m.wikipedia.org/wiki/HAL_Tejas"
                             ><img
-                                src="images/Combat Aircraft/HAL Tejas'.jpg"
+                                src="/images/Combat Aircraft/HAL Tejas'.jpg"
                                 alt="HAL Tejas"
                         /></a>
                         <p>
@@ -141,14 +121,14 @@
                     <a
                         href="https://en.m.wikipedia.org/wiki/Dassault_Mirage_2000"
                         ><img
-                            src="images/Combat Aircraft/Mirage 2000.png"
+                            src="/images/Combat Aircraft/Mirage 2000.png"
                             alt="Mirage 2000"
                     /></a>
                     <div class="equipment-info-right">
                         <a
                             href="https://en.m.wikipedia.org/wiki/Dassault_Mirage_2000"
                             ><img
-                                src="images/Combat Aircraft/Mirage 2000'.jpg"
+                                src="/images/Combat Aircraft/Mirage 2000'.jpg"
                                 alt="Mirage 2000"
                         /></a>
                         <p>
@@ -178,13 +158,13 @@
                     <h3>SUKHOI SU-30</h3>
                     <a href="https://en.m.wikipedia.org/wiki/Sukhoi_Su-30"
                         ><img
-                            src="images/Combat Aircraft/Sukhoi Su-30.png"
+                            src="/images/Combat Aircraft/Sukhoi Su-30.png"
                             alt="SUKHOI SU-30"
                     /></a>
                     <div class="equipment-info-bottom">
                         <a href="https://en.m.wikipedia.org/wiki/Sukhoi_Su-30"
                             ><img
-                                src="images/Combat Aircraft/Sukhoi Su-30'.jpg"
+                                src="/images/Combat Aircraft/Sukhoi Su-30'.jpg"
                                 alt="SUKHOI SU-30"
                         /></a>
                         <p>
@@ -208,14 +188,14 @@
                     <h3>DASSAULT RAFALE</h3>
                     <a href="https://en.m.wikipedia.org/wiki/Dassault_Rafale"
                         ><img
-                            src="images/Combat Aircraft/Dassault Rafale.png"
+                            src="/images/Combat Aircraft/Dassault Rafale.png"
                             alt="DASSAULT RAFALE"
                     /></a>
                     <div class="equipment-info-bottom">
                         <a
                             href="https://en.m.wikipedia.org/wiki/Dassault_Rafale"
                             ><img
-                                src="images/Combat Aircraft/Dassault Rafale'.jpg"
+                                src="/images/Combat Aircraft/Dassault Rafale'.jpg"
                                 alt="DASSAULT RAFALE"
                         /></a>
                         <p>
@@ -243,13 +223,13 @@
                     <h3>SEPECAT JAGUAR</h3>
                     <a href="https://en.m.wikipedia.org/wiki/SEPECAT_Jaguar"
                         ><img
-                            src="images/Combat Aircraft/SEPECAT Jaguar.png"
+                            src="/images/Combat Aircraft/SEPECAT Jaguar.png"
                             alt="SEPECAT JAGUAR"
                     /></a>
                     <div class="equipment-info-bottom">
                         <a href="https://en.m.wikipedia.org/wiki/SEPECAT_Jaguar"
                             ><img
-                                src="images/Combat Aircraft/SEPECAT Jaguar'.jpeg"
+                                src="/images/Combat Aircraft/SEPECAT Jaguar'.jpeg"
                                 alt="SEPECAT JAGUAR"
                         /></a>
                         <p>

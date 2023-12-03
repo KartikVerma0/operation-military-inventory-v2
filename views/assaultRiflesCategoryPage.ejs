@@ -1,37 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ASSAULT RIFLES</title>
-        <link rel="icon" type="image/x-icon" href="images/favicon.png" />
-        <link rel="stylesheet" href="css/assaultRiflesCategoryPageStyle.css" />
+        <%- include('partials/commonHead',{title}) %>
         <script
             src="https://kit.fontawesome.com/0487bece73.js"
             crossorigin="anonymous"
         ></script>
     </head>
     <body>
-        <div class="navbar">
-            <a href="index.html"
-                ><img
-                    src="images/page_logo2.png"
-                    alt="LOGO"
-                    class="nav-image"
-                    title="Operation Military Inventory"
-            /></a>
-            <p class="nav-logo">OP MILITARY INVENTORY</p>
-            <div class="nav-links">
-                <a href="index.html">HOME</a>
-                <a href="blog.html">BLOG</a>
-                <a href="feedback_page.html">FEEDBACK</a>
-                <a href="contact_page.html">CONTACT US</a>
-                <div class="sign-button">
-                    <a href="sign_in_page.html"><h3>SIGN IN</h3></a>
-                </div>
-            </div>
-        </div>
+        <!-- Navbar Starts -->
+        <%- include('partials/commonNavbar') %>
+        <!-- Navbar Ends -->
+
         <div class="equipment-category-box">
             <h1>ASSAULT RIFLES :</h1>
             <div class="equipments-main-container-div">
@@ -39,12 +19,12 @@
                     <h3>1B1 INSAS</h3>
                     <a href="1b1 insas.html"
                         ><img
-                            src="images/assault rifles/1B1 INSAS.png"
+                            src="/images/assault rifles/1B1 INSAS.png"
                             alt="1B1 INSAS"
                     /></a>
                     <div class="equipment-info">
                         <a href="1b1 insas.html"
-                            ><img src="images/assault rifles/insas.jpg" alt=""
+                            ><img src="/images/assault rifles/insas.jpg" alt=""
                         /></a>
                         <p>
                             <b>INSAS or Indian Small Arms System</b> is a family
@@ -68,13 +48,13 @@
                     <h3>AK-203</h3>
                     <a href="https://en.wikipedia.org/wiki/AK-203"
                         ><img
-                            src="images/assault rifles/AK-203.png"
+                            src="/images/assault rifles/AK-203.png"
                             alt="AK-203"
                     /></a>
                     <div class="equipment-info">
                         <a href="https://en.wikipedia.org/wiki/AK-203"
                             ><img
-                                src="images/assault rifles/AK-203.jpg"
+                                src="/images/assault rifles/AK-203.jpg"
                                 alt="AK-203"
                         /></a>
                         <p>
@@ -100,13 +80,13 @@
                     <h3>SIG-716 i</h3>
                     <a href="https://en.wikipedia.org/wiki/SIG_Sauer_SIG516"
                         ><img
-                            src="images/assault rifles/SIG-716 i.png"
+                            src="/images/assault rifles/SIG-716 i.png"
                             alt="SIG-716 i"
                     /></a>
                     <div class="equipment-info">
                         <a href="https://en.wikipedia.org/wiki/SIG_Sauer_SIG516"
                             ><img
-                                src="images/assault rifles/SIG-716 i.jpg"
+                                src="/images/assault rifles/SIG-716 i.jpg"
                                 alt="SIG-716 i"
                         /></a>
                         <p>
@@ -129,13 +109,13 @@
                     <h3>FN SCAR L</h3>
                     <a href="https://en.wikipedia.org/wiki/FN_SCAR"
                         ><img
-                            src="images/assault rifles/FN SCAR L.png"
+                            src="/images/assault rifles/FN SCAR L.png"
                             alt="FN SCAR L"
                     /></a>
                     <div class="equipment-info-right">
                         <a href="https://en.wikipedia.org/wiki/FN_SCAR"
                             ><img
-                                src="images/assault rifles/FN SCAR L.jpg"
+                                src="/images/assault rifles/FN SCAR L.jpg"
                                 alt="FN SCAR L"
                         /></a>
                         <p>
@@ -161,13 +141,13 @@
                     <h3>IMI Tavor TAR-21</h3>
                     <a href="https://en.wikipedia.org/wiki/IMI_Tavor_TAR-21"
                         ><img
-                            src="images/assault rifles/IMI Tavor TAR-21.png"
+                            src="/images/assault rifles/IMI Tavor TAR-21.png"
                             alt="IMI Tavor TAR-21"
                     /></a>
                     <div class="equipment-info">
                         <a href="https://en.wikipedia.org/wiki/IMI_Tavor_TAR-21"
                             ><img
-                                src="images/assault rifles/IMI Tavor TAR-21.jpg"
+                                src="/images/assault rifles/IMI Tavor TAR-21.jpg"
                                 alt="IMI Tavor TAR-21"
                         /></a>
                         <p>
@@ -191,13 +171,13 @@
                     <h3>M4 carbine</h3>
                     <a href="https://en.wikipedia.org/wiki/M4_carbine"
                         ><img
-                            src="images/assault rifles/M4 carbine.png"
+                            src="/images/assault rifles/M4 carbine.png"
                             alt="M4 carbine"
                     /></a>
                     <div class="equipment-info">
                         <a href="https://en.wikipedia.org/wiki/M4_carbine"
                             ><img
-                                src="images/assault rifles/M4 carbine.jpg"
+                                src="/images/assault rifles/M4 carbine.jpg"
                                 alt="M4 carbine"
                         /></a>
                         <p>
@@ -219,14 +199,14 @@
                     <h3>T91 assault rifle</h3>
                     <a href="https://en.wikipedia.org/wiki/T91_assault_rifle"
                         ><img
-                            src="images/assault rifles/T91 assault rifle.png"
+                            src="/images/assault rifles/T91 assault rifle.png"
                             alt="T91 assault rifle"
                     /></a>
                     <div class="equipment-info">
                         <a
                             href="https://en.wikipedia.org/wiki/T91_assault_rifle"
                             ><img
-                                src="images/assault rifles/T91 assault rifle.jpg"
+                                src="/images/assault rifles/T91 assault rifle.jpg"
                                 alt="T91 assault rifle"
                         /></a>
                         <p>
@@ -250,12 +230,14 @@
                 <div class="individual-equipments">
                     <h3>AR-M1</h3>
                     <a href="https://en.wikipedia.org/wiki/AR-M1"
-                        ><img src="images/assault rifles/AR-M1.png" alt="AR-M1"
+                        ><img
+                            src="/images/assault rifles/AR-M1.png"
+                            alt="AR-M1"
                     /></a>
                     <div class="equipment-info-right">
                         <a href="https://en.wikipedia.org/wiki/AR-M1"
                             ><img
-                                src="images/assault rifles/AR-M1.jpg"
+                                src="/images/assault rifles/AR-M1.jpg"
                                 alt="AR-M1"
                         /></a>
                         <p>
@@ -279,11 +261,13 @@
                 <div class="individual-equipments">
                     <h3>AKM</h3>
                     <a href="https://en.wikipedia.org/wiki/AKM"
-                        ><img src="images/assault rifles/AKM.png" alt="AKM"
+                        ><img src="/images/assault rifles/AKM.png" alt="AKM"
                     /></a>
                     <div class="equipment-info-bottom">
                         <a href="https://en.wikipedia.org/wiki/AKM"
-                            ><img src="images/assault rifles/AKM.jpg" alt="AKM"
+                            ><img
+                                src="/images/assault rifles/AKM.jpg"
+                                alt="AKM"
                         /></a>
                         <p>
                             The <b>AKM</b> is an assault rifle designed by
@@ -303,12 +287,14 @@
                 <div class="individual-equipments">
                     <h3>AK-47</h3>
                     <a href="ak-47.html"
-                        ><img src="images/assault rifles/AK-47.png" alt="AK-47"
+                        ><img
+                            src="/images/assault rifles/AK-47.png"
+                            alt="AK-47"
                     /></a>
                     <div class="equipment-info-bottom">
                         <a href="ak-47.html"
                             ><img
-                                src="images/assault rifles/AK-47.jpg"
+                                src="/images/assault rifles/AK-47.jpg"
                                 alt="AK-47"
                         /></a>
                         <p>
@@ -329,13 +315,13 @@
                     <h3>MPi-KMS-72</h3>
                     <a href="https://en.wikipedia.org/wiki/MPi-KMS-72"
                         ><img
-                            src="images/assault rifles/MPi-KMS-72.png"
+                            src="/images/assault rifles/MPi-KMS-72.png"
                             alt="MPi-KMS-72"
                     /></a>
                     <div class="equipment-info-bottom">
                         <a href="https://en.wikipedia.org/wiki/MPi-KMS-72"
                             ><img
-                                src="images/assault rifles/MPi-KM-72.jpg"
+                                src="/images/assault rifles/MPi-KM-72.jpg"
                                 alt="MPi-KMS-72"
                         /></a>
                         <p>
@@ -355,13 +341,13 @@
                     <h3>vz. 58</h3>
                     <a href="https://en.wikipedia.org/wiki/Vz._58"
                         ><img
-                            src="images/assault rifles/vz. 58.png"
+                            src="/images/assault rifles/vz. 58.png"
                             alt="vz. 58"
                     /></a>
                     <div class="equipment-info-bottom-right">
                         <a href="https://en.wikipedia.org/wiki/Vz._58"
                             ><img
-                                src="images/assault rifles/vz. 58.jpg"
+                                src="/images/assault rifles/vz. 58.jpg"
                                 alt="vz. 58"
                         /></a>
                         <p>
