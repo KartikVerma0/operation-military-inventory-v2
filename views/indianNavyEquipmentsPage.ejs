@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Indian Navy Equipments</title>
-        <link rel="stylesheet" href="/css/indianNavyEquipmentspageStyle.css" />
-        <link rel="icon" type="type/icon-x" href="/images/favicon.png" />
+        <%- include('partials/commonHead',{title}) %>
         <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -17,25 +12,9 @@
         />
     </head>
     <body>
-        <div class="navbar">
-            <a href="index.html"
-                ><img
-                    src="/images/page_logo2.png"
-                    alt="LOGO"
-                    class="nav-image"
-                    title="Operation Military Inventory"
-            /></a>
-            <p class="nav-logo">OP MILITARY INVENTORY</p>
-            <div class="nav-links">
-                <a href="index.html">HOME</a>
-                <a href="blog.html">BLOG</a>
-                <a href="feedback_page.html">FEEDBACK</a>
-                <a href="contact_page.html">CONTACT US</a>
-                <div class="sign-button">
-                    <a href="sign_in_page.html"><h3>SIGN IN</h3></a>
-                </div>
-            </div>
-        </div>
+        <!-- Navbar -->
+        <%- include('partials/commonNavbar') %>
+
         <div class="sections">
             <div class="page-heading">
                 <h1>INDIAN NAVY EQUIPMENTS</h1>
