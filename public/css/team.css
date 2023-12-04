@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@900&display=swap");
+
+@media (max-width: 600px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .footer-description-section {
+        min-width: 100%;
+    }
+    .footer-description {
+        width: 70%;
+    }
+    .team-section {
+        width: 50%;
+    }
+    .links-section {
+        width: 50%S;
+    }
+    .newsletter-section {
+        width: 100%;
+    }
+    .newsletter-section form input[type="email"] {
+        width: 100%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* main starts */
+
+.team-members {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 5rem auto;
+    gap: 4rem;
+}
+
+.member-section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.member-section-title h1 {
+    color: rgba(255, 255, 0, 0.9);
+    font-family: "Be Vietnam Pro", sans-serif;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 900;
+    text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.individual-member {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.individual-member > * {
+    width: 50%;
+}
+
+.individual-member h1 {
+    font-family: "poppins", sans-serif;
+    font-size: 2rem;
+    color: black;
+}
+
+.individual-member h3 {
+    font-family: "poppins", sans-serif;
+    font-size: 1.125rem;
+    font-weight: normal;
+    color: #505050;
+}
+
+.individual-member p {
+    font-family: "poppins", sans-serif;
+    font-weight: lighter;
+    color: #777777;
+    font-size: 1rem;
+}
+
+.text-right-align {
+    text-align: right;
+}
+
+.text-left-align {
+    text-align: left;
+}
+
+.social-icon-list {
+    list-style: none;
+}
+
+.social-icon-list li {
+    display: inline-block;
+}
+
+.social-icon-list img {
+    width: 2rem;
+}
+
+.members-photos {
+    display: flex;
+    justify-content: center;
+}
+
+.members-photos img {
+    width: 50%;
+    height: auto;
+}
+
+.leader-photo img {
+    width: 60%;
+    height: auto;
+}
+
+.member-description:nth-child(2n-1) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.member-description:nth-child(2n) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
