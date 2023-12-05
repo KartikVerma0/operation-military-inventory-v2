@@ -7,25 +7,6 @@
     :root {
         font-size: 12px;
     }
-
-    .footer-description-section {
-        min-width: 100%;
-    }
-    .footer-description {
-        width: 70%;
-    }
-    .team-section {
-        width: 50%;
-    }
-    .links-section {
-        width: 50%S;
-    }
-    .newsletter-section {
-        width: 100%;
-    }
-    .newsletter-section form input[type="email"] {
-        width: 100%;
-    }
 }
 
 * {
