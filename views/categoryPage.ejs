@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/commonCategoryPageHead',{title}) %>
+        <script
+            src="https://kit.fontawesome.com/0487bece73.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <!-- Navbar Starts -->
+        <%- include('partials/commonNavbar') %>
+        <!-- Navbar Ends -->
+
+        <div class="equipment-category-box">
+            <h1><%= title.toUpperCase() %> :</h1>
+            <div class="equipments-main-container-div">
+                <% for( let equipment in
+                fulldata.services[service].category[title] ){ %>
+                <div class="individual-equipments">
+                    <h3><%= equipment %></h3>
+                    <a
+                        href="<%= fulldata.services[service].category[title][equipment].preview.fullInfoLink %>"
+                        ><img
+                            src="<%= fulldata.services[service].category[title][equipment].preview.imgSrc %>"
+                            alt="<%= equipment %>"
+                    /></a>
+                    <div class="equipment-info">
+                        <a
+                            href="<%= fulldata.services[service].category[title][equipment].preview.fullInfoLink %>"
+                            ><img
+                                src="<%= fulldata.services[service].category[title][equipment].preview.onHover.imgSrc %>"
+                                alt="<%= equipment %>"
+                        /></a>
+                        <p>
+                            <%-
+                            fulldata.services[service].category[title][equipment].preview.onHover.desc
+                            %>
+                        </p>
+                        <a
+                            href="<%= fulldata.services[service].category[title][equipment].preview.fullInfoLink %>"
+                            class="wikipedia-link"
+                            title="Know More about the Equipment"
+                            ><i class="fab fa-wikipedia-w"></i
+                        ></a>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+
+        <!-- footer starts -->
+        <%- include('partials/footer')%>
+        <!-- footer ends -->
+    </body>
+</html>
