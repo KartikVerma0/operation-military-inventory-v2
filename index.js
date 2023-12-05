@@ -3,33 +3,36 @@ const path = require("path");
 const app = express();
 const port = 3000;
 
+const indexPageData = require("./public/json/indexPage.json");
+const fulldata = require("./public/json/data.json");
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-    res.render("index");
+    res.render("index", { categories: indexPageData["categories"] });
 });
 
 app.get("/blog", (req, res) => {
-    res.render("blog");
+    res.render("blog", { title: "Blogs" });
 });
 
 app.get("/team", (req, res) => {
-    res.render("team");
+    res.render("team", { title: "Team" });
 });
 
 app.get("/feedback", (req, res) => {
-    res.render("feedback_page");
+    res.render("feedback_page", { title: "Feedback" });
 });
 
 app.get("/contact", (req, res) => {
-    res.render("contact_page");
+    res.render("contact_page", { title: "Contact Us" });
 });
 
 app.get("/signIn", (req, res) => {
-    res.render("sign_in_page");
+    res.render("sign_in_page", { title: "Sign In" });
 });
 
 app.get("/equipments/:service", (req, res) => {
@@ -56,6 +59,15 @@ app.get("/equipments/:service", (req, res) => {
             });
             break;
     }
+});
+
+app.get("/equipments/:service/category/:category", (req, res) => {
+    const { service, category } = req.params;
+    res.render("categoryPage", {
+        title: category,
+        service,
+        fulldata,
+    });
 });
 
 //temp
