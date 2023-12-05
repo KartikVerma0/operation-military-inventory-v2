@@ -1,5 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@media (max-width: 600px) {
+    .footer-description-section {
+        min-width: 100%;
+    }
+    .footer-description {
+        width: 70%;
+    }
+    .team-section {
+        width: 50%;
+    }
+    .links-section {
+        width: 50%;
+    }
+    .newsletter-section {
+        width: 100%;
+    }
+    .newsletter-section form input[type="email"] {
+        width: 100%;
+    }
+}
+
 /*footer starts*/
 .footer-box {
     width: 100%;
