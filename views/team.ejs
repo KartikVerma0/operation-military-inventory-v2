@@ -1,32 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Team Description</title>
-        <link rel="icon" type="image/x-icon" href="images/favicon.png" />
-        <link rel="stylesheet" type="text/css" href="css/team_style.css" />
+        <%- include('partials/commonHead',{title}) %>
     </head>
     <body>
-        <div class="navbar">
-            <a href="index.html"
-                ><img
-                    src="images/page_logo2.png"
-                    alt="LOGO"
-                    class="nav-image"
-                    title="Operation Military Inventory"
-            /></a>
-            <p class="nav-logo">OP MILITARY INVENTORY</p>
-            <div class="nav-links">
-                <a href="index.html">HOME</a>
-                <a href="blog.html">BLOG</a>
-                <a href="feedback_page.html">FEEDBACK</a>
-                <a href="contact_page.html">CONTACT US</a>
-                <div class="sign-button">
-                    <a href="sign_in_page.html"><h3>SIGN IN</h3></a>
-                </div>
-            </div>
-        </div>
+        <!-- Navbar Starts -->
+        <%- include('partials/commonNavbar') %>
+        <!-- Navbar Ends -->
+
         <div class="team-members">
             <div class="member-section-title">
                 <h1>TEAM MEMBERS</h1>

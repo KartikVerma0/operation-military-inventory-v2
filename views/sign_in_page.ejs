@@ -1,33 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sign In</title>
-        <link rel="stylesheet" href="css/sign_in_style.css" />
-        <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+        <%- include('partials/commonHead',{title}) %>
     </head>
     <body>
-        <div class="navbar">
-            <a href="index.html"
-                ><img
-                    src="images/page_logo2.png"
-                    alt="LOGO"
-                    class="nav-image"
-                    title="Operation Military Inventory"
-            /></a>
-            <p class="nav-logo">OP MILITARY INVENTORY</p>
-            <div class="nav-links">
-                <a href="index.html">HOME</a>
-                <a href="blog.html">BLOG</a>
-                <a href="feedback_page.html">FEEDBACK</a>
-                <a href="contact_page.html">CONTACT US</a>
-                <div class="sign-button">
-                    <a href="sign_in_page.html"><h3>SIGN IN</h3></a>
-                </div>
-            </div>
-        </div>
+        <!-- Navbar Starts -->
+        <%- include('partials/commonNavbar') %>
+        <!-- Navbar Ends -->
+
         <header>
             <div class="hero">
                 <div class="form-box">
@@ -54,7 +34,7 @@
                         <img src="images/tw.png" />
                         <img src="images/gp.png" />
                     </div>
-                    <form id="login" class="input-group">
+                    <form id="login" class="inputs">
                         <input
                             type="text"
                             class="input-field"
@@ -71,7 +51,7 @@
                         <span>Remember Password</span>
                         <button type="submit" class="submit-btn">Log In</button>
                     </form>
-                    <form id="register" class="input-group">
+                    <form id="register" class="inputs">
                         <input
                             type="text"
                             class="input-field"
