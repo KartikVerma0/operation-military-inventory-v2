@@ -1,0 +1,1601 @@
+{
+    "services": {
+        "IA": {
+            "category": {
+                "Assault Rifles": {
+                    "1b1 Insas": {
+                        "preview": {
+                            "imgSrc": "/images/assault rifles/1B1 INSAS.png",
+                            "onHover": {
+                                "imgSrc": "/images/assault rifles/insas.jpg",
+                                "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades."
+                            },
+                            "fullInfoLink": "/equipments/IA/1b1 insas"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "ak-47": {
+                        "preview": {
+                            "imgSrc": "/images/assault rifles/AK-47.png",
+                            "onHover": {
+                                "imgSrc": "/images/assault rifles/AK-47.jpg",
+                                "desc": "<b>AK-47</b> , officially known as the Avtomat Kalashnikova , is a gas-operated assault rifle that is chambered for the 7.62x39mm cartridge."
+                            },
+                            "fullInfoLink": "/equipments/IA/ak-47",
+                            "comment": "//fullInfoLink needs fixing"
+                        },
+                        "fullInfo": {
+                            "title": "AK-47",
+                            "desc": "<b>AK-47</b>, officially known as the Avtomat Kalashnikov (Russian: Автомат Калашникова, lit. 'Kalashnikov's automatic [rifle]'; also known as the Kalashnikov or just AK), is a gas-operated assault rifle that is chambered for the 7.62×39mm cartridge. Developed in the Soviet Union by Russian small-arms designer Mikhail Kalashnikov, it is the originating firearm of the Kalashnikov (or 'AK') family of rifles. After more than seven decades, the AK-47 model and its variants remain the most popular and widely used rifles in the world.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/AK-47",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/ak-47/Iraqi AK-47 1200.jpg",
+                                "/images/indianArmyEquipmentsPage/ak-47/Ak47fieldstripped.jpg",
+                                "/images/indianArmyEquipmentsPage/ak-47/AK-47-1.jpg",
+                                "/images/indianArmyEquipmentsPage/ak-47/origin.jpg",
+                                "/images/indianArmyEquipmentsPage/ak-47/DCYDSGC3C5BDNJVCHHCFRO2MMI.jpg"
+                            ],
+                            "users": [
+                                "Afganistan",
+                                "Albania",
+                                "Algeria",
+                                "Angola",
+                                "Armenia",
+                                "Azerbaijan",
+                                "Bangladesh",
+                                "Belarus",
+                                "Benin",
+                                "Bosnia and Herzegovina",
+                                "Botswana",
+                                "Bulgaria",
+                                "Burkina Faso",
+                                "Burundi",
+                                "Cambodia",
+                                "Cape Verde",
+                                "Central African Republic",
+                                "Chad",
+                                "Chile",
+                                "China",
+                                "Comoros",
+                                "Republic of the Congo",
+                                "Cuba",
+                                "DR Congo",
+                                "Djibouti",
+                                "Egypt",
+                                "Equatorial Guinea",
+                                "Eritrea",
+                                "Ethiopia",
+                                "Finland",
+                                "Gabon",
+                                "Georgia",
+                                "Greece",
+                                "Guinea",
+                                "Guinea-Bissau",
+                                "Guyana",
+                                "Hungary",
+                                "India",
+                                "Indonesia",
+                                "Iran",
+                                "Iraq",
+                                "Israel",
+                                "Kazakhstan",
+                                "Laos",
+                                "Lebanon",
+                                "Lesotho",
+                                "Liberia",
+                                "Libya",
+                                "Madagascar",
+                                "Mali",
+                                "Moldova",
+                                "Mongolia",
+                                "Morocco",
+                                "Mozambique",
+                                "Namibia",
+                                "Nicaragua",
+                                "North Korea",
+                                "North Macedonia",
+                                "Pakistan",
+                                "Peru",
+                                "Qatar",
+                                "Romania",
+                                "Russia",
+                                "São Tomé and Príncipe",
+                                "Saudi Arabia",
+                                "Serbia",
+                                "Seychelles",
+                                "Sierra Leone",
+                                "Somalia",
+                                "Sudan",
+                                "Suriname",
+                                "Syria",
+                                "Tajikistan",
+                                "Tanzania",
+                                "Togo",
+                                "Turkey",
+                                "Turkmenistan",
+                                "Ukraine",
+                                "United States",
+                                "Uzbekistan",
+                                "Vietnam",
+                                "Yemen",
+                                "Zambia",
+                                "Zimbabwe"
+                            ],
+                            "gallery": [],
+                            "working": {
+                                "videoLink": "https://www.youtube.com/embed/_eQLFVpOYm4"
+                            }
+                        }
+                    },
+                    "AK-203": {
+                        "preview": {
+                            "imgSrc": "/images/assault rifles/AK-203.png",
+                            "onHover": {
+                                "imgSrc": "/images/assault rifles/AK-203.jpg",
+                                "desc": "<b>AK-203</b> is a gas-operated, magazine-fed, select fire assault rifle designed to chamber 7.62x39mm cartridge. It is one of the latest iterations of the AK series of assault rifles originally designed by Mikhail Kalashnikov. The AK-203 assault rifles will be manufactured by an Indo-Russian joint venture company, Indo-Russia Rifles Private Limited (IRRPL), based at Amethi, India."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/AK-203"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "SIG-716 i": {
+                        "preview": {
+                            "imgSrc": "/images/assault rifles/SIG-716 i.png",
+                            "onHover": {
+                                "imgSrc": "/images/assault rifles/SIG-716 i.jpg",
+                                "desc": "<b>SIG Sauer SIG516</b> is a semi-automatic rifle manufactured by SIG Sauer. It is an AR-15 style rifle chambered in 5.56x45mm NATO. Introduced in 2010, the SIG516 was discontinued as of 2019. A variant chambered in 7.62x51mm NATO, the SIG716i, remains in production."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/SIG_Sauer_SIG516"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "FN SCAR L": {
+                        "preview": {
+                            "imgSrc": "/images/assault rifles/FN SCAR L.png",
+                            "onHover": {
+                                "imgSrc": "/images/assault rifles/FN SCAR L.jpg",
+                                "desc": "<b>FN SCAR</b>(<b>S</b>pecial Operations Forces <b>C</b>ombat <b>A</b>ssault <b>R</b>ifle) is a family of gas-operated (short-stroke gas piston) automatic rifles developed by Belgian manufacturer FN Herstal (FN) in 2004. It is constructed with modularity for the United States Special Operations Command (SOCOM) to satisfy the requirements of the SCAR competition."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/FN_SCAR"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "IMI Tavor TAR-21": {
+                        "preview": {
+                            "imgSrc": "/images/assault rifles/IMI Tavor TAR-21.png",
+                            "onHover": {
+                                "imgSrc": "/images/assault rifles/IMI Tavor TAR-21.jpg",
+                                "desc": "<b>IWI Tavor TAR-21</b> is an Israeli bullpup assault rifle chambered in 5.56x45mm NATO caliber with a selective fire system, selecting between semi-automatic mode and full automatic fire mode. The Tavor is designed and produced by Israel Weapon Industries (IWI). It is produced in two main variants: the TAR-21 and the CTAR-21."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/IMI_Tavor_TAR-21"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "M4 carbine": {
+                        "preview": {
+                            "imgSrc": "/images/assault rifles/M4 carbine.png",
+                            "onHover": {
+                                "imgSrc": "/images/assault rifles/M4 carbine.jpg",
+                                "desc": "<b>M4 carbine</b> is a 5.56x45mm NATO, air-cooled, gas-operated, magazine-fed, carbine, assault rifle developed in the United States during the 1980s. It is a shortened version of the M16A2 assault rifle."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/M4_carbine"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "T91 assault rifle": {
+                        "preview": {
+                            "imgSrc": "/images/assault rifles/T91 assault rifle.png",
+                            "onHover": {
+                                "imgSrc": "/images/assault rifles/T91 assault rifle.jpg",
+                                "desc": "<b>T91 rifle</b> is produced by the 205th Armory of National Defense in Taiwan. It is based on the proven T86 assault rifle, incorporating features from the M16 and AR-18 rifles with more modern features. The T91 is lighter and shorter than the T65 it replaces and has a 3-position telescoping stock to allow adjustment based on individual requirements."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/T91_assault_rifle"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "AR-M1": {
+                        "preview": {
+                            "imgSrc": "/images/assault rifles/AR-M1.png",
+                            "onHover": {
+                                "imgSrc": "/images/assault rifles/AR-M1.jpg",
+                                "desc": "<b>AR-M1</b>, also known as <b>AK-47M1</b>, is a Bulgarian assault rifle designed primarily for export. It is a modernized Bulgarian derivative of the AKK, which itself is based on the Soviet AK-47 (specifically Type 3). The AR-M1 can be chambered for both the 5.56x45mm NATO and 7.62x39mm cartridges."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/AR-M1"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "AKM": {
+                        "preview": {
+                            "imgSrc": "/images/assault rifles/AKM.png",
+                            "onHover": {
+                                "imgSrc": "/images/assault rifles/AKM.jpg",
+                                "desc": "<b>AKM</b> is an assault rifle designed by Soviet small arms designer Mikhail Kalashnikov in 1959. It is the most ubiquitous rifle of the Kalashnikov rifles. It was developed as replacement to AK-47 introduced a decade prior."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/AKM"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "MPi-KMS-72": {
+                        "preview": {
+                            "imgSrc": "/images/assault rifles/MPi-KMS-72.png",
+                            "onHover": {
+                                "imgSrc": "/images/assault rifles/MPi-KM-72.jpg",
+                                "desc": "<b>MPi-KM</b> is a East German license-manufactured version of the <b>Soviet AKM assault rifle</b>."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/MPi-KMS-72"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "vz. 58": {
+                        "preview": {
+                            "imgSrc": "/images/assault rifles/vz. 58.png",
+                            "onHover": {
+                                "imgSrc": "/images/assault rifles/vz. 58.jpg",
+                                "desc": "<b>vz. 58</b> (or <b>Sa vz. 58</b>) is a 7.62x39mm assault rifle designed and manufactured in Czechoslovakia and accepted into service in the late 1950s as the 7,62 mm samopal vzor 58 ('7.62mm submachine gun model 1958'), replacing the vz. 52 self-loading rifle and the 7.62x25mm Tokarev Sa 24 and Sa 26 submachine guns."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/Vz._58"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    }
+                },
+                "Sniper Rifles": {
+                    "Dragunov SVD": {
+                        "preview": {
+                            "imgSrc": "/images/indianArmyEquipmentsPage/Dragunov SVD.png",
+                            "onHover": {
+                                "imgSrc": "/images/sniper rifles/Dragunov sniper rifle.jpg",
+                                "desc": "<b>Dragunov sniper rifle</b> is a semi-automatic designated marksman rifle chambered in 7.62x54mmR and developed in the Soviet Union."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/Dragunov_Sniper_Rifle"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "IMI GALIL 7.62 SNIPER": {
+                        "preview": {
+                            "imgSrc": "/images/indianArmyEquipmentsPage/IMI GALIL SNIPER.png",
+                            "onHover": {
+                                "imgSrc": "/images/sniper rifles/IMI GALIL 7.62 SNIPER.jpg",
+                                "desc": "<b>IMI Galil</b> (Hebrew: גליל) is a family of Israeli-made automatic rifles chambered for the 5.56×45mm NATO or 7.62×51mm NATO cartridges."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/IMI_Galil#7.62mm_variants"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "HECKLER & KOCH PSG1": {
+                        "preview": {
+                            "imgSrc": "/images/indianArmyEquipmentsPage/PSG1.png",
+                            "onHover": {
+                                "imgSrc": "/images/sniper rifles/HECKLER & KOCH PSG1.jpg",
+                                "desc": "<b>PSG1</b> (<b>P</b>räzisions<b>s</b>chützen<b>g</b>ewehr, German for 'precision shooting rifle') is a semi-automatic sniper rifle designed and produced by the German company Heckler & Koch."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/Heckler_%26_Koch_PSG1"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "MAUSER SP66": {
+                        "preview": {
+                            "imgSrc": "/images/indianArmyEquipmentsPage/MAUSER SP66.png",
+                            "onHover": {
+                                "imgSrc": "/images/sniper rifles/MAUSER SP66.jpg",
+                                "desc": "<b>SP66</b> is a late Cold War era sniper rifle of German origin. It was developed by Mauser in the mid-1970’s from a conventional hunting rifle design. The SP66 was developed for both military and law enforcement use. The SP66 was replaced in production with the Mauser 86SR."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/Mauser"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    }
+                },
+                "Machine Guns": {
+                    "FN MINIMI": {
+                        "preview": {
+                            "imgSrc": "/images/indianArmyEquipmentsPage/FN MINIMI and MK 48.png",
+                            "onHover": {
+                                "imgSrc": "/images/machine guns/FN MINIMI.jpg",
+                                "desc": "The <b>FN Minimi</b> (short for French: Mini Mitrailleuse; 'mini machine gun') is a Belgian 5.56mm light machine gun developed by Ernest Vervier, for FN Herstal. First introduced in the late 1970s, it is now in service in more than 75 countries. The weapon is currently manufactured at the FN facility in Herstal and their U.S. subsidiary FN Manufacturing LLC."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/FN_Minimi"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "IMI NEGEV NG5": {
+                        "preview": {
+                            "imgSrc": "/images/indianArmyEquipmentsPage/IMI NEGEV NG5.png",
+                            "onHover": {
+                                "imgSrc": "/images/machine guns/IMI NEGEV NG5.jpg",
+                                "desc": "Negev NG-5</b> is a light machine gun is chambered in 5.56×45mm NATO cartridge. It has a barrel length of 460 mm (18.11 inch) and two operation modes; semi-automatic for accurate and fast controlled fire, and fully automatic for maximum firepower."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/IWI_Negev#Negev_NG-5"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "M2 BROWNING": {
+                        "preview": {
+                            "imgSrc": "/images/indianArmyEquipmentsPage/M2 BROWNING.png",
+                            "onHover": {
+                                "imgSrc": "/images/machine guns/M2 BROWNING.jpg",
+                                "desc": "The <b>M2 machine gun</b> or <b>Browning .50 caliber machine gun</b> is a heavy machine gun designed toward the end of World War I by John Browning. Its design is similar to Browning's earlier M1919 Browning machine gun, which was chambered for the .30-06 cartridge. The M2 uses the much larger and much more powerful .50 BMG (12.7 mm) cartridge, which was developed alongside and takes its name from the gun itself (BMG standing for Browning machine gun). It has been referred to as 'Ma Deuce', in reference to its M2 nomenclature."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/M2_Browning"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "MK 48": {
+                        "preview": {
+                            "imgSrc": "/images/indianArmyEquipmentsPage/FN MINIMI and MK 48.png",
+                            "onHover": {
+                                "imgSrc": "/images/machine guns/MK 48.jpg",
+                                "desc": "The <b>Mk 48 (Mark 48)</b>, or <b>Maximi</b> is a lightweight belt-fed machine gun, firing 7.62×51mm NATO cartridges from a disintegrating belt of ammunition. It is manufactured by Fabrique Nationale Manufacturing, Inc., a division of FN Herstal based in the United States. The Mk 48 has been developed in conjunction with the U.S. Special Operations Command (USSOCOM), which has adopted the weapon and started its fielding process, beginning with special operations units."
+                            },
+                            "fullInfoLink": "https://en.wikipedia.org/wiki/Mk_48_machine_gun"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    }
+                },
+                "Hand Guns": {},
+                "Shot Guns": {},
+                "Smgs": {},
+                "Grenades": {},
+                "Tanks": {},
+                "Artillery": {},
+                "Infantry Fighting Vehicles": {},
+                "Armoured Personell Carriers": {},
+                "Tank Destroyers": {},
+                "Miscellaneous Vehicles": {},
+                "Utility And Staff Transport": {},
+                "Goods And Field Transport Vehicles": {},
+                "Engineering And Support Vehicles": {},
+                "Unmanned Ground Vehicle": {},
+                "Self Propelled Artillery": {},
+                "Towed Artillery": {},
+                "Anti Tank Guided Missiles": {},
+                "Air Defence Anti Ballistic Missile Systems": {},
+                "Man Portable Air Defence Systems": {},
+                "Air Defence Anti Aircraft Gun Systems": {},
+                "Ballistic And Cruise Missiles": {},
+                "Radar": {}
+            }
+        },
+        "IAF": {
+            "category": {
+                "Trainer Aircrafts": {
+                    "Pilatus PC-7": {
+                        "preview": {
+                            "imgSrc": "/images/Trainer Aircraft/Pilatus PC-7.png",
+                            "onHover": {
+                                "imgSrc": "/images/Trainer Aircraft/Pilatus PC-7'.jpg",
+                                "desc": "The <b>Pilatus PC-7 Turbo Trainer</b> is a low-wing tandem-seat training aircraft designed and manufactured by Pilatus Aircraft of Switzerland. The aircraft is capable of all basic training functions including aerobatics, instrument, tactical and night flying."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/Pilatus_PC-7"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "Pipistrel Virus": {
+                        "preview": {
+                            "imgSrc": "/images/Trainer Aircraft/Pipistrel Virus.png",
+                            "onHover": {
+                                "imgSrc": "/images/Trainer Aircraft/Pipistrel Virus'.jpg",
+                                "desc": "The <b>Pipistrel Virus</b> is a two-seat, single engine light aircraft, manufactured by Pipistrel in Slovenia and Italy, and sold as an ultralight, homebuilt kit, or light-sport aircraft."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/Pipistrel_Virus"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "HAL Kiran": {
+                        "preview": {
+                            "imgSrc": "/images/Trainer Aircraft/HAL HJT-16 Kiran.png",
+                            "onHover": {
+                                "imgSrc": "/images/Trainer Aircraft/HAL HJT-16 Kiran'.jpg",
+                                "desc": "The <b>HAL HJT-16 Kiran</b> ('Ray of light') is an Indian two-seat intermediate jet-powered trainer aircraft designed and manufactured by aircraft company Hindustan Aeronautics Limited (HAL)."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/HAL_Kiran"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "BAE Hawk": {
+                        "preview": {
+                            "imgSrc": "/images/Trainer Aircraft/BAE Systems Hawk.png",
+                            "onHover": {
+                                "imgSrc": "/images/Trainer Aircraft/BAE Systems Hawk'.jpg",
+                                "desc": "The <b>BAE Systems Hawk</b> is a British single-engine, jet-powered advanced trainer aircraft. It was first flown at Dunsfold, Surrey, in 1974 as the <b>Hawker Siddeley Hawk</b>, and subsequently produced by its successor companies, British Aerospace and BAE Systems. It has been used in a training capacity and as a low-cost combat aircraft."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/BAE_Systems_Hawk"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "SEPECAT Jaguar": {
+                        "preview": {
+                            "imgSrc": "/images/Trainer Aircraft/SEPECAT Jaguar.png",
+                            "onHover": {
+                                "imgSrc": "/images/Trainer Aircraft/SEPECAT Jaguar'.jpg",
+                                "desc": "The <b>SEPECAT Jaguar</b> is an Anglo-French jet attack aircraft originally used by the British Royal Air Force and the French Air Force in the close air support and nuclear strike role. It is still in service with the Indian Air Force."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/SEPECAT_Jaguar"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "Mikoyan MiG-21": {
+                        "preview": {
+                            "imgSrc": "/images/Trainer Aircraft/Mikoyan Gurevich MiG-21.png",
+                            "onHover": {
+                                "imgSrc": "/images/Trainer Aircraft/Mikoyan Gurevich MiG-21'.jpg",
+                                "desc": "The <b>Mikoyan-Gurevich MiG-21</b> (Russian: Микоян и Гуревич МиГ-21; NATO reporting name: <b>Fishbed</b>) is a supersonic jet fighter and interceptor aircraft, designed by the Mikoyan-Gurevich Design Bureau in the Soviet Union. Its nicknames include: 'balalaika', because its planform resembles the stringed musical instrument of the same name; 'Ołówek', Polish for 'pencil', due to the shape of its fuselage, and 'Én Bạc', meaning 'silver swallow', in Vietnamese."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/MiG-21"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "Mirage 2000": {
+                        "preview": {
+                            "imgSrc": "/images/Trainer Aircraft/Dassault Mirage 2000.png",
+                            "onHover": {
+                                "imgSrc": "/images/Trainer Aircraft/Dassault Mirage 2000'.jpg",
+                                "desc": "The <b>Dassault Mirage 2000</b> is a French multirole, single-engine, fourth-generation jet fighter manufactured by Dassault Aviation. It was designed in the late 1970s as a lightweight fighter to replace the Mirage III for the French Air Force (Armée de l'air). The Mirage 2000 evolved into a multirole aircraft with several variants developed, with sales to a number of nations. It was later developed into the Mirage 2000N and 2000D strike variants, the improved Mirage 2000-5, and several export variants. Over 600 aircraft were built and it has been in service with 9 nations."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/Dassault_Mirage_2000"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "HAL Tejas": {
+                        "preview": {
+                            "imgSrc": "/images/Trainer Aircraft/HAL Tejas.png",
+                            "onHover": {
+                                "imgSrc": "/images/Trainer Aircraft/HAL Tejas'.jpg",
+                                "desc": "The <b>HAL Tejas</b> is an Indian multirole light fighter designed by the Aeronautical Development Agency (ADA) in collaboration with Aircraft Research and Design Centre (ARDC) of Hindustan Aeronautics Limited (HAL) for the Indian Air Force and Indian Navy. It came from the Light Combat Aircraft (LCA) programme, which began in the 1980s to replace India's ageing MiG-21 fighters but later became part of a general fleet modernisation programme. In 2003, the LCA was officially named 'Tejas'. It is the smallest and lightest in its class of contemporary supersonic combat aircraft."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/HAL_Tejas"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    }
+                },
+                "Transport Aircrafts": {
+                    "Ilyushin IL-76": {
+                        "preview": {
+                            "imgSrc": "/images/Transport/Ilushin II-76.png",
+                            "onHover": {
+                                "imgSrc": "/images/Transport/Ilushin II-76'.jpg",
+                                "desc": "The <b>Ilyushin IL-76</b> (Russian: Илью́шин Ил-76; NATO reporting name: <b>Candid</b>) is a multi-purpose, fixed-wing, four-engine turbofan strategic airlifter designed by the Soviet Union's Ilyushin design bureau. It was first planned as a commercial freighter in 1967, as a replacement for the Antonov An-12. It was designed to deliver heavy machinery to remote, poorly served areas. Military versions of the Il-76 have been widely used in Europe, Asia and Africa, including use as an aerial refueling tanker or command center."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/Ilyushin_Il-76"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "Boeing C-17": {
+                        "preview": {
+                            "imgSrc": "/images/Trainer Aircraft/Pipistrel Virus.png",
+                            "onHover": {
+                                "imgSrc": "/images/Transport/Boeing C-17 Globemaster III.png",
+                                "desc": "The <b>McDonnell Douglas/Boeing C-17 Globemaster III</b> is a large military transport aircraft that was developed for the United States Air Force (USAF) from the 1980s to the early 1990s by McDonnell Douglas. The C-17 carries forward the name of two previous piston-engined military cargo aircraft, the Douglas C-74 Globemaster and the Douglas C-124 Globemaster II. The C-17 commonly performs tactical and strategic airlift missions, transporting troops and cargo throughout the world; additional roles include medical evacuation and airdrop duties. It was designed to replace the Lockheed C-141 Starlifter, and also fulfill some of the duties of the Lockheed C-5 Galaxy."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/Boeing_C-17_Globemaster_III"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "C-130J": {
+                        "preview": {
+                            "imgSrc": "/images/Transport/Lockheed Martin C-130J Super Hercules.png",
+                            "onHover": {
+                                "imgSrc": "/images/Transport/Lockheed Martin C-130J Super Hercules'.jpg",
+                                "desc": "The <b>Lockheed Martin C-130J Super Hercules</b> is a four-engine turboprop military transport aircraft. The C-130J is a comprehensive update of the Lockheed C-130 Hercules, with new engines, flight deck, and other systems."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/Lockheed_Martin_C-130J_Super_Hercules"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "Antonov An-32": {
+                        "preview": {
+                            "imgSrc": "/images/Transport/Antonov An-32.png",
+                            "onHover": {
+                                "imgSrc": "/images/Transport/Antonov An-32'.jpg",
+                                "desc": "The <b>Antonov An-32</b> (NATO reporting name: <b>Cline</b>) is a turboprop twin-engined military transport aircraft."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/Antonov_An-32"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "EADS CASA C-295": {
+                        "preview": {
+                            "imgSrc": "/images/Transport/EADS CASA C-295.png",
+                            "onHover": {
+                                "imgSrc": "/images/Transport/EADS CASA C-295'.jpg",
+                                "desc": "The <b>CASA C-295</b> is a medium tactical transport aircraft that was designed by the Spanish company CASA in the 1990s as a development of the CASA-Nurtanio CN-235. When CASA was incorporated into the European aeronautical group EADS in 2000, the aircraft was designated as the <b>EADS CASA C-295</b>. It made its first flight on 28 November 1997 and entered service with the Spanish Air Force in 2001."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/EADS_CASA_C-295"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "Hawker Siddeley HS 748": {
+                        "preview": {
+                            "imgSrc": "/images/Transport/Hawker Siddeley HS 748.png",
+                            "onHover": {
+                                "imgSrc": "/images/Transport/Hawker Siddeley HS 748'.jpg",
+                                "desc": "The <b>Hawker Siddeley HS 748</b> is a medium-sized turboprop airliner originally designed and initially produced by the British aircraft manufacturer Avro. It was the last aircraft to be developed by Avro prior to its absorption by Hawker Siddeley."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/Hawker_Siddeley_HS_748"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "Dornier 228": {
+                        "preview": {
+                            "imgSrc": "/images/Transport/Dornier 228.png",
+                            "onHover": {
+                                "imgSrc": "/images/Transport/Dornier 228'.jpg",
+                                "desc": "The <b>Dornier 228</b> is a twin-turboprop STOL utility aircraft, designed and first manufactured by Dornier GmbH (later DASA Dornier, Fairchild-Dornier) from 1981 until 1998. Two hundred and forty-five were built in Oberpfaffenhofen, Germany. In 1983, Hindustan Aeronautics Limited (HAL) bought a production licence and manufactured another 125 aircraft in Kanpur, Uttar Pradesh, India. In July 2017, 63 aircraft were still in airline service."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/Dornier_228"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "Boeing 777": {
+                        "preview": {
+                            "imgSrc": "/images/Transport/Boeing 777.png",
+                            "onHover": {
+                                "imgSrc": "/images/Transport/Boeing 777'.jpg",
+                                "desc": "The <b>Boeing 777</b>, commonly referred to as the <b>Triple Seven</b>, is an American long-range wide-body airliner developed and manufactured by Boeing Commercial Airplanes. It is the world's largest twinjet. The 777 was designed to bridge the gap between Boeing's other wide body airplanes, the twin-engined 767 and quad-engined 747, and to replace older DC-10s and L-1011 trijets."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/Boeing_777"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "Boeing 737": {
+                        "preview": {
+                            "imgSrc": "/images/Transport/Boeing 737.png",
+                            "onHover": {
+                                "imgSrc": "/images/Transport/Boeing 737'.jpg",
+                                "desc": "The <b>Boeing 737</b> is a narrow-body aircraft produced by Boeing at its Renton Factory in Washington. Developed to supplement the Boeing 727 on short and thin routes, the twinjet retains the 707 fuselage cross-section and nose with two underwing turbofans. Envisioned in 1964, the initial 737-100 made its first flight in April 1967 and entered service in February 1968 with Lufthansa. The lengthened 737-200 entered service in April 1968. It evolved through four generations, offering several variants for 85 to 215 passengers."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/Boeing_737"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    },
+                    "Embraer Legacy 600": {
+                        "preview": {
+                            "imgSrc": "/images/Transport/Embraer Legacy 600.png",
+                            "onHover": {
+                                "imgSrc": "/images/Transport/Embraer Legacy 600'.jpg",
+                                "desc": "The <b>Embraer Legacy 600</b> is a business jet derivative of the Embraer ERJ 145 family of commercial jet aircraft."
+                            },
+                            "fullInfoLink": "https://en.m.wikipedia.org/wiki/Embraer_Legacy_600"
+                        },
+                        "fullInfo": {
+                            "title": "INSAS",
+                            "desc": "<b>INSAS or Indian Small Arms System</b> is a family of infantry arms consisting of an assault rifle and a light machine gun (LMG). It was designed by the Armament Research and Development Establishment and manufactured by the Ordnance Factories Board at its various factories. The INSAS assault rifle was the standard infantry weapon of the Indian Armed Forces for almost three decades.",
+                            "learnMoreLink": "https://en.wikipedia.org/wiki/INSAS_rifle",
+                            "carouselImages": [
+                                "/images/indianArmyEquipmentsPage/insas/insas.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 2.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 3.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 4.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 5.jpg"
+                            ],
+                            "users": [
+                                "India",
+                                "Bhutan",
+                                "Nepal",
+                                "Oman",
+                                "Swaziland"
+                            ],
+                            "gallery": [
+                                "/images/indianArmyEquipmentsPage/insas/insas 6.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 7.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 8.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 9.jpg",
+                                "/images/indianArmyEquipmentsPage/insas/insas 10.jpg"
+                            ],
+                            "working": {
+                                "videoLink": ""
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "IN": {}
+    }
+}
