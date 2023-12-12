@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('partials/commonServicePageHead',{title}) %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <%- include('partials/commonNavbar') %>
+    <div class="page-heading">
+      <h1>
+        <%= title.toUpperCase()%>
+      </h1>
+    </div>
+    <% for( let category in fulldata["services"][service]["category"]) { %>
+      <div class="sections">
+        <div class="equipment-category-box">
+          <h1>
+            <%= category.toUpperCase() %> :
+          </h1>
+          <div class="equipments-main-container-div">
+            <% let numOfEquip=0 %>
+              <% for( let equipment in fulldata["services"][service]["category"][category] ) { %>
+                <% if(numOfEquip++==4){ %>
+                  <% break %>
+                    <%}%>
+                      <div class="individual-equipments">
+                        <h3>
+                          <%= equipment.toUpperCase()%>
+                        </h3>
+                        <a
+                          href='<%= fulldata["services"][service]["category"][category][equipment]["preview"]["fullInfoLink"] %>'><img
+                            src='<%= fulldata["services"][service]["category"][category][equipment]["preview"]["imgSrc"] %>'
+                            alt="<%=
+                            equipment.toUpperCase()%>" /></a>
+                        <div class="equipment-info">
+                          <a
+                            href='<%= fulldata["services"][service]["category"][category][equipment]["preview"]["fullInfoLink"]%>'><img
+                              src='<%= fulldata["services"][service]["category"][category][equipment]["preview"]["onHover"]["imgSrc"]%>'
+                              alt="<%= equipment.toUpperCase()%>" /></a>
+                          <p>
+                            <%-
+                              fulldata["services"][service]["category"][category][equipment]["preview"]["onHover"]["desc"]%>
+                          </p>
+                          <a href='<%= fulldata["services"][service]["category"][category][equipment]["preview"]["fullInfoLink"]%>'
+                            class="wikipedia-link" title="Know More about the Equipment"><i
+                              class="fab fa-wikipedia-w"></i></a>
+                        </div>
+                      </div>
+
+                      <% } %>
+          </div>
+
+          <% if(Object.keys(fulldata["services"][service]["category"][category]).length>4){ %>
+            <div class="see-more-btn">
+              <a href="/equipments/<%= service %>/category/<%= category%>">SEE MORE</a>
+            </div>
+            <%}%>
+
+        </div>
+      </div>
+      <% } %>
+        </div>
+
+        <!-- footer starts -->
+        <%- include('partials/footer') %>
+          <!-- footer ends -->
+</body>
+
+</html>
