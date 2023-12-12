@@ -8,140 +8,159 @@
 <body>
   <%- include('partials/commonNavbar') %>
 
-  <div class="section">
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-md-6 col-lg-4">
-          <h1 class="primary-heading">
-            <%= title.toUpperCase() %>
-          </h1>
-          <p>
-            <%-
-                            fulldata["services"][service]["category"][category][title]["fullInfo"]["desc"]
-                            %>
-          </p>
-          <a href='<%=
+    <div class="section">
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <h1 class="primary-heading">
+              <%= fulldata["services"][service]["category"][category][title]["fullInfo"]["title"].toUpperCase() %>
+            </h1>
+            <p>
+              <%- fulldata["services"][service]["category"][category][title]["fullInfo"]["desc"] %>
+            </p>
+            <a href='<%=
                             fulldata["services"][service]["category"][category][title]["fullInfo"]["learnMoreLink"]
                             %>'>
-            <button class="btn btn-lg bg-dark text-light mb-3 rounded-pill">
-              Learn More
-            </button>
-          </a>
-        </div>
-
-        <!-- Carousel 1-->
-
-        <div id="carouselExampleIndicators" class="col-md-6 col-lg-8 carousel slide" data-bs-ride="carousel">
-
-          <div class="carousel-indicators">
-            <% for( let imgIndex = 0; imgIndex <
-                            fulldata["services"][service]["category"][category][title]["fullInfo"]["carouselImages"].length;
-                            imgIndex++ ) { %>
-
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= imgIndex %>" <% if (imgIndex === 0) { %> class="active" aria-current="true" <% } %> aria-label="Slide
-                                <%= imgIndex + 1 %>">
-            </button>
-
-            <% } %>
+              <button class="btn btn-lg bg-dark text-light mb-3 rounded-pill">
+                Learn More
+              </button>
+            </a>
           </div>
 
-          <div class="carousel-inner">
-            <% for( let imgIndex = 0; imgIndex <
-                            fulldata["services"][service]["category"][category][title]["fullInfo"]["carouselImages"].length;
-                            imgIndex++ ) { %>
-            <div class="carousel-item <% if(imgIndex===0) { %>active<% } %>" data-bs-interval="4000">
-              <img src='<%= fulldata["services"][service]["category"][category][title]["fullInfo"]["carouselImages"][imgIndex] %>' class="d-block w-100" alt="..." />
+          <!-- Carousel 1-->
+
+          <div id="carouselExampleIndicators" class="col-md-6 col-lg-8 carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+              <% for( let imgIndex=0; imgIndex <
+                fulldata["services"][service]["category"][category][title]["fullInfo"]["carouselImages"].length;
+                imgIndex++ ) { %>
+
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= imgIndex %>" <%
+                  if (imgIndex===0) { %> class="active" aria-current="true" <% } %> aria-label="Slide
+                    <%= imgIndex + 1 %>">
+                </button>
+
+                <% } %>
             </div>
-            <% } %>
+
+            <div class="carousel-inner">
+              <% for( let imgIndex=0; imgIndex <
+                fulldata["services"][service]["category"][category][title]["fullInfo"]["carouselImages"].length;
+                imgIndex++ ) { %>
+                <div class="carousel-item <% if(imgIndex===0) { %>active<% } %>" data-bs-interval="4000">
+                  <img
+                    src='<%= fulldata["services"][service]["category"][category][title]["fullInfo"]["carouselImages"][imgIndex] %>'
+                    class="d-block w-100" alt="..." />
+                </div>
+                <% } %>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="section">
-    <div class="container p-5">
-      <div class="row">
-        <div class="col-sm-4">
-          <h2 class="secondary-heading">USERS</h2>
+    <div class="section">
+      <div class="container p-5">
+        <div class="row">
+          <div class="col-sm-4">
+            <h2 class="secondary-heading">USERS</h2>
+          </div>
+        </div>
+        <div class="row black-background p-5 rounded-border white-box-shadow">
+          <ul class="column-width">
+            <% for (let index=0; index <
+              fulldata["services"][service]["category"][category][title]["fullInfo"]["users"].length; index++) { %>
+              <li class="text-white text-decoration-none">
+                <img
+                  src='<%= fulldata["services"][service]["category"][category][title]["fullInfo"]["users"][index][1]%>'
+                  class="me-2" />
+                <%= fulldata["services"][service]["category"][category][title]["fullInfo"]["users"][index][0] %>
+              </li>
+              <% } %>
+          </ul>
         </div>
       </div>
-      <div class="row black-background p-5 rounded-border white-box-shadow">
-        <ul class="column-width">
-          <% for (let index = 0; index < fulldata["services"][service]["category"][category][title]["fullInfo"]["users"].length; index++) { %>
-          <li class="text-white text-decoration-none">
-            <img src='<%= fulldata["services"][service]["category"][category][title]["fullInfo"]["users"][index][1]%>' class="me-2" /><%= fulldata["services"][service]["category"][category][title]["fullInfo"]["users"][index][0] %>
-          </li>
+    </div>
+
+    <% if (fulldata["services"][service]["category"][category][title]["fullInfo"]["gallery"].length!==0) {%>
+      <div class="section">
+        <div class="container p-5">
+          <div class="row">
+            <h2 class="secondary-heading text-black">GALLERY</h2>
+          </div>
+          <div class="row">
+            <div id="carousel2" class="col-12 carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <% for (let index=0; index <
+                  fulldata["services"][service]["category"][category][title]["fullInfo"]["gallery"].length; index++) {
+                  %>
+                  <button type="button" data-bs-target="#carousel2" data-bs-slide-to="<%= index %>" <% if(index===0){%>
+                    class="active" aria-current="true" <%}%>
+
+                      aria-label="Slide <%= index + 1 %>"></button>
+                  <% } %>
+
+              </div>
+              <div class="carousel-inner">
+                <% for (let index=0; index <
+                  fulldata["services"][service]["category"][category][title]["fullInfo"]["gallery"].length; index++) {
+                  %>
+                  <div class="carousel-item <% if(index===0) { %>active<%}%>" data-bs-interval="4000">
+                    <img
+                      src='<%= fulldata["services"][service]["category"][category][title]["fullInfo"]["gallery"][index] %>'
+                      class=" d-block w-100" alt="..." />
+                  </div>
+                  <% } %>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+
+        <% if (fulldata["services"][service]["category"][category][title]["fullInfo"]["working"]["videoLink"]!=="" ) {%>
+          <div class="section">
+            <div class="container p-5">
+              <div class="row">
+                <h2 class="secondary-heading text-black">WORKING</h2>
+              </div>
+              <div class="row">
+                <div class="iframe-container">
+                  <iframe class="responsive-iframe"
+                    src='<%=fulldata["services"][service]["category"][category][title]["fullInfo"]["working"]["videoLink"]%>'
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
           <% } %>
-        </ul>
-      </div>
-    </div>
-  </div>
 
-  <% if (fulldata["services"][service]["category"][category][title]["fullInfo"]["gallery"].length!==0) {%>
-  <div class="section">
-    <div class="container p-5">
-      <div class="row">
-        <h2 class="secondary-heading text-black">GALLERY</h2>
-      </div>
-      <div class="row">
-        <div id="carousel2" class="col-12 carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <% for (let index = 0; index < fulldata["services"][service]["category"][category][title]["fullInfo"]["gallery"].length; index++) { %>
-            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="<%= index %>" <% if(index===0){%> class="active" aria-current="true" <%}%>
-              
-              aria-label="Slide <%= index + 1 %>"></button>
-            <% } %>
-
-          </div>
-          <div class="carousel-inner">
-            <% for (let index = 0; index < fulldata["services"][service]["category"][category][title]["fullInfo"]["gallery"].length; index++) { %>
-            <div class="carousel-item <% if(index===0) { %>active<%}%>" data-bs-interval="4000">
-              <img src='<%= fulldata["services"][service]["category"][category][title]["fullInfo"]["gallery"][index] %>' class=" d-block w-100" alt="..." />
-          </div>
-          <% } %>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-  </div>
-  </div>
-  <%  } %>
-
-  <% if (fulldata["services"][service]["category"][category][title]["fullInfo"]["working"]["videoLink"]!=="") {%>
-  <div class="section">
-    <div class="container p-5">
-      <div class="row">
-        <h2 class="secondary-heading text-black">WORKING</h2>
-      </div>
-      <div class="row">
-        <div class="iframe-container">
-          <iframe class="responsive-iframe" src="<%=fulldata["services"][service]["category"][category][title]["fullInfo"]["working"]["videoLink"]%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-  <%  } %>
-
-  <!-- footer starts -->
-  <%- include('partials/footer')%>
-  <!-- footer ends -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <!-- footer starts -->
+            <%- include('partials/footer')%>
+              <!-- footer ends -->
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
 </body>
 
 </html>
