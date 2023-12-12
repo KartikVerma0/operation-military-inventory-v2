@@ -4,7 +4,7 @@
     "description": "This Project/Website was made with the aim to provide Information about all the Equipment which the Indian Armed Forces hold. For Suggestions mail me at katik2129.be21@chitkara.edu.in  . <br>\r Click the link to visit the hoisted page : https://kartikverma0.github.io/operation-military-inventory/",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "nodemon index.js",
         "start": "start http://localhost:3000 && nodemon index.js"
     },
     "keywords": [],
