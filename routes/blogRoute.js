@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Blog = require("../modals/blogSchema");
+const Blog = require("../modals/blog");
 
 //setup crud for blog route
 router.get("/", async (req, res) => {
