@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/commonHead',{title:"Create a new Blog"}) %>
+
+</head>
+
+<body>
+    <%- include('partials/commonNavbar') %>
+
+        <div class="row my-5 w-100">
+            <h1 class="col-6 offset-3 mb-3 fst-italic">Create a New Blog: </h1>
+            <form class="card text-bg-light col-6 offset-3  py-5 px-4 d-flex flex-column" method="post" action="/blog">
+                <div class="mb-3">
+                    <label for="headline" class="form-label">Headline: <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="headline" required name="headline">
+                </div>
+                <div class="mb-3">
+                    <label for="articleURL" class="form-label">Article Link: <span class="text-danger">*</span></label>
+                    <input type="url" class="form-control" id="articleURL" required name="articleURL">
+                </div>
+                <div class="mb-5">
+                    <label for="thumbnailURL" class="form-label">Thubnail Picture URL: <span
+                            class="text-danger">*</span></label>
+                    <input type="url" class="form-control" id="thumbnailURL" required name="thumbnailURL">
+                </div>
+
+                <button type="submit" class="btn btn-dark w-50 align-self-center py-2">Publish</button>
+            </form>
+
+        </div>
+        <%- include('partials/footer')%>
+
+</body>
+
+</html>
