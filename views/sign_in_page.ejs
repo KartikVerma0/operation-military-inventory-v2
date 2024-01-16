@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include('partials/commonHead',{title}) %>
-    </head>
-    <body>
-        <!-- Navbar Starts -->
-        <%- include('partials/commonNavbar') %>
+
+<head>
+    <%- include('partials/commonHead',{title}) %>
+</head>
+
+<body>
+    <!-- Navbar Starts -->
+    <%- include('partials/commonNavbar') %>
         <!-- Navbar Ends -->
 
         <header>
@@ -13,18 +15,10 @@
                 <div class="form-box">
                     <div class="button-box">
                         <div id="btn"></div>
-                        <button
-                            type="button"
-                            class="togglebtn"
-                            onclick="login()"
-                        >
+                        <button type="button" class="togglebtn" onclick="login()">
                             Login
                         </button>
-                        <button
-                            type="button"
-                            class="togglebtn"
-                            onclick="register()"
-                        >
+                        <button type="button" class="togglebtn" onclick="register()">
                             &ensp;&nbsp;Register
                         </button>
                     </div>
@@ -34,44 +28,16 @@
                         <img src="images/tw.png" />
                         <img src="images/gp.png" />
                     </div>
-                    <form id="login" class="inputs">
-                        <input
-                            type="text"
-                            class="input-field"
-                            placeholder="User Id"
-                            required
-                        />
-                        <input
-                            type="Password"
-                            class="input-field"
-                            placeholder="Enter Password"
-                            required
-                        />
-                        <input type="checkbox" class="checkbox" />
-                        <span>Remember Password</span>
+                    <form id="login" class="inputs" method="post" action="/signin">
+                        <input type="text" class="input-field" placeholder="User Name" required name="username" />
+                        <input type="Password" class="input-field" placeholder="Enter Password" required
+                            name="password" />
                         <button type="submit" class="submit-btn">Log In</button>
                     </form>
-                    <form id="register" class="inputs">
-                        <input
-                            type="text"
-                            class="input-field"
-                            placeholder="User Id"
-                            required
-                        />
-                        <input
-                            type="email"
-                            class="input-field"
-                            placeholder="Email Id"
-                            required
-                        />
-                        <input
-                            type="text"
-                            class="input-field"
-                            placeholder="Enter Password"
-                            required
-                        />
-                        <input type="checkbox" class="checkbox" />
-                        <span>I agree to the terms and conditions.</span>
+                    <form id="register" class="inputs" method="post" action="/signup">
+                        <input type="text" class="input-field" placeholder="User Name" required name="username" />
+                        <input type="email" class="input-field" placeholder="Email Id" required name="email" />
+                        <input type="text" class="input-field" placeholder="Enter Password" required name="password" />
                         <button type="submit" class="submit-btn">
                             Register
                         </button>
@@ -82,24 +48,25 @@
 
         <!-- footer starts -->
         <%- include('partials/footer')%>
-        <!-- footer ends -->
+            <!-- footer ends -->
 
-        <script>
-            var x = document.getElementById("login");
-            var y = document.getElementById("register");
-            var z = document.getElementById("btn");
+            <script>
+                var x = document.getElementById("login");
+                var y = document.getElementById("register");
+                var z = document.getElementById("btn");
 
-            function register() {
-                x.style.left = "-400px";
-                y.style.left = "50px";
-                z.style.left = "110px";
-            }
+                function register() {
+                    x.style.left = "-400px";
+                    y.style.left = "50px";
+                    z.style.left = "110px";
+                }
 
-            function login() {
-                y.style.left = "450px";
-                z.style.left = "0px";
-                x.style.left = "50px";
-            }
-        </script>
-    </body>
+                function login() {
+                    y.style.left = "450px";
+                    z.style.left = "0px";
+                    x.style.left = "50px";
+                }
+            </script>
+</body>
+
 </html>

@@ -1,93 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta
-            name="description"
-            content="Indian Armed Forces have some of the latest and most
-                            leathal weapons from Foreign and
-                            Domestic Companies"
-        />
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Indian Army / Airforce / Navy - Weapons with Description</title>
-        <meta
-            property="og:image"
-            content="https://kartikverma0.github.io/operation-military-inventory/images/page_logo2.png"
-        />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="250" />
-        <meta property="og:image:height" content="100" />
-        <link rel="stylesheet" href="/css/partials/footer.css" />
-        <link rel="stylesheet" href="/css/index_style.css" />
-        <link rel="icon" type="type/icon-x" href="images/favicon.png" />
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-W43DDWMDV2"
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
 
-            gtag("config", "G-W43DDWMDV2");
-        </script>
-    </head>
-    <body>
-        <!-- Navbar Starts -->
-        <div class="container">
-            <div class="nav_bar">
-                <a href="/">HOME</a>
-                <a href="/blog" target="_blank">BLOG</a>
-                <a href="/team" target="_blank">TEAM</a>
-                <a href="/feedback" target="_blank">FEEDBACK</a>
-                <a href="/contact" target="_blank">CONTACT US</a>
-                <button onclick="window.location.href='/signIn'">
-                    <p>SIGN IN</p>
+<head>
+    <meta name="description" content="Indian Armed Forces have some of the latest and most
+                            leathal weapons from Foreign and
+                            Domestic Companies" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Army / Airforce / Navy - Weapons with Description</title>
+    <meta property="og:image"
+        content="https://kartikverma0.github.io/operation-military-inventory/images/page_logo2.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="250" />
+    <meta property="og:image:height" content="100" />
+    <link rel="stylesheet" href="/css/partials/footer.css" />
+    <link rel="stylesheet" href="/css/index_style.css" />
+    <link rel="icon" type="type/icon-x" href="images/favicon.png" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W43DDWMDV2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-W43DDWMDV2");
+    </script>
+</head>
+
+<body>
+    <!-- Navbar Starts -->
+    <div class="container">
+        <div class="nav_bar">
+            <a href="/">HOME</a>
+            <a href="/blog" target="_blank">BLOG</a>
+            <a href="/team" target="_blank">TEAM</a>
+            <a href="/feedback" target="_blank">FEEDBACK</a>
+            <a href="/contact" target="_blank">CONTACT US</a>
+            <button onclick="window.location.href='/signin'">
+                <p>SIGN IN</p>
+            </button>
+        </div>
+        <div class="textbox">
+            <p>OPERATION</p>
+            <h1>MILITARY</h1>
+            <h1>INVENTORY</h1>
+            <h3>MILITARY EQUIPMENT RESOURCES</h3>
+            <div class="explorebutton">
+                <button type="button" class="btn">
+                    <a href="#service-category-boxes">Explore</a>
                 </button>
             </div>
-            <div class="textbox">
-                <p>OPERATION</p>
-                <h1>MILITARY</h1>
-                <h1>INVENTORY</h1>
-                <h3>MILITARY EQUIPMENT RESOURCES</h3>
-                <div class="explorebutton">
-                    <button type="button" class="btn">
-                        <a href="#service-category-boxes">Explore</a>
-                    </button>
-                </div>
-            </div>
         </div>
-        <!-- Navbar Ends -->
+    </div>
+    <!-- Navbar Ends -->
 
-        <!-- 3 container boxes starts -->
-        <div class="service-category-boxes" id="service-category-boxes">
-            <% for (let category = 0; category < categories.length; category++)
-            {%>
+    <!-- 3 container boxes starts -->
+    <div class="service-category-boxes" id="service-category-boxes">
+        <% for (let category=0; category < categories.length; category++) {%>
             <div class="individual-service-boxes">
-                <img
-                    src="<%= categories[category]['imgSrc'] %>"
-                    alt="<%=
-                categories[category]['imgAlt'] %>"
-                />
-                <h1><%= categories[category]['title'] %></h1>
+                <img src="<%= categories[category]['imgSrc'] %>" alt="<%=
+                categories[category]['imgAlt'] %>" />
+                <h1>
+                    <%= categories[category]['title'] %>
+                </h1>
                 <div class="explore-button">
-                    <a href="<%= categories[category]['exploreBtnLink'] %>"
-                        >Explore</a
-                    >
+                    <a href="<%= categories[category]['exploreBtnLink'] %>">Explore</a>
                 </div>
             </div>
             <% } %>
-        </div>
-        <!-- 3 container boxes ends -->
+    </div>
+    <!-- 3 container boxes ends -->
 
-        <!-- footer starts -->
-        <%- include('partials/footer')%>
+    <!-- footer starts -->
+    <%- include('partials/footer')%>
         <!-- footer ends -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
         <script src="/js/homePage.js"></script>
-    </body>
+</body>
+
 </html>

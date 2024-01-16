@@ -33,7 +33,7 @@ body {
     width: 380px;
     height: 480px;
     position: relative;
-    margin: 6% auto;
+    margin: 1% auto;
     background: rgba(0, 0, 0, 0.5);
     padding: 5px;
     overflow: hidden;
@@ -110,7 +110,7 @@ body {
     padding: 10px 30px;
     cursor: pointer;
     display: block;
-    margin: auto;
+    margin: 6% auto;
     background: linear-gradient(to right, #ff105f, #ffad06);
     border: 0;
     border-radius: 30px;
