@@ -14,7 +14,7 @@ const flash = require("connect-flash");
 const methodOverride = require("method-override");
 
 mongoose
-    .connect("mongodb://localhost:27017/opMilInv")
+    .connect(process.env.MONGO_URI)
     .then(() => {
         console.log("Database Connection Established");
     })
