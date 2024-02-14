@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <%- include('partials/commonEquipmentHead',{title}) %>
+  <%- include('partials/commonEquipmentHead',{title:name,favicon:preview.icon.path}) %>
 </head>
 
 <body>
@@ -11,15 +11,15 @@
     <div class="section">
       <div class="container my-5">
         <div class="row">
-          <div class="col-md-6 col-lg-4">
+          <div class="col-6">
             <h1 class="primary-heading">
-              <%= fulldata["services"][service]["category"][category][title]["fullInfo"]["title"].toUpperCase() %>
+              <%= fullInfo.title.toUpperCase() %>
             </h1>
             <p>
-              <%- fulldata["services"][service]["category"][category][title]["fullInfo"]["desc"] %>
+              <%- fullInfo.description %>
             </p>
             <a href='<%=
-                            fulldata["services"][service]["category"][category][title]["fullInfo"]["learnMoreLink"]
+                            fullInfo.learnMoreLink
                             %>'>
               <button class="btn btn-lg bg-dark text-light mb-3 rounded-pill">
                 Learn More
@@ -29,12 +29,10 @@
 
           <!-- Carousel 1-->
 
-          <div id="carouselExampleIndicators" class="col-md-6 col-lg-8 carousel slide" data-bs-ride="carousel">
+          <div id="carouselExampleIndicators" class="col-6 carousel slide" data-bs-ride="carousel">
 
             <div class="carousel-indicators">
-              <% for( let imgIndex=0; imgIndex <
-                fulldata["services"][service]["category"][category][title]["fullInfo"]["carouselImages"].length;
-                imgIndex++ ) { %>
+              <% for( let imgIndex=0; imgIndex < fullInfo.carouselImages.length; imgIndex++ ) { %>
 
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= imgIndex %>" <%
                   if (imgIndex===0) { %> class="active" aria-current="true" <% } %> aria-label="Slide
@@ -45,13 +43,9 @@
             </div>
 
             <div class="carousel-inner">
-              <% for( let imgIndex=0; imgIndex <
-                fulldata["services"][service]["category"][category][title]["fullInfo"]["carouselImages"].length;
-                imgIndex++ ) { %>
+              <% for( let imgIndex=0; imgIndex < fullInfo.carouselImages.length; imgIndex++ ) { %>
                 <div class="carousel-item <% if(imgIndex===0) { %>active<% } %>" data-bs-interval="4000">
-                  <img
-                    src='<%= fulldata["services"][service]["category"][category][title]["fullInfo"]["carouselImages"][imgIndex] %>'
-                    class="d-block w-100" alt="..." />
+                  <img src='<%= fullInfo.carouselImages[imgIndex].path %>' class="d-block w-100" alt="..." />
                 </div>
                 <% } %>
             </div>
@@ -79,13 +73,11 @@
         </div>
         <div class="row black-background p-5 rounded-border white-box-shadow">
           <ul class="column-width">
-            <% for (let index=0; index <
-              fulldata["services"][service]["category"][category][title]["fullInfo"]["users"].length; index++) { %>
+            <% for (let index=0; index < fullInfo.users.length; index++) { %>
               <li class="text-white text-decoration-none">
-                <img
-                  src='<%= fulldata["services"][service]["category"][category][title]["fullInfo"]["users"][index][1]%>'
-                  class="me-2" />
-                <%= fulldata["services"][service]["category"][category][title]["fullInfo"]["users"][index][0] %>
+                <img src=' https://flagcdn.com/24x18/<%=fullInfo.users[index].split(",")[1].trim()%>.png'
+                  class=" me-2" />
+                <%= fullInfo.users[index].split(",")[0].trim() %>
               </li>
               <% } %>
           </ul>
@@ -93,7 +85,7 @@
       </div>
     </div>
 
-    <% if (fulldata["services"][service]["category"][category][title]["fullInfo"]["gallery"].length!==0) {%>
+    <% if (fullInfo.gallery.length!==0) {%>
       <div class="section">
         <div class="container p-5">
           <div class="row">
@@ -102,9 +94,7 @@
           <div class="row">
             <div id="carousel2" class="col-12 carousel slide" data-bs-ride="carousel">
               <div class="carousel-indicators">
-                <% for (let index=0; index <
-                  fulldata["services"][service]["category"][category][title]["fullInfo"]["gallery"].length; index++) {
-                  %>
+                <% for (let index=0; index < fullInfo.gallery.length; index++) { %>
                   <button type="button" data-bs-target="#carousel2" data-bs-slide-to="<%= index %>" <% if(index===0){%>
                     class="active" aria-current="true" <%}%>
 
@@ -113,13 +103,9 @@
 
               </div>
               <div class="carousel-inner">
-                <% for (let index=0; index <
-                  fulldata["services"][service]["category"][category][title]["fullInfo"]["gallery"].length; index++) {
-                  %>
+                <% for (let index=0; index < fullInfo.gallery.length; index++) { %>
                   <div class="carousel-item <% if(index===0) { %>active<%}%>" data-bs-interval="4000">
-                    <img
-                      src='<%= fulldata["services"][service]["category"][category][title]["fullInfo"]["gallery"][index] %>'
-                      class=" d-block w-100" alt="..." />
+                    <img src=' <%=fullInfo.gallery[index].path %>' class=" d-block w-100" alt="..." />
                   </div>
                   <% } %>
               </div>
@@ -137,7 +123,7 @@
       </div>
       <% } %>
 
-        <% if (fulldata["services"][service]["category"][category][title]["fullInfo"]["working"]["videoLink"]!=="" ) {%>
+        <% if (fullInfo.working.videoLink!=="" ) {%>
           <div class="section">
             <div class="container p-5">
               <div class="row">
@@ -145,15 +131,28 @@
               </div>
               <div class="row">
                 <div class="iframe-container">
-                  <iframe class="responsive-iframe"
-                    src='<%=fulldata["services"][service]["category"][category][title]["fullInfo"]["working"]["videoLink"]%>'
-                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                  <iframe class="responsive-iframe" src='<%=fullInfo.working.videoLink%>' title="YouTube video player"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write;
                     encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
           </div>
           <% } %>
+
+            <div class="controls">
+              <a href="/equipments/edit/<%= _id %>?view=saved" type="button" class="btn btn-dark"><i
+                  class="fa-regular fa-pen-to-square"></i>
+                Edit</a>
+
+              <form action="/equipments/delete/<%= _id%>?_method=DELETE" method="post">
+                <input type="hidden" name="view" value="saved">
+                <input type="hidden" name="service" value="<%= service%>">
+                <button type="submit" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Delete
+                  Equipment</button>
+              </form>
+
+            </div>
 
             <!-- footer starts -->
             <%- include('partials/footer')%>
