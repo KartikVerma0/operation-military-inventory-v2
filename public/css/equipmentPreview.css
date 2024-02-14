@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap");
+
+/* fade in animation */
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .equipment-category-box {
+        align-items: center;
+    }
+    .equipments-main-container-div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .equipment-info {
+        width: 240px;
+    }
+
+    /* .equipment-info img {
+    width: 240px;
+  } */
+}
+
+@media (min-width: 600px) {
+    .equipment-category-box {
+        align-items: flex-start;
+    }
+    .equipment-info {
+        width: 400px;
+    }
+
+    /* .equipment-info img {
+    min-width: 400px;
+  } */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sections {
+    padding-bottom: 10px;
+}
+
+.sections:nth-child(2n) {
+    background-color: white;
+}
+
+.sections:nth-child(2n-1) {
+    margin: 10px 0;
+    background-color: #eeeeee;
+}
+
+/* main start */
+
+.preview-heading {
+    font-family: "poppins", sans-serif;
+    font-weight: 900 !important;
+    color: #353535;
+    font-size: 3rem !important;
+    text-transform: uppercase;
+    /* text-align: center; */
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+
+.equipment-category-box > h2 {
+    padding: 0.5rem;
+    font-family: "poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.equipment-category-box {
+    width: 90%;
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: flex-start; */
+    gap: 1rem;
+}
+
+.category-heading {
+    padding: 0 !important;
+    font-family: "poppins", sans-serif;
+    font-weight: 900 !important;
+    color: #575757;
+    font-size: 2rem !important;
+    text-transform: uppercase;
+    /* text-align: center; */
+}
+
+.sections:nth-child(2n-1) h1 {
+    color: #4a4a4a;
+}
+
+.equipments-main-container-div {
+    width: 100%;
+    height: 62%;
+    display: flex;
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+    gap: 5rem;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1270px) {
+    .equipments-main-container-div {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.individual-equipments {
+    min-width: max(20%, 240px);
+    height: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 2px #232323;
+    position: relative;
+}
+
+.sections:nth-child(2n) .individual-equipments {
+    background-color: #ececec;
+}
+
+.sections:nth-child(2n-1) .individual-equipments {
+    background-color: white;
+}
+
+.individual-equipments h3 {
+    font-family: "poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #515151;
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.individual-equipments > a img {
+    flex-shrink: 1;
+    max-width: 12rem;
+    border-radius: 1rem;
+    filter: drop-shadow(1.928px 2.298px 3px rgba(0, 0, 0, 0.56));
+}
+
+.equipment-info {
+    max-width: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    height: fit-content;
+}
+
+.equipment-info > a {
+    width: 100%;
+    display: inline-block;
+}
+.equipment-info img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.equipment-info p {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+    font-family: "montserrat", sans-serif;
+    font-weight: 200;
+    text-align: justify;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.equipment-info p b {
+    font-weight: 500;
+}
+
+.equipment-info i {
+    float: right;
+    margin: 0 1.5rem 1rem 0;
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.individual-equipments:hover .equipment-info {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 11rem;
+    bottom: auto;
+    left: 0;
+    right: auto;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.see-more-btn {
+    background-color: #929292;
+    border-radius: 4rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.see-more-btn a {
+    font-family: "poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.light-background-equipment-box {
+    background-color: white !important;
+}
+
+.dark-category-heading h1 {
+    color: #4a4a4a !important;
+}
+
+.hidden-visibility {
+    visibility: hidden;
+}
+/* main end */
+
+@media (max-width: 600px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+body {
+    font-family: "poppins", sans-serif;
+}
+
+.primary-heading {
+    font-family: "poppins", sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 4.1vw, 6.5rem);
+}
+
+.primary-heading + p {
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    color: #4a4a4a;
+    font-size: clamp(1rem, 1vw, 2rem);
+    text-align: justify;
+}
+
+.section:nth-child(2n-1) {
+    background-color: #2a2a2a;
+}
+
+.secondary-heading {
+    font-family: "poppins", sans-serif;
+    font-size: clamp(2.5rem, 3.5vw, 6rem);
+    font-weight: 800;
+    color: #b4b4b4;
+}
+
+.column-width {
+    column-width: 8rem;
+    color: #b4b4b4;
+}
+
+.black-background {
+    background-color: black;
+}
+
+.rounded-border {
+    border-radius: 1rem;
+}
+
+.white-box-shadow {
+    box-shadow: 1rem 1rem 0px white;
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.controls {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 7rem;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+}
