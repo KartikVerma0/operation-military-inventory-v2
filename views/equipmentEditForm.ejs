@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/commonHead',{title:"Add New Equipment"}) %>
+        <link rel="stylesheet" href="/css/editEquipmentForm.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <%- include('partials/commonNavbar') %>
+        <div class="row w-100">
+            <div class="col-6 offset-3 py-5">
+                <h1>Edit Equipment:</h1>
+                <form class="my-3" action="/equipments/edit/<%= equipment._id %>?_method=PUT" method="post"
+                    enctype="multipart/form-data">
+                    <input type="hidden" name="view" value="<%= view %>">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Equipment Name: <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="name" name="name" value="<%= equipment.name %>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="service" class="form-label">Service: <span class="text-danger">*</span></label>
+                        <select class="form-select" aria-label="Select the defence service it belongs" name="service"
+                            id="service">
+                            <option value="no-service">Select the Defence Service: </option>
+
+                            <option <% if(equipment.service=="IA" ){ %>
+                                selected
+                                <%} %> value="IA">Indian Army
+                            </option>
+                            <option <% if(equipment.service=="IAF" ){ %>
+                                selected
+                                <%} %> value="IAF">Indian Air Force
+                            </option>
+                            <option <% if(equipment.service=="IN" ){ %>
+                                selected
+                                <%} %> value="IN">Indian Navy
+                            </option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Category: <span class="text-danger">*</span></label>
+                        <select class="form-select" aria-label="Select the defence service it belongs" name="category"
+                            id="category">
+                            <!-- options are added dynamically by javascript -->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subcategory" class="form-label">Sub Category: <span
+                                class="text-danger">*</span></label>
+                        <select class="form-select" aria-label="Select the category it belongs" name="subCategory"
+                            id="subcategory" disabled>
+
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description: <span
+                                class="text-danger">*</span></label>
+                        <textarea class="form-control" id="description" name="description"
+                            value="<%= equipment.description %>"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="equipmentIcon" class="form-label">Upload Equipment Icon: <span
+                                class="text-danger">*</span></label>
+                        <% if(equipment.preview.icon){ %>
+                            <div class="card mb-2 icon-card position-relative icon-card-custom">
+                                <img src="<%= equipment.preview.icon.path %>" class="card-img-top"
+                                    alt="<%= equipment.name%> Equipment Icon">
+
+
+                                <i class="fa-regular fa-circle-xmark position-absolute" id="deleteIcon"
+                                    onclick='deleteIcon("<%= equipment.preview.icon.filename.split("/")[1]%>","<%=view %>")'></i>
+                            </div>
+                            <% }%>
+                                <input type="file" class="form-control" id="equipmentIcon" name="equipmentIcon"
+                                    disabled>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="images" class="form-label">Do you want to Delete Old Equipment Images?: </label>
+                        <div class="d-flex flex-wrap gap-3">
+                            <% if(equipment.images.length) {%>
+                                <% for(let image in equipment.images){ %>
+                                    <div class="card mb-2 icon-card position-relative img-card">
+                                        <img src="<%= equipment.images[image].path %>" class="card-img-top"
+                                            alt="<%= equipment.name%> Equipment Image <%= image %>">
+
+
+                                        <i class="fa-regular fa-circle-xmark position-absolute"
+                                            id="deleteImage<%= image %>"
+                                            onclick='deleteImage("<%= equipment.images[image].filename.split("/")[1]%>","<%=view %>","<%= image%>")'></i>
+                                    </div>
+                                    <% } %>
+                                        <% }%>
+                        </div>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="images" class="form-label">Upload New Equipment Images?: <span
+                                class="text-danger">*</span></label>
+
+                        <input type="file" class="form-control" id="images" name="images" multiple>
+                    </div>
+                    <div class="mb-3">
+                        <div class="dropdown">
+                            <label for="countries">Equipment Owning Countries: <span
+                                    class="text-danger">*</span></label>
+                            <br>
+                            <button class="btn border dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" id="countries" data-bs-auto-close="outside">
+                                Select Countries:
+                            </button>
+
+                            <ul class="dropdown-menu  custom-max-height" id="userDropDown">
+                                <input type="text" class="form-control mb-1 ms-3 w-75" id="searchInput"
+                                    placeholder="Search Countries...">
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="learnMoreLink" class="form-label">Equipment Information URL / Wikipedia URL: <span
+                                class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="learnMoreLink" name="learnMoreLink"
+                            value="<%= equipment.fullInfo.learnMoreLink %>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="videoLink" class="form-label">Working Video URL:</label>
+                        <input type="text" class="form-control" id="videoLink" name="videoLink"
+                            value="<%= equipment.fullInfo.working.videoLink %>">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Preview</button>
+                </form>
+            </div>
+        </div>
+
+        <%- include('partials/footer') %>
+            <script>
+                let category = "<%=equipment.category %>";
+                let textAreaDescription = `<%- equipment.description %>`;
+                let countries = "<%- equipment.fullInfo.users %>";
+
+            </script>
+
+
+
+            <script src="/js/deleteIcon.js"></script>
+            <script src="/js/equipmentEditForm.js" type="module"></script>
+
+
+
+</body>
+
+</html>
