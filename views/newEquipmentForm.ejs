@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/commonHead',{title:"Add New Equipment"}) %>
+        <link rel="stylesheet" href="/css/newEquipmentForm.css">
+</head>
+
+<body>
+    <%- include('partials/commonNavbar') %>
+        <div class="row w-100">
+            <div class="col-6 offset-3 py-5">
+                <h1>Add New Equipment:</h1>
+                <form class="my-3" action="/equipments/new" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Equipment Name: <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="service" class="form-label">Service: <span class="text-danger">*</span></label>
+                        <select class="form-select" aria-label="Select the defence service it belongs" name="service"
+                            id="service">
+                            <option selected value="no-service">Select the Defence Service: </option>
+                            <option value="IA">Indian Army</option>
+                            <option value="IAF">Indian Air Force</option>
+                            <option value="IN">Indian Navy</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Category: <span class="text-danger">*</span></label>
+                        <select class="form-select" aria-label="Select the defence service it belongs" name="category"
+                            id="category">
+                            <!-- options are added dynamically by javascript -->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subcategory" class="form-label">Sub Category: <span
+                                class="text-danger">*</span></label>
+                        <select class="form-select" aria-label="Select the category it belongs" name="subCategory"
+                            id="subcategory" disabled>
+
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description: <span
+                                class="text-danger">*</span></label>
+                        <textarea class="form-control" id="description" name="description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="equipmentIcon" class="form-label">Upload Equipment Icon: <span
+                                class="text-danger">*</span></label>
+                        <input type="file" class="form-control" id="equipmentIcon" name="equipmentIcon">
+                    </div>
+                    <div class="mb-3">
+                        <label for="images" class="form-label">Upload Equipment Images: <span
+                                class="text-danger">*</span></label>
+                        <input type="file" class="form-control" id="images" name="images" multiple>
+                    </div>
+                    <div class="mb-3">
+                        <div class="dropdown">
+                            <label for="countries">Equipment Owning Countries: <span
+                                    class="text-danger">*</span></label>
+                            <br>
+                            <button class="btn border dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" id="countries" data-bs-auto-close="outside">
+                                Select Countries:
+                            </button>
+
+                            <ul class="dropdown-menu  custom-max-height" id="userDropDown">
+                                <input type="text" class="form-control mb-1 ms-3 w-75" id="searchInput"
+                                    placeholder="Search Countries...">
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="learnMoreLink" class="form-label">Equipment Information URL / Wikipedia URL: <span
+                                class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="learnMoreLink" name="learnMoreLink">
+                    </div>
+                    <div class="mb-3">
+                        <label for="videoLink" class="form-label">Working Video URL:</label>
+                        <input type="text" class="form-control" id="videoLink" name="videoLink">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Preview</button>
+                </form>
+            </div>
+        </div>
+
+        <%- include('partials/footer') %>
+            <script src="/js/newEquipmentForm.js" type="module"></script>
+
+
+
+</body>
+
+</html>
