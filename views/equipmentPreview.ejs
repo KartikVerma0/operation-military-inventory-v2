@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/commonHead',{title:"Preview"}) %>
+        <link rel="stylesheet" href="/css/equipmentPreview.css">
+</head>
+
+<body>
+    <%- include('partials/commonNavbar') %>
+        <div class="container">
+            <h1 class="preview-heading">Preview:</h1>
+
+            <div class="row sections">
+                <div class="col-md-6 col-lg-4">
+
+
+                    <h2 class="category-heading">
+                        <%= equipment.category.toUpperCase() %> :
+                    </h2>
+                    <% if(equipment.subCategory){ %>
+                        <h2 class="subCategory-heading">
+                            <%= equipment.subCategory.toUpperCase() %> :
+                        </h2>
+                        <% } %>
+
+                            <div class="equipments-main-container-div">
+
+
+
+                                <div class="individual-equipments">
+                                    <h3>
+                                        <%= equipment.name.toUpperCase()%>
+                                    </h3>
+                                    <a href=""><img src="<%= equipment.preview.icon.path%>"
+                                            alt="<%= equipment.name.toUpperCase()%>" /></a>
+                                    <div class="equipment-info">
+                                        <a href=""><img src="<%= equipment.preview.onHover.imgSrc%>"
+                                                alt="<%= equipment.name.toUpperCase()%>" /></a>
+                                        <p>
+                                            <%-equipment.preview.onHover.description %>
+                                        </p>
+                                        <a href="" class="wikipedia-link" title="Know More about the Equipment"><i
+                                                class="fab fa-wikipedia-w"></i></a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                </div>
+            </div>
+            <div class="row sections">
+                <div class="col-md-6 col-lg-4">
+                    <h1 class="primary-heading">
+                        <%= equipment.name.toUpperCase() %>
+                    </h1>
+                    <p>
+                        <%- equipment.description %>
+                    </p>
+                    <a href='<%=
+                                        equipment.fullInfo.learnMoreLink
+                                        %>'>
+                        <button class="btn btn-lg bg-dark text-light mb-3 rounded-pill">
+                            Learn More
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Carousel 1-->
+
+                <div id="carousel1" class="col-md-6 col-lg-8 carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-indicators">
+
+                        <% for( let imgIndex=0; imgIndex < equipment.fullInfo.carouselImages.length; imgIndex++ ) { %>
+
+                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="<%= imgIndex %>" <% if
+                                (imgIndex===0) { %>
+                                class="active"
+                                aria-current="true" <% } %> aria-label="Slide <%= imgIndex + 1 %>">
+                            </button>
+
+                            <% } %>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <% for( let imgIndex=0; imgIndex < equipment.fullInfo.carouselImages.length; imgIndex++ ) { %>
+                            <div class="carousel-item <% if(imgIndex===0) { %>active<% } %>" data-bs-interval="4000">
+                                <img src='<%= equipment.fullInfo.carouselImages[imgIndex].path %>' class="d-block w-100"
+                                    alt="..." />
+                            </div>
+                            <% } %>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel1"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel1"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+
+
+                <div class="section">
+                    <div class="container p-5">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h2 class="secondary-heading">USERS</h2>
+                            </div>
+                        </div>
+                        <div class="row black-background p-5 rounded-border white-box-shadow">
+                            <ul class="column-width">
+                                <% for (let index=0; index < equipment.fullInfo.users.length; index++) { %>
+                                    <li class="text-white text-decoration-none">
+                                        <img src="https://flagcdn.com/24x18/<%= equipment.fullInfo.users[index].split(',')[1].trim()%>.png"
+                                            class="me-2" />
+                                        <%= equipment.fullInfo.users[index].split(',')[0].trim() %>
+                                    </li>
+                                    <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <% if(equipment.fullInfo.gallery.length!=0){ %>
+                    <div class="section">
+                        <div class="container p-5">
+                            <div class="row">
+                                <h2 class="secondary-heading text-black">GALLERY</h2>
+                            </div>
+                            <div class="row">
+                                <div id="carousel2" class="col-12 carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <% for (let index=0; index <equipment.fullInfo.gallery.length; index++) { %>
+                                            <button type="button" data-bs-target="#carousel2"
+                                                data-bs-slide-to="<%= index %>" <% if(index===0){%>
+                                                class="active" aria-current="true" <%}%>
+
+                                                    aria-label="Slide <%= index + 1 %>"></button>
+                                            <% } %>
+
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <% for (let index=0; index <equipment.fullInfo.gallery.length; index++) { %>
+                                            <div class="carousel-item <% if(index===0) { %>active<%}%>"
+                                                data-bs-interval="4000">
+                                                <img src='<%= equipment.fullInfo.gallery[index].path %>'
+                                                    class=" d-block w-100" alt="..." />
+                                            </div>
+                                            <% } %>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel2"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carousel2"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+
+                        <% if (equipment.fullInfo.working.videoLink!=="" ) {%>
+                            <div class="section">
+                                <div class="container p-5">
+                                    <div class="row">
+                                        <h2 class="secondary-heading text-black">WORKING</h2>
+                                    </div>
+                                    <div class="row">
+                                        <div class="iframe-container">
+                                            <iframe class="responsive-iframe"
+                                                src='<%=equipment.fullInfo.working.videoLink%>'
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+            </div>
+
+        </div>
+        <div class="controls">
+            <a href="/equipments/edit/<%= equipment._id %>?view=<%= view%>" type="button" class="btn btn-dark"><i
+                    class="fa-regular fa-pen-to-square"></i>
+                Edit</a>
+            <form action="/equipments/delete/<%= equipment._id%>?_method=DELETE" method="post">
+                <input type="hidden" name="view" value="<%= view%>">
+                <input type="hidden" name="service" value="<%= equipment.service%>">
+                <button type="submit" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Delete
+                    Equipment</button>
+            </form>
+            <form action="/equipments/preview/<%= equipment._id%>" method="post">
+                <input type="hidden" name="view" value="<%= view%>">
+                <!-- in future make value as unsaved, then the request will go to moderator he will approve it and then it will be saved in equipment collection-->
+                <button type="submit" class="btn btn-danger"><i class="fa-solid fa-upload"></i> Submit</button>
+            </form>
+        </div>
+
+
+
+
+        <%- include('partials/footer')%>
+
+</body>
+
+</html>
