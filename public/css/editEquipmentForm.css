@@ -1,0 +1,29 @@
+.custom-max-height {
+    max-height: 30vh; /* Set your desired maximum height */
+    overflow-y: auto; /* Add vertical scroll if content exceeds maximum height */
+}
+
+.fa-circle-xmark {
+    border-radius: 50%;
+    top: -5px;
+    right: -5px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(220, 53, 69, 1);
+}
+
+.fa-circle-xmark:hover {
+    color: rgb(220, 53, 69, 1);
+    background-color: white;
+    width: max-content;
+}
+
+.icon-card-custom {
+    width: 18rem;
+}
+
+.img-card > img {
+    width: 12rem;
+    object-fit: fill;
+    height: 100%;
+}
