@@ -1,0 +1,4 @@
+.custom-max-height {
+    max-height: 30vh; /* Set your desired maximum height */
+    overflow-y: auto; /* Add vertical scroll if content exceeds maximum height */
+}
