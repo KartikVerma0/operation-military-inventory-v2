@@ -105,8 +105,12 @@
     height: fit-content;
 }
 
+.equipment-info > a {
+    width: 100%;
+    display: inline-block;
+}
 .equipment-info img {
-    max-width: 100%;
+    width: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
