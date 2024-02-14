@@ -20,7 +20,7 @@ body {
 .primary-heading {
     font-family: "poppins", sans-serif;
     font-weight: 900;
-    font-size: clamp(4rem, 5vw, 8rem);
+    font-size: clamp(2.5rem, 5vw, 6.5rem);
 }
 
 .primary-heading + p {
@@ -75,4 +75,21 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
+}
+
+.controls {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 7rem;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
 }
