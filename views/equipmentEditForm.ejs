@@ -12,8 +12,8 @@
         <div class="row w-100">
             <div class="col-6 offset-3 py-5">
                 <h1>Edit Equipment:</h1>
-                <form class="my-3" action="/equipments/edit/<%= equipment._id %>?_method=PUT" method="post"
-                    enctype="multipart/form-data">
+                <form class="my-3" action="/equipments/edit/<%= equipment._id %>?view=<%=view%>&_method=PUT"
+                    method="post" enctype="multipart/form-data">
                     <input type="hidden" name="view" value="<%= view %>">
                     <div class="mb-3">
                         <label for="name" class="form-label">Equipment Name: <span class="text-danger">*</span></label>
