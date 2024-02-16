@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Blog = require("../modals/blog");
+const { isLoggedIn } = require("../middleware");
 
 //setup crud for blog route
 router.get("/", async (req, res) => {
@@ -8,11 +9,11 @@ router.get("/", async (req, res) => {
     res.render("blog", { allBlogs });
 });
 
-router.get("/new", (req, res) => {
+router.get("/new", isLoggedIn, (req, res) => {
     res.render("newBlog");
 });
 
-router.post("/", async (req, res) => {
+router.post("/", isLoggedIn, async (req, res) => {
     const { headline, articleURL, thumbnailURL } = req.body;
     const newBlog = new Blog({
         headline,
@@ -28,13 +29,13 @@ router.post("/", async (req, res) => {
     res.redirect("/blog");
 });
 
-router.get("/edit/:id", async (req, res) => {
+router.get("/edit/:id", isLoggedIn, async (req, res) => {
     const { id } = req.params;
     const blog = await Blog.findById(id);
     res.render("editBlog", { blog });
 });
 
-router.put("/edit/:id", async (req, res) => {
+router.put("/edit/:id", isLoggedIn, async (req, res) => {
     const { id } = req.params;
     const { headline, articleURL, thumbnailURL } = req.body;
     const blog = await Blog.findByIdAndUpdate(
