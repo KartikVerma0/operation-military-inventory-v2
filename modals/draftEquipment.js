@@ -41,7 +41,7 @@ const equipmentFullInfoSchema = new Schema(
         users: [
             {
                 type: String,
-                require: true,
+                required: true,
             },
             // Flag link and country name go here
         ],
@@ -84,21 +84,25 @@ const imageSchema = new mongoose.Schema(
 const equipmentSchema = new mongoose.Schema({
     service: {
         type: String,
-        require: true,
+        required: true,
         enum: ["IA", "IAF", "IN"],
     },
-    category: { type: String, require: true },
+    category: { type: String, required: true },
     subCategory: String,
-    name: { type: String, require: true },
-    description: { type: String, require: true },
+    name: { type: String, required: true },
+    description: { type: String, required: true },
     images: [{ type: imageSchema }],
     preview: {
         type: equipmentPreviewSchema,
-        require: true,
+        required: true,
     },
     fullInfo: {
         type: equipmentFullInfoSchema,
-        require: true,
+        required: true,
+    },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
     },
     // Add createdAt field to track creation time
     createdAt: {
