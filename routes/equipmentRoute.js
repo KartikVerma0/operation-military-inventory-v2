@@ -4,6 +4,8 @@ const cloudinary = require("cloudinary").v2;
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const multer = require("multer");
 
+const { isLoggedIn, hasRights } = require("../middleware");
+
 // Configure cloudinary instance with your cloudinary credentials
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -48,10 +50,11 @@ const fulldata = require("../public/json/data.json");
 
 router
     .route("/new")
-    .get((req, res) => {
+    .get(isLoggedIn, (req, res) => {
         res.render("newEquipmentForm");
     })
     .post(
+        isLoggedIn,
         (req, res, next) => {
             upload.fields([
                 { name: "equipmentIcon", maxCount: 1 },
@@ -107,6 +110,7 @@ router
                         videoLink,
                     },
                 },
+                user: req.user,
             }).save();
 
             res.redirect(`/equipments/preview/${newEquipment._id}?view=draft`);
@@ -115,7 +119,7 @@ router
 
 router
     .route("/preview/:id")
-    .get(async (req, res) => {
+    .get(isLoggedIn, hasRights, async (req, res) => {
         const { id } = req.params;
         const { view } = req.query;
         let equipment = {};
@@ -128,7 +132,7 @@ router
 
         res.render("equipmentPreview", { equipment, view });
     })
-    .post(async (req, res) => {
+    .post(isLoggedIn, hasRights, async (req, res) => {
         const { id } = req.params;
         const { view } = req.body;
         let {
@@ -154,6 +158,7 @@ router
             videoLink = equipment.fullInfo.working.videoLink;
             learnMoreLink = equipment.fullInfo.learnMoreLink;
             users = equipment.fullInfo.users;
+            user = equipment.user;
 
             await new Equipment({
                 service,
@@ -171,6 +176,7 @@ router
                         videoLink,
                     },
                 },
+                user,
             }).save();
 
             await equipment.deleteOne();
@@ -193,7 +199,7 @@ router
 
 router
     .route("/edit/:id")
-    .get(async (req, res) => {
+    .get(isLoggedIn, hasRights, async (req, res) => {
         const { id } = req.params;
         const { view } = req.query;
         let equipment = {};
@@ -206,6 +212,8 @@ router
         res.render("equipmentEditForm", { equipment, view });
     })
     .put(
+        isLoggedIn,
+        hasRights,
         upload.fields([
             { name: "equipmentIcon", maxCount: 1 },
             { name: "images", maxCount: 10 },
@@ -308,6 +316,7 @@ router.get("/IN", (req, res) => {
 router.get("/:id", async (req, res) => {
     const { id } = req.params;
     const equipment = await Equipment.findById(id);
+    await equipment.populate("user");
     res.render("equipment", equipment);
 });
 
@@ -318,7 +327,7 @@ router.get("/:service/category/:category", async (req, res) => {
 });
 
 // Handle image deletion
-router.delete("/delete-icon/:publicId", async (req, res) => {
+router.delete("/delete-icon/:publicId", isLoggedIn, async (req, res) => {
     const { publicId } = req.params;
     const { view } = req.query;
     cloudinary.api.delete_resources(
@@ -347,7 +356,7 @@ router.delete("/delete-icon/:publicId", async (req, res) => {
     res.send("Image deleted");
 });
 
-router.delete("/delete-image/:publicId", async (req, res) => {
+router.delete("/delete-image/:publicId", isLoggedIn, async (req, res) => {
     const { publicId } = req.params;
     const { view } = req.query;
 
@@ -382,7 +391,7 @@ router.delete("/delete-image/:publicId", async (req, res) => {
     res.status(200);
 });
 
-router.delete("/delete/:id", async (req, res) => {
+router.delete("/delete/:id", isLoggedIn, hasRights, async (req, res) => {
     const { id } = req.params;
     const { view, service } = req.body;
 
