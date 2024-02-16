@@ -15,15 +15,18 @@
                     <p>OP MILITARY INVENTORY</p>
                 </a>
                 <div class="navbar-nav">
-                    <a href="/" class="home">HOME</a>
-                    <a href="/feedback" class="feedback">FEEDBACK</a>
-                    <a href="/contact" class="contact">CONTACT</a>
+                    <a href="/" class="home nav-link">HOME</a>
+                    <a href="/feedback" class="feedback nav-link">FEEDBACK</a>
+                    <a href="/contact" class="contact nav-link">CONTACT</a>
+                    <% if(!currentUser) {%>
+                        <a href="/signin" class="auth-btn">SIGN IN</a>
+                        <% } else{%>
+                            <form action="/logout" method="post">
+                                <button class="auth-btn">LOG OUT</button>
+                            </form>
+                            <% } %>
                 </div>
-                <div class="sign-in-div">
-                    <button onclick="window.location.href='/signin'">
-                        SIGN IN
-                    </button>
-                </div>
+
             </div>
         </nav>
         <div class="banner">
@@ -39,17 +42,19 @@
     </header>
     <!-- end of header -->
     <!-- design -->
-    <div class="design">
+    <div class="container">
         <div class="title">
             <h2>RECENT UPDATES</h2>
         </div>
 
         <% for(let i=0;i<allBlogs.length;i++){ %>
-            <div class="design-item mb-4">
-                <div class="design-img">
-                    <img src="<%= allBlogs[i].thumbnailURL %>" alt="" />
+            <div class="design-item mb-4 row pb-2">
+                <div class="col-5">
+                    <a href="<%=allBlogs[i].articleURL %>" target="_blank" class="design-img">
+                        <img src="<%= allBlogs[i].thumbnailURL %>" alt="" />
+                    </a>
                 </div>
-                <div class="headline">
+                <div class="headline col-7">
                     <h2>
                         <a href="<%=allBlogs[i].articleURL %>" target="_blank">
                             <%= allBlogs[i].headline %>
