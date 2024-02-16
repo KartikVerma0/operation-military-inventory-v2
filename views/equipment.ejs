@@ -140,26 +140,30 @@
           </div>
           <% } %>
 
-            <div class="controls">
-              <a href="/equipments/edit/<%= _id %>?view=saved" type="button" class="btn btn-dark"><i
-                  class="fa-regular fa-pen-to-square"></i>
-                Edit</a>
+            <%if(currentUser && currentUser._id.toString()==user._id.toString()||currentUser.role=="moderator"
+              ||currentUser.role=="administrator" ){%>
 
-              <form action="/equipments/delete/<%= _id%>?_method=DELETE" method="post">
-                <input type="hidden" name="view" value="saved">
-                <input type="hidden" name="service" value="<%= service%>">
-                <button type="submit" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Delete
-                  Equipment</button>
-              </form>
+              <div class=" controls">
+                <a href="/equipments/edit/<%= _id %>?view=saved" type="button" class="btn btn-dark"><i
+                    class="fa-regular fa-pen-to-square"></i>
+                  Edit</a>
 
-            </div>
+                <form action="/equipments/delete/<%= _id%>?_method=DELETE" method="post">
+                  <input type="hidden" name="view" value="saved">
+                  <input type="hidden" name="service" value="<%= service%>">
+                  <button type="submit" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Delete
+                    Equipment</button>
+                </form>
 
-            <!-- footer starts -->
-            <%- include('partials/footer')%>
-              <!-- footer ends -->
-              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-                crossorigin="anonymous"></script>
+              </div>
+              <%}%>
+
+                <!-- footer starts -->
+                <%- include('partials/footer')%>
+                  <!-- footer ends -->
+                  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                    crossorigin="anonymous"></script>
 </body>
 
 </html>

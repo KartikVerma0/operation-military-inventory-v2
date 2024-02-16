@@ -190,27 +190,31 @@
             </div>
 
         </div>
-        <div class="controls">
-            <a href="/equipments/edit/<%= equipment._id %>?view=<%= view%>" type="button" class="btn btn-dark"><i
-                    class="fa-regular fa-pen-to-square"></i>
-                Edit</a>
-            <form action="/equipments/delete/<%= equipment._id%>?_method=DELETE" method="post">
-                <input type="hidden" name="view" value="<%= view%>">
-                <input type="hidden" name="service" value="<%= equipment.service%>">
-                <button type="submit" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Delete
-                    Equipment</button>
-            </form>
-            <form action="/equipments/preview/<%= equipment._id%>" method="post">
-                <input type="hidden" name="view" value="<%= view%>">
-                <!-- in future make value as unsaved, then the request will go to moderator he will approve it and then it will be saved in equipment collection-->
-                <button type="submit" class="btn btn-danger"><i class="fa-solid fa-upload"></i> Submit</button>
-            </form>
-        </div>
+
+        <%if(currentUser && currentUser._id.toString()==equipment.user._id.toString()||currentUser.role=="moderator"
+            ||currentUser.role=="administrator" ){%>
+            <div class="controls">
+                <a href="/equipments/edit/<%= equipment._id %>?view=<%= view%>" type="button" class="btn btn-dark"><i
+                        class="fa-regular fa-pen-to-square"></i>
+                    Edit</a>
+                <form action="/equipments/delete/<%= equipment._id%>?_method=DELETE" method="post">
+                    <input type="hidden" name="view" value="<%= view%>">
+                    <input type="hidden" name="service" value="<%= equipment.service%>">
+                    <button type="submit" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Delete
+                        Equipment</button>
+                </form>
+                <form action="/equipments/preview/<%= equipment._id%>?view=<%=view%>" method="post">
+                    <input type="hidden" name="view" value="<%= view%>">
+                    <!-- in future make value as unsaved, then the request will go to moderator he will approve it and then it will be saved in equipment collection-->
+                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-upload"></i> Submit</button>
+                </form>
+            </div>
+            <%}%>
 
 
 
 
-        <%- include('partials/footer')%>
+                <%- include('partials/footer')%>
 
 </body>
 
