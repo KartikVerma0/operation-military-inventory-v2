@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Blog = require("../modals/blog");
+const Blog = require("../models/blog");
 const { isLoggedIn } = require("../middleware");
 
 //setup crud for blog route

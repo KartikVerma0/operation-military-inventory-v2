@@ -39,8 +39,8 @@ const upload = multer({
     },
 });
 
-const { Equipment } = require("../modals/equipment");
-const DraftEquipment = require("../modals/draftEquipment");
+const { Equipment } = require("../models/equipment");
+const DraftEquipment = require("../models/draftEquipment");
 const {
     serviceCategories,
     subCategoriesArray,

@@ -2,13 +2,13 @@ const express = require("express");
 const router = express.Router();
 const passport = require("passport");
 
-const User = require("../modals/user");
+const User = require("../models/user");
 
 const { storeReturnTo } = require("../middleware");
 
 //setup authentication
 router.get("/signin", (req, res) => {
-    res.render("sign_in_page", { title: "Sign In" });
+    res.render("sign_in_page");
 });
 
 router.post("/signup", storeReturnTo, async (req, res, next) => {
