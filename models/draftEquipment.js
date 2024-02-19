@@ -26,6 +26,12 @@ equipmentPreviewSchema.virtual("fullInfoLink").get(function () {
     // }/${this.parent().category}/${this.parent().name}`;
     return "/equipments/" + this.parent()._id;
 });
+equipmentPreviewSchema.virtual("dashboardFullInfoLink").get(function () {
+    // return `/equipments/${
+    //     this.parent().service
+    // }/${this.parent().category}/${this.parent().name}`;
+    return "/equipments/preview/" + this.parent()._id + "?view=draft";
+});
 equipmentPreviewSchema.virtual("onHover.imgSrc").get(function () {
     return this.parent().images[0].path;
 });
