@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/commonHead',{title:"dashboard"}) %>
+</head>
+
+<body>
+    <%- include('partials/commonNavbar') %>
+
+        <main class="container">
+            <div class="page-heading">
+                <h1>YOUR CONTRIBUTIONS:</h1>
+            </div>
+            <div class="saved-equipments equipment-category-box mb-3">
+                <h2>SAVED EQUIPMENTS:</h2>
+                <div class="equipments-main-container-div">
+                    <% let numOfEquip=0 %>
+                        <% for( let equipment in savedEquipments ) { %>
+                            <% if(numOfEquip++==4){ %>
+                                <% break %>
+                                    <%}%>
+                                        <%if(savedEquipments[equipment]){%>
+                                            <div class="individual-equipments">
+                                                <h3>
+                                                    <%= savedEquipments[equipment].name.toUpperCase()%>
+                                                </h3>
+                                                <a href='<%= savedEquipments[equipment].preview.fullInfoLink%>'><img
+                                                        src='<%= savedEquipments[equipment].preview.icon.path%>'
+                                                        alt="<%=
+                                                                                  savedEquipments[equipment].name.toUpperCase()%>" /></a>
+
+                                                <div class="equipment-info">
+                                                    <a href='<%= savedEquipments[equipment].preview.fullInfoLink%>'><img
+                                                            src='<%= savedEquipments[equipment].preview.onHover.imgSrc%>'
+                                                            alt="<%= savedEquipments[equipment].name.toUpperCase()%>" /></a>
+                                                    <p>
+                                                        <%- savedEquipments[equipment].preview.onHover.description%>
+                                                    </p>
+                                                    <a href='<%= savedEquipments[equipment].preview.fullInfoLink%>'
+                                                        class="wikipedia-link" title="Know More about the Equipment"><i
+                                                            class="fa-brands fa-wikipedia-w"></i></a>
+                                                </div>
+                                            </div>
+                                            <%}%>
+                                                <% } %>
+                </div>
+            </div>
+            <div class="draft-equipments equipment-category-box mb-3">
+                <h2>DRAFT EQUIPMENTS:</h2>
+                <div class="equipments-main-container-div">
+                    <% let numOfEquip2=0 %>
+                        <% for( let equipment in draftEquipments ) { %>
+                            <% if(numOfEquip2++==4){ %>
+                                <% break %>
+                                    <%}%>
+                                        <%if(draftEquipments[equipment]){%>
+                                            <div class="individual-equipments">
+                                                <h3>
+                                                    <%= draftEquipments[equipment].name.toUpperCase()%>
+                                                </h3>
+                                                <a
+                                                    href='<%= draftEquipments[equipment].preview.dashboardFullInfoLink%>'><img
+                                                        src='<%= draftEquipments[equipment].preview.icon.path%>'
+                                                        alt="<%=
+                                                                                  draftEquipments[equipment].name.toUpperCase()%>" /></a>
+
+                                                <div class="equipment-info">
+                                                    <a
+                                                        href='<%= draftEquipments[equipment].preview.dashboardFullInfoLink%>'><img
+                                                            src='<%= draftEquipments[equipment].preview.onHover.imgSrc%>'
+                                                            alt="<%= draftEquipments[equipment].name.toUpperCase()%>" /></a>
+                                                    <p>
+                                                        <%- draftEquipments[equipment].preview.onHover.description%>
+                                                    </p>
+                                                    <a href='<%= draftEquipments[equipment].preview.dashboardFullInfoLink%>'
+                                                        class="wikipedia-link" title="Know More about the Equipment"><i
+                                                            class="fa-brands fa-wikipedia-w"></i></a>
+                                                </div>
+                                            </div>
+                                            <%}%>
+                                                <% } %>
+                </div>
+            </div>
+        </main>
+
+        <%- include("partials/footer") %>
+</body>
+
+</html>
