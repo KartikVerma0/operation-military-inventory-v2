@@ -9,6 +9,7 @@ const port = 3000;
 const equipmentRouter = require("./routes/equipmentRoute");
 const pageRouter = require("./routes/pagesRoute");
 const authRouter = require("./routes/authRoute");
+const dashboardRouter = require("./routes/dashboardRoute");
 const mongoose = require("mongoose");
 const flash = require("connect-flash");
 const methodOverride = require("method-override");
@@ -16,7 +17,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
-const User = require("./modals/user");
+const User = require("./models/user");
 
 mongoose
     .connect(process.env.MONGO_URI)
@@ -60,6 +61,7 @@ app.use((req, res, next) => {
 
 app.use("/", pageRouter);
 app.use("/", authRouter);
+app.use("/", dashboardRouter);
 app.use("/equipments", equipmentRouter);
 
 app.all("*", (req, res) => {
