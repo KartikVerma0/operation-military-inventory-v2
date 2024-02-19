@@ -78,6 +78,7 @@ body {
 }
 
 .controls {
+    pointer-events: none;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -92,4 +93,8 @@ body {
     align-items: center;
     gap: 1rem;
     z-index: 2;
+}
+
+.controls > * {
+    pointer-events: auto;
 }

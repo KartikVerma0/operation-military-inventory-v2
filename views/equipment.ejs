@@ -140,15 +140,15 @@
           </div>
           <% } %>
 
-            <%if(currentUser && currentUser._id.toString()==user._id.toString()||currentUser.role=="moderator"
-              ||currentUser.role=="administrator" ){%>
+            <%if(currentUser && (currentUser._id.toString()==user._id.toString() || currentUser.role=="moderator" ||
+              currentUser.role=="administrator" )){%>
 
               <div class=" controls">
                 <a href="/equipments/edit/<%= _id %>?view=saved" type="button" class="btn btn-dark"><i
                     class="fa-regular fa-pen-to-square"></i>
                   Edit</a>
 
-                <form action="/equipments/delete/<%= _id%>?_method=DELETE" method="post">
+                <form action="/equipments/delete/<%= _id%>?view=saved&_method=DELETE" method="post">
                   <input type="hidden" name="view" value="saved">
                   <input type="hidden" name="service" value="<%= service%>">
                   <button type="submit" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Delete
