@@ -97,6 +97,12 @@ const equipmentSchema = new mongoose.Schema({
         type: equipmentFullInfoSchema,
         required: true,
     },
+    decomissionDetails: {
+        hasDecomissioned: {
+            type: Boolean,
+            required: true,
+        },
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",
