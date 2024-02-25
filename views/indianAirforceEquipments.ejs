@@ -8,7 +8,6 @@
 <body>
     <!-- Navbar -->
     <%- include('partials/commonNavbar') %>
-
         <div class="page-heading">
             <h1>
                 <%= title.toUpperCase()%>
@@ -30,36 +29,22 @@
                             <div class="equipments-main-container-div">
                                 <% let numOfEquip=0 %>
                                     <% for( let equipment in categoryEquipment ) { %>
-                                        <% if(numOfEquip++==4){ %>
-                                            <% break %>
+                                        <%if(categoryEquipment[equipment].decomissionDetails.hasDecomissioned){%>
+                                            <%continue%>
                                                 <%}%>
-                                                    <%if(categoryEquipment[equipment]){%>
-                                                        <div class="individual-equipments">
-                                                            <h3>
-                                                                <%= categoryEquipment[equipment].name.toUpperCase()%>
-                                                            </h3>
-                                                            <a
-                                                                href='<%= categoryEquipment[equipment].preview.fullInfoLink%>'><img
-                                                                    src='<%= categoryEquipment[equipment].preview.iconSrc%>'
-                                                                    alt="<%=
-                                                  categoryEquipment[equipment].name.toUpperCase()%>" /></a>
-                                                            <div class="equipment-info">
-                                                                <a
-                                                                    href='<%= categoryEquipment[equipment].preview.fullInfoLink%>'><img
-                                                                        src='<%= categoryEquipment[equipment].preview.onHover.imgSrc%>'
-                                                                        alt="<%= categoryEquipment[equipment].name.toUpperCase()%>" /></a>
-                                                                <p>
-                                                                    <%-
-                                                                        categoryEquipment[equipment].preview.onHover.description%>
-                                                                </p>
-                                                                <a href='<%= categoryEquipment[equipment].preview.fullInfoLink%>'
-                                                                    class="wikipedia-link"
-                                                                    title="Know More about the Equipment"><i
-                                                                        class="fa-brands fa-wikipedia-w"></i></a>
-                                                            </div>
-                                                        </div>
-                                                        <%}%>
-                                                            <% } %>
+                                                    <% if(numOfEquip++==4){ %>
+                                                        <% break %>
+                                                            <%}%>
+                                                                <%if(categoryEquipment[equipment]){%>
+                                                                    <%- include("partials/equipmentCard",{equipmentDecomissioned:categoryEquipment[equipment].decomissionDetails.hasDecomissioned,
+                                                                        equipmentName:categoryEquipment[equipment].name.toUpperCase(),
+                                                                        equipmentFullInfoLink:categoryEquipment[equipment].preview.fullInfoLink,
+                                                                        equipmentIconPath:categoryEquipment[equipment].preview.icon.path,
+                                                                        equipmentOnHoverImg:categoryEquipment[equipment].preview.onHover.imgSrc,
+                                                                        equipmentOnHoverDescription:categoryEquipment[equipment].preview.onHover.description})%>
+                                                                        <%}%>
+                                                                            <%}%>
+
                             </div>
                             <% if(categoryEquipment.length>4){ %>
                                 <div class="see-more-btn">
@@ -70,7 +55,6 @@
                     </div>
                 </div>
                 <% } %>
-
                     <!-- <div class="sections">
             <div class="page-heading">
                 <h1>INDIAN AIRFORCE EQUIPMENTS</h1>
