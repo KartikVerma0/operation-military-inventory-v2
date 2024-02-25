@@ -89,6 +89,7 @@ router
                 users,
                 learnMoreLink,
                 videoLink,
+                hasDecomissioned,
             } = req.body;
 
             const { equipmentIcon, images } = req.files;
@@ -109,6 +110,9 @@ router
                     working: {
                         videoLink,
                     },
+                },
+                decomissionDetails: {
+                    hasDecomissioned,
                 },
                 user: req.user,
             }).save();
@@ -230,6 +234,7 @@ router
                 users,
                 learnMoreLink,
                 videoLink,
+                hasDecomissioned,
             } = req.body;
 
             const { equipmentIcon, images } = req.files;
@@ -245,6 +250,8 @@ router
                 equipment.fullInfo.learnMoreLink = learnMoreLink;
                 equipment.fullInfo.users = users;
                 equipment.fullInfo.working.videoLink = videoLink;
+                equipment.decomissionDetails.hasDecomissioned =
+                    hasDecomissioned;
                 if (equipmentIcon) {
                     equipment.preview.icon = equipmentIcon[0];
                 }
@@ -263,6 +270,8 @@ router
                 equipment.fullInfo.learnMoreLink = learnMoreLink;
                 equipment.fullInfo.users = users;
                 equipment.fullInfo.working.videoLink = videoLink;
+                equipment.decomissionDetails.hasDecomissioned =
+                    hasDecomissioned;
                 if (equipmentIcon) {
                     equipment.preview.icon = equipmentIcon[0];
                 }
