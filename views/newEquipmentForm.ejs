@@ -82,6 +82,13 @@
                         <label for="videoLink" class="form-label">Working Video URL:</label>
                         <input type="text" class="form-control" id="videoLink" name="videoLink">
                     </div>
+                    <div class="mb-3">
+                        <p class="mb-1">Is this equipment <span class="fw-bold">decomissioned?</span></p>
+                        <input type="radio" name="hasDecomissioned" id="decomissioned" class="me-1" value="true"><label
+                            for="decomissioned" class="me-2">Yes</label>
+                        <input type="radio" name="hasDecomissioned" id="notDecomissioned" class="me-1"
+                            value="false"><label for="notDecomissioned" class="me-2">No</label>
+                    </div>
                     <button type="submit" class="btn btn-primary">Create Preview</button>
                 </form>
             </div>
