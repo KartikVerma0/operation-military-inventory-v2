@@ -159,6 +159,25 @@
     background-color: #ececec;
 }
 
+.individual-equipment-link {
+    min-width: max(20%, 240px);
+    text-decoration: none;
+}
+
+.individual-equipment-placeholder {
+    width: 100%;
+    height: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    border: 2px dashed #939393;
+    color: #575757;
+    background-color: #ececec;
+    text-decoration: none;
+}
+
 .sections:nth-child(2n) .individual-equipments {
     background-color: #ececec;
 }
