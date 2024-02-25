@@ -1,0 +1,19 @@
+<div class="individual-equipments">
+    <%if(equipmentDecomissioned){%><span class="badge rounded-pill text-bg-danger">Decomissioned</span>
+        <%}%>
+            <h3>
+                <%= equipmentName%>
+            </h3>
+            <a href='<%= equipmentFullInfoLink%>'><img src='<%= equipmentIconPath%>' alt="<%=
+                                          equipmentName%>" /></a>
+
+            <div class="equipment-info">
+                <a href='<%= equipmentFullInfoLink%>'><img src='<%= equipmentOnHoverImg%>'
+                        alt="<%= equipmentName%>" /></a>
+                <p>
+                    <%- equipmentOnHoverDescription%>
+                </p>
+                <a href='<%= equipmentFullInfoLink%>' class="wikipedia-link" title="Know More about the Equipment"><i
+                        class="fa-brands fa-wikipedia-w"></i></a>
+            </div>
+</div>
