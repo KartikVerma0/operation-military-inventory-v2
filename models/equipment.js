@@ -18,11 +18,16 @@ const equipmentPreviewSchema = new Schema(
 );
 
 equipmentPreviewSchema.virtual("fullInfoLink").get(function () {
-    // return `/equipments/${
-    //     this.parent().service
-    // }/${this.parent().category}/${this.parent().name}`;
-    return "/equipments/" + this.parent()._id;
+    // Check if the equipment is an instance of UnsavedEquipment
+    if (this.parent().constructor.modelName === 'UnsavedEquipment') {
+        // If the equipment is unsaved, return the unsaved URL
+        return "/equipments/unsaved/" + this.parent()._id;
+    } else {
+        // If the equipment is saved, return the normal URL
+        return "/equipments/" + this.parent()._id;
+    }
 });
+
 equipmentPreviewSchema.virtual("onHover.imgSrc").get(function () {
     return this.parent().images[0].path;
 });

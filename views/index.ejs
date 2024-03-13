@@ -40,6 +40,7 @@
             <% if(!currentUser) {%>
                 <a href="/signin" class="auth-btn">SIGN IN</a>
                 <% } else{%>
+                    <a href="/dashboard" class="nav-link">DASHBOARD</a>
                     <form action="/logout" method="post">
                         <button class="auth-btn">LOG OUT</button>
                     </form>

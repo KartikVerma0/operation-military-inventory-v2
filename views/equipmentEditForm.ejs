@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include('partials/commonHead',{title:"Add New Equipment"}) %>
-        <link rel="stylesheet" href="/css/editEquipmentForm.css">
+    <%- include('partials/commonHead',{title:"Edit-Equipment"}) %>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
@@ -50,8 +49,11 @@
                         <label for="subcategory" class="form-label">Sub Category: <span
                                 class="text-danger">*</span></label>
                         <select class="form-select" aria-label="Select the category it belongs" name="subCategory"
-                            id="subcategory" disabled>
-
+                            id="subcategory" <% if(equipment.service!=='IN' ) {%>
+                            disabled
+                            <%}%>
+                                >
+                                <!-- options are added dynamically by javascript -->
                         </select>
                     </div>
                     <div class="mb-3">
@@ -147,6 +149,7 @@
         <%- include('partials/footer') %>
             <script>
                 let category = "<%=equipment.category %>";
+                let subCategory = "<%= equipment.subCategory%>";
                 let textAreaDescription = `<%- equipment.description %>`;
                 let countries = "<%- equipment.fullInfo.users %>";
 

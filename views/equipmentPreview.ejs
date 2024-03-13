@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include('partials/commonHead',{title:"Preview"}) %>
-        <link rel="stylesheet" href="/css/equipmentPreview.css">
+    <%- include('partials/commonHead',{title:"Equipment-Preview"}) %>
 </head>
 
 <body>
@@ -197,7 +196,7 @@
                 <a href="/equipments/edit/<%= equipment._id %>?view=<%= view%>" type="button" class="btn btn-dark"><i
                         class="fa-regular fa-pen-to-square"></i>
                     Edit</a>
-                <form action="/equipments/delete/<%= equipment._id%>?_method=DELETE" method="post">
+                <form action="/equipments/delete/<%= equipment._id%>?view=<%=view%>&_method=DELETE" method="post">
                     <input type="hidden" name="view" value="<%= view%>">
                     <input type="hidden" name="service" value="<%= equipment.service%>">
                     <button type="submit" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Delete

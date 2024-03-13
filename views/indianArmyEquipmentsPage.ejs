@@ -8,6 +8,9 @@
 <body>
   <!-- Navbar -->
   <%- include('partials/commonNavbar') %>
+    <div class="mt-4">
+      <%- include('partials/flash') %>
+    </div>
     <div class="page-heading">
       <h1>
         <%= title.toUpperCase()%>
@@ -48,7 +51,8 @@
               </div>
               <% if(categoryEquipment.length>4){ %>
                 <div class="see-more-btn">
-                  <a href="/equipments/<%= service %>/category/<%= categories[categoryIndex]%>">SEE MORE</a>
+                  <a href="/equipments/<%= service %>/category/<%= categories[categoryIndex]%>">SEE
+                    MORE</a>
                 </div>
                 <%}%>
           </div>

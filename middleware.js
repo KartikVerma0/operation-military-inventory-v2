@@ -12,7 +12,7 @@ function storeReturnTo(req, res, next) {
     next();
 }
 
-const { Equipment } = require("./models/equipment");
+const { Equipment, UnsavedEquipment } = require("./models/equipment");
 const DraftEquipment = require("./models/draftEquipment");
 
 async function hasRights(req, res, next) {
@@ -21,9 +21,10 @@ async function hasRights(req, res, next) {
     let equipment = {};
     if (view == "draft") {
         equipment = await DraftEquipment.findById(id);
-    }
-    if (view == "saved") {
+    } else if (view == "saved") {
         equipment = await Equipment.findById(id);
+    } else if (view == "unsaved") {
+        equipment = await UnsavedEquipment.findById(id);
     }
     if (
         equipment.user._id.toString() == req.user._id.toString() ||
