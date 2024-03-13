@@ -31,10 +31,28 @@ function createOptions() {
     }
 }
 
+function createSubCatOptions() {
+    if (service == "IN") {
+        const subCategories = subCategoriesArray[category];
+        subCategorySelect.innerHTML = "";
+        for (let i = 0; i < subCategories.length; i++) {
+            const option = document.createElement("option");
+            option.text = subCategories[i];
+            option.value = subCategories[i];
+            if (subCategories[i] == "Select the Category:") {
+                option.classList.add("bg-dark-subtle");
+            }
+            subCategorySelect.add(option);
+        }
+    } else {
+        subCategorySelect.innerHTML = "";
+    }
+}
+
 window.addEventListener("load", function () {
     service = serviceSelect.value;
-
     createOptions();
+    createSubCatOptions();
 });
 
 // Event listener for service select change
@@ -133,6 +151,14 @@ window.addEventListener("load", () => {
         if (categorySelect.options[i].value === category) {
             // If it matches, set the 'selected' attribute for this option
             categorySelect.options[i].setAttribute("selected", "selected");
+        }
+    }
+
+    for (let i = 0; i < subCategorySelect.options.length; i++) {
+        // Check if the value of the current option matches the 'category variable
+        if (subCategorySelect.options[i].value === subCategory) {
+            // If it matches, set the 'selected' attribute for this option
+            subCategorySelect.options[i].setAttribute("selected", "selected");
         }
     }
 
