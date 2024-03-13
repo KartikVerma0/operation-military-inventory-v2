@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Blog = require("../models/blog");
-const { isLoggedIn } = require("../middleware");
+const { isLoggedIn } = require("../middleware/middleware");
 
 const axios = require('axios');
 

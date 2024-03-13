@@ -4,7 +4,7 @@ const cloudinary = require("cloudinary").v2;
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const multer = require("multer");
 
-const { isLoggedIn } = require("../middleware");
+const { isLoggedIn } = require("../middleware/middleware");
 
 // Configure cloudinary instance with your cloudinary credentials
 cloudinary.config({

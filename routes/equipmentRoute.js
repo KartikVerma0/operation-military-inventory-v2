@@ -6,7 +6,7 @@ const equipmentEditRoute = require("./equipmentEditRoute");
 const newEquipmentRoute = require("./newEquipmentRoute");
 const equipmentPreviewRoute = require("./equipmentPreviewRoute");
 
-const { isLoggedIn, hasRights } = require("../middleware");
+const { isLoggedIn, hasRights } = require("../middleware/middleware");
 
 const { Equipment, UnsavedEquipment } = require("../models/equipment");
 const DraftEquipment = require("../models/draftEquipment");

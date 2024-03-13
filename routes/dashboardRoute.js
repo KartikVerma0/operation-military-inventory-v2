@@ -4,7 +4,7 @@ const router = express.Router();
 const { Equipment, UnsavedEquipment } = require("../models/equipment");
 const DraftEquipment = require("../models/draftEquipment");
 
-const { isLoggedIn } = require("../middleware");
+const { isLoggedIn } = require("../middleware/middleware");
 
 router.get("/dashboard", isLoggedIn, async (req, res) => {
     const id = res.locals.currentUser._id;

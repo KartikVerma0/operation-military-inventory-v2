@@ -4,7 +4,7 @@ const passport = require("passport");
 
 const User = require("../models/user");
 
-const { storeReturnTo } = require("../middleware");
+const { storeReturnTo } = require("../middleware/middleware");
 
 //setup authentication
 router.get("/signin", (req, res) => {

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const { isLoggedIn, hasRights } = require("../middleware");
+const { isLoggedIn, hasRights } = require("../middleware/middleware");
 
 const { Equipment, UnsavedEquipment } = require("../models/equipment");
 const DraftEquipment = require("../models/draftEquipment");
