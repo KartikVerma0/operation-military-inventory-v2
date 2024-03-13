@@ -3,24 +3,21 @@
     "version": "1.0.0",
     "description": "This Project/Website was made with the aim to provide Information about all the Equipment which the Indian Armed Forces hold. For Suggestions mail me at katik2129.be21@chitkara.edu.in  . <br>\r Click the link to visit the hoisted page : https://kartikverma0.github.io/operation-military-inventory/",
     "main": "index.js",
-    "scripts": {
-        "test": "nodemon index.js",
-        "start": "open http://localhost:3000 && nodemon index.js"
-    },
+    "scripts": {},
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "axios": "^1.6.7",
-        "cloudinary": "^1.41.3",
+        "cloudinary": "^2.0.3",
         "connect-flash": "^0.1.1",
         "connect-mongo": "^5.1.0",
-        "dotenv": "^16.4.1",
+        "dotenv": "^16.4.5",
         "ejs": "^3.1.9",
-        "express": "^4.18.2",
+        "express": "^4.18.3",
         "express-session": "^1.18.0",
         "method-override": "^3.0.0",
-        "mongoose": "^8.2.0",
+        "mongoose": "^8.2.1",
         "multer": "^1.4.5-lts.1",
         "multer-cloudinary": "^1.1.0",
         "multer-storage-cloudinary": "^4.0.0",
@@ -29,6 +26,6 @@
         "passport-local-mongoose": "^8.0.0"
     },
     "devDependencies": {
-        "nodemon": "^3.0.1"
+        "nodemon": "^3.1.0"
     }
 }
