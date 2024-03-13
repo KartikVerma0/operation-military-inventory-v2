@@ -9,20 +9,25 @@
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -36,10 +41,12 @@
     .equipment-category-box {
         align-items: center;
     }
+
     .equipments-main-container-div {
         flex-direction: column;
         align-items: center;
     }
+
     .equipment-info {
         width: 240px;
     }
@@ -53,6 +60,7 @@
     .equipment-category-box {
         align-items: flex-start;
     }
+
     .equipment-info {
         width: 400px;
     }
@@ -94,7 +102,7 @@
     text-decoration: underline;
 }
 
-.equipment-category-box > h2 {
+.equipment-category-box>h2 {
     padding: 0.5rem;
     font-family: "poppins", sans-serif;
     font-weight: 700;
@@ -117,6 +125,16 @@
     font-weight: 900 !important;
     color: #575757;
     font-size: 2rem !important;
+    text-transform: uppercase;
+    /* text-align: center; */
+}
+
+.subCategory-heading {
+    padding: 0 !important;
+    font-family: "poppins", sans-serif;
+    font-weight: 800 !important;
+    color: #707070;
+    font-size: 1.75rem !important;
     text-transform: uppercase;
     /* text-align: center; */
 }
@@ -171,7 +189,7 @@
     text-transform: uppercase;
 }
 
-.individual-equipments > a img {
+.individual-equipments>a img {
     flex-shrink: 1;
     max-width: 12rem;
     border-radius: 1rem;
@@ -189,10 +207,11 @@
     height: fit-content;
 }
 
-.equipment-info > a {
+.equipment-info>a {
     width: 100%;
     display: inline-block;
 }
+
 .equipment-info img {
     width: 100%;
     border-top-left-radius: 5px;
@@ -259,6 +278,7 @@
 .hidden-visibility {
     visibility: hidden;
 }
+
 /* main end */
 
 @media (max-width: 600px) {
@@ -277,7 +297,7 @@ body {
     font-size: clamp(2.5rem, 4.1vw, 6.5rem);
 }
 
-.primary-heading + p {
+.primary-heading+p {
     font-family: "poppins", sans-serif;
     font-weight: 400;
     color: #4a4a4a;
@@ -317,7 +337,8 @@ body {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
 /* Then style the iframe to fit in the container div with full height and width */
@@ -336,11 +357,9 @@ body {
     bottom: 0;
     width: 100%;
     height: 7rem;
-    background: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 0) 100%
-    );
+    background: linear-gradient(0deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
