@@ -2,6 +2,7 @@ if (process.env.NODE_ENV != "production") {
     require("dotenv").config();
 }
 
+
 const { app, port } = require("./config/config")
 const { express, path, session, flash, methodOverride, mongoose, MongoStore, passport, LocalStrategy } = require("./config/utils")
 const connectToDB = require("./config/db")
@@ -14,6 +15,17 @@ const dashboardRouter = require("./routes/dashboardRoute");
 const User = require("./models/user");
 
 connectToDB();
+
+const cors = require("cors");
+
+const corsConfig = {
+    origin: "*",
+    credential: true,
+    methods: ["GET", "PUT", "POST", "DELETE"]
+
+}
+app.options("", cors(corsConfig))
+app.use(cors(corsConfig));
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
