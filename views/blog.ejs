@@ -51,7 +51,8 @@
             <div class="design-item mb-4 row pb-2">
                 <div class="col-5">
                     <a href="<%=allBlogs[i].link %>" target="_blank" class="design-img">
-                        <img src="<%= allBlogs[i].image_url %>" alt="article thumbnail" />
+                        <img src="<%= allBlogs[i].image_url || 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.mi_eFXd_Fcmu2zQ8oz5LEwAAAA%26pid%3DApi&f=1&ipt=0bfa5e8f28545487726d196864738d1d15d1c5df93b7d75b5e174359175931bf&ipo=images' %>"
+                            alt="article thumbnail" />
                     </a>
                 </div>
                 <div class="headline col-7">
@@ -64,8 +65,6 @@
                         <span>Published by <%= allBlogs[i].creator %></span>
                         <% } %>
                             <span>Published on <%=allBlogs[i].pubDate %></span>
-                            <%=allBlogs[i].article_id %>
-                                <%=allBlogs[i].article_id %>
                 </div>
             </div>
             <% } %>
