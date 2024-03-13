@@ -3,10 +3,24 @@ const router = express.Router();
 const Blog = require("../models/blog");
 const { isLoggedIn } = require("../middleware");
 
+const axios = require('axios');
+
 //setup crud for blog route
 router.get("/", async (req, res) => {
-    const allBlogs = await Blog.find({});
-    res.render("blog", { allBlogs });
+    const apiKey = process.env.NEWS_APIKEY;
+    const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=indian military&country=in&language=en`;
+
+    try {
+        const response = await axios.get(url);
+        if (response.status !== 200) {
+            throw new Error(`Error fetching news: ${response.statusText}`);
+        }
+        const data = response.data;
+        res.render("blog", { allBlogs: data.results });
+    } catch (error) {
+        console.error("Error fetching news:", error);
+        res.status(500).send("Error fetching news");
+    }
 });
 
 router.get("/new", isLoggedIn, (req, res) => {
