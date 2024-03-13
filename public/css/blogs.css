@@ -65,22 +65,14 @@ header {
     flex-direction: row;
 }
 
-.navbar-nav a {
-    font-family: "roboto", sans-serif;
-    color: rgb(255, 30, 0);
-    letter-spacing: 3px;
-    text-decoration: none;
-}
-
-.sign-in-div {
+.auth-btn {
     margin-top: 1rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.navbar button {
+    text-decoration: none;
+    color: rgb(255, 30, 0);
     height: 3.125rem;
     width: 5.938rem;
     border-radius: 3.125rem;
@@ -93,17 +85,28 @@ header {
     font-weight: bolder;
 }
 
-.navbar button:hover {
+.auth-btn:hover {
     color: rgb(255, 30, 0);
 }
 
-.navbar .home {
+.nav-link {
+    font-family: "roboto", sans-serif;
+    letter-spacing: 3px;
+    text-decoration: none;
     color: white;
-    background-color: red;
     padding: 10px;
     border-radius: 50px;
     font-family: "poppins", sans-serif;
     font-weight: bolder;
+
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .home {
+    background-color: red;
 }
 
 .navbar .home:hover {
@@ -111,12 +114,7 @@ header {
 }
 
 .navbar .feedback {
-    color: white;
     background-color: darkblue;
-    padding: 10px;
-    border-radius: 50px;
-    font-family: "poppins", sans-serif;
-    font-weight: bolder;
 }
 
 .navbar .feedback:hover {
@@ -124,12 +122,7 @@ header {
 }
 
 .navbar .contact {
-    color: white;
     background-color: cyan;
-    padding: 10px;
-    border-radius: 50px;
-    font-family: "poppins", sans-serif;
-    font-weight: bolder;
 }
 
 .navbar .contact:hover {
@@ -154,13 +147,6 @@ header {
 
 /*header ends*/
 
-.design {
-    margin: 50px;
-    padding: 0;
-    box-sizing: border-box;
-    float: left;
-}
-
 .title {
     margin-bottom: 40px;
 }
@@ -172,26 +158,20 @@ header {
 }
 
 .design-item {
-    width: 90%;
     border-bottom: 2px solid grey;
-    display: flex;
-    gap: 3.5rem;
 }
 
 .design-img {
-    width: 60%;
+    width: 100%;
+    display: inline-block;
+}
+.design-img > img {
+    width: 100%;
     height: auto;
     display: inline-block;
-    transition: 0.5s;
-}
-
-.design-img:hover {
-    width: 62%;
-    height: auto;
 }
 
 .headline {
-    width: 30%;
     display: inline-block;
 }
 

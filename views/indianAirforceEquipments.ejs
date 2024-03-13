@@ -1,17 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include('partials/commonServicePageHead',{title}) %>
-        <script
-            src="https://kit.fontawesome.com/0487bece73.js"
-            crossorigin="anonymous"
-        ></script>
-    </head>
-    <body>
-        <!-- Navbar -->
-        <%- include('partials/commonNavbar') %>
 
-        <div class="sections">
+<head>
+    <%- include('partials/commonServicePageHead',{title}) %>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <%- include('partials/commonNavbar') %>
+        <div class="mt-4">
+            <%- include('partials/flash') %>
+        </div>
+        <div class="page-heading">
+            <h1>
+                <%= title.toUpperCase()%>
+            </h1>
+        </div>
+
+        <% const categories=serviceCategories[service]%>
+            <% for (let categoryIndex=1; categoryIndex < categories.length; categoryIndex++) { %>
+                <div class="sections">
+                    <div class="equipment-category-box">
+                        <h2 class="category-heading">
+                            <%= categories[categoryIndex].toUpperCase() %> :
+                        </h2>
+
+                        <% let categoryEquipment=equipments.filter((equip)=>{
+                            return equip.category===categories[categoryIndex]
+                            }) %>
+
+                            <div class="equipments-main-container-div">
+                                <% let numOfEquip=0 %>
+                                    <% for( let equipment in categoryEquipment ) { %>
+                                        <%if(categoryEquipment[equipment].decomissionDetails.hasDecomissioned){%>
+                                            <%continue%>
+                                                <%}%>
+                                                    <% if(numOfEquip++==4){ %>
+                                                        <% break %>
+                                                            <%}%>
+                                                                <%if(categoryEquipment[equipment]){%>
+                                                                    <%- include("partials/equipmentCard",{equipmentDecomissioned:categoryEquipment[equipment].decomissionDetails.hasDecomissioned,
+                                                                        equipmentName:categoryEquipment[equipment].name.toUpperCase(),
+                                                                        equipmentFullInfoLink:categoryEquipment[equipment].preview.fullInfoLink,
+                                                                        equipmentIconPath:categoryEquipment[equipment].preview.icon.path,
+                                                                        equipmentOnHoverImg:categoryEquipment[equipment].preview.onHover.imgSrc,
+                                                                        equipmentOnHoverDescription:categoryEquipment[equipment].preview.onHover.description})%>
+                                                                        <%}%>
+                                                                            <%}%>
+
+                            </div>
+                            <% if(categoryEquipment.length>4){ %>
+                                <div class="see-more-btn">
+                                    <a href="/equipments/<%= service %>/category/<%= categories[categoryIndex]%>">SEE
+                                        MORE</a>
+                                </div>
+                                <%}%>
+                    </div>
+                </div>
+                <% } %>
+                    <!-- <div class="sections">
             <div class="page-heading">
                 <h1>INDIAN AIRFORCE EQUIPMENTS</h1>
             </div>
@@ -21,17 +68,11 @@
                 <div class="equipments-main-container-div">
                     <div class="individual-equipments">
                         <h3>MiG-21</h3>
-                        <a href="https://en.wikipedia.org/wiki/MiG-21"
-                            ><img
-                                src="/images/indianAirforceEquipments/MiG-21.png"
-                                alt="MiG-21"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/MiG-21"><img
+                                src="/images/indianAirforceEquipments/MiG-21.png" alt="MiG-21" /></a>
                         <div class="equipment-info">
-                            <a href="https://en.wikipedia.org/wiki/MiG-21"
-                                ><img
-                                    src="/images/Combat Aircraft/MiG-21'.jpg"
-                                    alt="MiG-21"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/MiG-21"><img
+                                    src="/images/Combat Aircraft/MiG-21'.jpg" alt="MiG-21" /></a>
                             <p>
                                 The <b>Mikoyan-Gurevich MiG-21</b> (Russian:
                                 Микоян и Гуревич МиГ-21; NATO reporting name:
@@ -45,27 +86,17 @@
                                 fuselage, and "Én Bạc", meaning "silver
                                 swallow", in Vietnamese.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/MiG-21"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/MiG-21" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>MiG-29</h3>
-                        <a href="https://en.wikipedia.org/wiki/MiG-29"
-                            ><img
-                                src="/images/indianAirforceEquipments/MiG-29.png"
-                                alt="MiG-29"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/MiG-29"><img
+                                src="/images/indianAirforceEquipments/MiG-29.png" alt="MiG-29" /></a>
                         <div class="equipment-info">
-                            <a href="https://en.wikipedia.org/wiki/MiG-29"
-                                ><img
-                                    src="/images/Combat Aircraft/MiG-29'.jpg"
-                                    alt="MiG-29"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/MiG-29"><img
+                                    src="/images/Combat Aircraft/MiG-29'.jpg" alt="MiG-29" /></a>
                             <p>
                                 The <b>Mikoyan MiG-29</b> (Russian: Микоян
                                 МиГ-29; NATO reporting name: <b>Fulcrum</b>) is
@@ -79,27 +110,17 @@
                                 Fighting Falcon. The MiG-29 entered service with
                                 the Soviet Air Forces in 1982.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/MiG-29"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/MiG-29" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>HAL Tejas</h3>
-                        <a href="https://en.wikipedia.org/wiki/HAL_Tejas"
-                            ><img
-                                src="/images/indianAirforceEquipments/HAL Tejas.png"
-                                alt="HAL Tejas"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/HAL_Tejas"><img
+                                src="/images/indianAirforceEquipments/HAL Tejas.png" alt="HAL Tejas" /></a>
                         <div class="equipment-info">
-                            <a href="https://en.wikipedia.org/wiki/HAL_Tejas"
-                                ><img
-                                    src="/images/Combat Aircraft/Hal Tejas'.jpg"
-                                    alt="HAL Tejas"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/HAL_Tejas"><img
+                                    src="/images/Combat Aircraft/Hal Tejas'.jpg" alt="HAL Tejas" /></a>
                             <p>
                                 The <b>HAL Tejas</b> is an Indian multirole
                                 light fighter designed by the Aeronautical
@@ -115,29 +136,17 @@
                                 smallest and lightest in its class of
                                 contemporary supersonic combat aircraft.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/HAL_Tejas"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/HAL_Tejas" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>Mirage 2000</h3>
-                        <a
-                            href="https://en.wikipedia.org/wiki/Dassault_Mirage_2000"
-                            ><img
-                                src="/images/indianAirforceEquipments/Mirage 2000.png"
-                                alt="Mirage 2000"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/Dassault_Mirage_2000"><img
+                                src="/images/indianAirforceEquipments/Mirage 2000.png" alt="Mirage 2000" /></a>
                         <div class="equipment-info-right">
-                            <a
-                                href="https://en.wikipedia.org/wiki/Dassault_Mirage_2000"
-                                ><img
-                                    src="/images/Combat Aircraft/Mirage 2000'.jpg"
-                                    alt="Mirage 2000"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Dassault_Mirage_2000"><img
+                                    src="/images/Combat Aircraft/Mirage 2000'.jpg" alt="Mirage 2000" /></a>
                             <p>
                                 The <b>Dassault Mirage 2000</b> is a French
                                 multirole, single-engine, fourth-generation jet
@@ -153,12 +162,8 @@
                                 600 aircraft were built and it has been in
                                 service with 9 nations.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Dassault_Mirage_2000"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Dassault_Mirage_2000" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                 </div>
@@ -174,17 +179,11 @@
                 <div class="equipments-main-container-div">
                     <div class="individual-equipments">
                         <h3>EMB-145</h3>
-                        <a href="https://en.wikipedia.org/wiki/Embraer_R-99"
-                            ><img
-                                src="/images/indianAirforceEquipments/Embraer R-99.png"
-                                alt="EMB-145"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/Embraer_R-99"><img
+                                src="/images/indianAirforceEquipments/Embraer R-99.png" alt="EMB-145" /></a>
                         <div class="equipment-info">
-                            <a href="https://en.wikipedia.org/wiki/Embraer_R-99"
-                                ><img
-                                    src="/images/Awacs/Embraer R-99'.jpg"
-                                    alt="EMB-145"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Embraer_R-99"><img
+                                    src="/images/Awacs/Embraer R-99'.jpg" alt="EMB-145" /></a>
                             <p>
                                 The <b>Embraer R-99</b> is the Brazilian Air
                                 Force military designation of the EMB-145-RS. It
@@ -194,28 +193,18 @@
                                 military versions provide 20% more thrust than
                                 the civil version. The first flight was in 1999.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Embraer_R-99"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Embraer_R-99" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
 
                     <div class="individual-equipments">
                         <h3>BERIEV A-50</h3>
-                        <a href="https://en.wikipedia.org/wiki/Beriev_A-50"
-                            ><img
-                                src="/images/indianAirforceEquipments/Beriev A-50.png"
-                                alt="BERIEV A-50"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/Beriev_A-50"><img
+                                src="/images/indianAirforceEquipments/Beriev A-50.png" alt="BERIEV A-50" /></a>
                         <div class="equipment-info">
-                            <a href="https://en.wikipedia.org/wiki/Beriev_A-50"
-                                ><img
-                                    src="/images/Awacs/Beriev A-50'.jpg"
-                                    alt="BERIEV A-50"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Beriev_A-50"><img
+                                    src="/images/Awacs/Beriev A-50'.jpg" alt="BERIEV A-50" /></a>
                             <p>
                                 <b>The Beriev A-50</b> (NATO reporting name:
                                 <b>Mainstay</b>) is a Soviet airborne early
@@ -227,15 +216,9 @@
                                 It entered service in 1984, with about 40
                                 produced by 1992.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Beriev_A-50"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i
-                                    class="fab fa-wikipedia-w"
-                                    aria-hidden="true"
-                                ></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Beriev_A-50" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"
+                                    aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -249,17 +232,11 @@
                 <div class="equipments-main-container-div">
                     <div class="individual-equipments">
                         <h3>Boeing 707</h3>
-                        <a href="https://en.wikipedia.org/wiki/Boeing_707"
-                            ><img
-                                src="/images/indianAirforceEquipments/Boeing 707.png"
-                                alt="Boeing 707"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/Boeing_707"><img
+                                src="/images/indianAirforceEquipments/Boeing 707.png" alt="Boeing 707" /></a>
                         <div class="equipment-info">
-                            <a href="https://en.wikipedia.org/wiki/Boeing_707"
-                                ><img
-                                    src="/images/Reconnaissance/Boeing 707'.jpg"
-                                    alt="Boeing 707"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Boeing_707"><img
+                                    src="/images/Reconnaissance/Boeing 707'.jpg" alt="Boeing 707" /></a>
                             <p>
                                 The <b>Boeing 707</b> is an American long-range
                                 narrow-body airliner that was developed and
@@ -275,29 +252,18 @@
                                 seating, retained in the later 720, 727, 737,
                                 and 757.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Boeing_707"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Boeing_707" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>Global 5000</h3>
-                        <a
-                            href="https://en.wikipedia.org/wiki/Bombardier_Global_Express"
-                            ><img
+                        <a href="https://en.wikipedia.org/wiki/Bombardier_Global_Express"><img
                                 src="/images/indianAirforceEquipments/Bombardier Global  Express.png"
-                                alt="Global 5000"
-                        /></a>
+                                alt="Global 5000" /></a>
                         <div class="equipment-info">
-                            <a
-                                href="https://en.wikipedia.org/wiki/Bombardier_Global_Express"
-                                ><img
-                                    src="/images/Reconnaissance/Bombardier Global Express'.jpg"
-                                    alt="Global 5000"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Bombardier_Global_Express"><img
+                                    src="/images/Reconnaissance/Bombardier Global Express'.jpg" alt="Global 5000" /></a>
                             <p>
                                 The <b>Bombardier Global Express</b> is a large
                                 cabin, 6,000 nmi / 11,100 km range business jet
@@ -314,28 +280,17 @@
                                 updated and has been modified for military
                                 missions.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Bombardier_Global_Express"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Bombardier_Global_Express" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>Gulfstream G100</h3>
-                        <a href="https://en.wikipedia.org/wiki/Gulfstream_G100"
-                            ><img
-                                src="/images/indianAirforceEquipments/Gulfstram G100.png"
-                                alt="Gulfstream G100"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/Gulfstream_G100"><img
+                                src="/images/indianAirforceEquipments/Gulfstram G100.png" alt="Gulfstream G100" /></a>
                         <div class="equipment-info">
-                            <a
-                                href="https://en.wikipedia.org/wiki/Gulfstream_G100"
-                                ><img
-                                    src="/images/Reconnaissance/Gulfstram G100'.jpg"
-                                    alt="Gulfstream G100"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Gulfstream_G100"><img
+                                    src="/images/Reconnaissance/Gulfstram G100'.jpg" alt="Gulfstream G100" /></a>
                             <p>
                                 The <b>Gulfstream G100</b>, formerly known as
                                 the <b>IAI Astra SPX</b>, is an Israel Aerospace
@@ -349,12 +304,8 @@
                                 September 2016 and the last delivery by
                                 mid-2017.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Gulfstream_G100"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Gulfstream_G100" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                 </div>
@@ -370,29 +321,18 @@
                 <div class="equipments-main-container-div">
                     <div class="individual-equipments">
                         <h3>Gulfstream III</h3>
-                        <a href="https://en.wikipedia.org/wiki/Gulfstream_III"
-                            ><img
-                                src="/images/indianAirforceEquipments/Gulfstream III.png"
-                                alt="Gulfstream III"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/Gulfstream_III"><img
+                                src="/images/indianAirforceEquipments/Gulfstream III.png" alt="Gulfstream III" /></a>
                         <div class="equipment-info">
-                            <a
-                                href="https://en.wikipedia.org/wiki/Gulfstream_III"
-                                ><img
-                                    src="/images/Electronic Warfare/Gulfstream III'.jpg"
-                                    alt="Gulfstream III"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Gulfstream_III"><img
+                                    src="/images/Electronic Warfare/Gulfstream III'.jpg" alt="Gulfstream III" /></a>
                             <p>
                                 The <b>Gulfstream III</b>, a business jet
                                 produced by Gulfstream Aerospace, is an improved
                                 variant of the Grumman Gulfstream II.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Gulfstream_III"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Gulfstream_III" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                 </div>
@@ -406,30 +346,19 @@
                 <div class="equipments-main-container-div">
                     <div class="individual-equipments">
                         <h3>Ilyushin Il-78</h3>
-                        <a href="https://en.wikipedia.org/wiki/Ilyushin_Il-78"
-                            ><img
-                                src="/images/indianAirforceEquipments/ilyushin II-78.png"
-                                alt="Ilyushin Il-78"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/Ilyushin_Il-78"><img
+                                src="/images/indianAirforceEquipments/ilyushin II-78.png" alt="Ilyushin Il-78" /></a>
                         <div class="equipment-info">
-                            <a
-                                href="https://en.wikipedia.org/wiki/Ilyushin_Il-78"
-                                ><img
-                                    src="/images/Tanker/Ilyushin Il-78'.jpg"
-                                    alt="Ilyushin Il-78"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Ilyushin_Il-78"><img
+                                    src="/images/Tanker/Ilyushin Il-78'.jpg" alt="Ilyushin Il-78" /></a>
                             <p>
                                 The <b>Ilyushin Il-78</b> (Russian: Илью́шин
                                 Ил-78; NATO reporting name <b>Midas</b>) is a
                                 Soviet four-engined aerial refueling tanker
                                 based on the Il-76 strategic airlifter.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Ilyushin_Il-78"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Ilyushin_Il-78" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                 </div>
@@ -445,18 +374,11 @@
                 <div class="equipments-main-container-div">
                     <div class="individual-equipments">
                         <h3>Ilyushin IL-76</h3>
-                        <a href="https://en.wikipedia.org/wiki/Ilyushin_Il-76"
-                            ><img
-                                src="/images/indianAirforceEquipments/Ilushin II-76.png"
-                                alt="Ilyushin Il-76"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/Ilyushin_Il-76"><img
+                                src="/images/indianAirforceEquipments/Ilushin II-76.png" alt="Ilyushin Il-76" /></a>
                         <div class="equipment-info">
-                            <a
-                                href="https://en.wikipedia.org/wiki/Ilyushin_Il-76"
-                                ><img
-                                    src="/images/Transport/Ilushin II-76'.jpg"
-                                    alt="Ilyushin Il-76"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Ilyushin_Il-76"><img
+                                    src="/images/Transport/Ilushin II-76'.jpg" alt="Ilyushin Il-76" /></a>
                             <p>
                                 The <b>Ilyushin IL-76</b> (Russian: Илью́шин
                                 Ил-76; NATO reporting name: <b>Candid</b>) is a
@@ -471,35 +393,22 @@
                                 Africa, including use as an aerial refueling
                                 tanker or command center.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Ilyushin_Il-76"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Ilyushin_Il-76" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>Boeing C-17</h3>
-                        <a
-                            href="https://en.wikipedia.org/wiki/Boeing_C-17_Globemaster_III"
-                            ><img
+                        <a href="https://en.wikipedia.org/wiki/Boeing_C-17_Globemaster_III"><img
                                 src="/images/indianAirforceEquipments/Boeing C-17 Globemaster III.png"
-                                alt="Boeing C-17"
-                        /></a>
+                                alt="Boeing C-17" /></a>
                         <div class="equipment-info">
-                            <a
-                                href="https://en.wikipedia.org/wiki/Boeing_C-17_Globemaster_III"
-                                ><img
-                                    src="/images/Transport/Boeing C-17 Globemaster III'.jpg"
-                                    alt="Boeing C-17"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Boeing_C-17_Globemaster_III"><img
+                                    src="/images/Transport/Boeing C-17 Globemaster III'.jpg" alt="Boeing C-17" /></a>
                             <p>
                                 The
-                                <b
-                                    >McDonnell Douglas/Boeing C-17 Globemaster
-                                    III</b
-                                >
+                                <b>McDonnell Douglas/Boeing C-17 Globemaster
+                                    III</b>
                                 is a large military transport aircraft that was
                                 developed for the United States Air Force (USAF)
                                 from the 1980s to the early 1990s by McDonnell
@@ -515,29 +424,19 @@
                                 Starlifter, and also fulfill some of the duties
                                 of the Lockheed C-5 Galaxy.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Boeing_C-17_Globemaster_III"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Boeing_C-17_Globemaster_III" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>C-130J</h3>
-                        <a
-                            href="https://en.wikipedia.org/wiki/Lockheed_Martin_C-130J_Super_Hercules"
-                            ><img
+                        <a href="https://en.wikipedia.org/wiki/Lockheed_Martin_C-130J_Super_Hercules"><img
                                 src="/images/indianAirforceEquipments/Lockheed Martin C-130J Super Hercules.png"
-                                alt="C-130J Super Hercules"
-                        /></a>
+                                alt="C-130J Super Hercules" /></a>
                         <div class="equipment-info">
-                            <a
-                                href="https://en.wikipedia.org/wiki/Lockheed_Martin_C-130J_Super_Hercules"
-                                ><img
+                            <a href="https://en.wikipedia.org/wiki/Lockheed_Martin_C-130J_Super_Hercules"><img
                                     src="/images/Transport/Lockheed Martin C-130J Super Hercules'.jpg"
-                                    alt="C-130J Super Hercules"
-                            /></a>
+                                    alt="C-130J Super Hercules" /></a>
                             <p>
                                 The
                                 <b>Lockheed Martin C-130J Super Hercules</b> is
@@ -546,39 +445,25 @@
                                 of the Lockheed C-130 Hercules, with new
                                 engines, flight deck, and other systems.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Lockheed_Martin_C-130J_Super_Hercules"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Lockheed_Martin_C-130J_Super_Hercules"
+                                class="wikipedia-link" title="Know More about the Equipment"><i
+                                    class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>Antonov An-32</h3>
-                        <a href="https://en.wikipedia.org/wiki/Antonov_An-32"
-                            ><img
-                                src="/images/indianAirforceEquipments/Antonov An-32.png"
-                                alt="Antonov An-32"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/Antonov_An-32"><img
+                                src="/images/indianAirforceEquipments/Antonov An-32.png" alt="Antonov An-32" /></a>
                         <div class="equipment-info-right">
-                            <a
-                                href="https://en.wikipedia.org/wiki/Antonov_An-32"
-                                ><img
-                                    src="/images/Transport/Antonov An-32'.jpg"
-                                    alt="Antonov An-32"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Antonov_An-32"><img
+                                    src="/images/Transport/Antonov An-32'.jpg" alt="Antonov An-32" /></a>
                             <p>
                                 The <b>Antonov An-32</b> (NATO reporting name:
                                 <b>Cline</b>) is a turboprop twin-engined
                                 military transport aircraft.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Antonov_An-32"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Antonov_An-32" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                 </div>
@@ -592,19 +477,13 @@
                 <div class="equipments-main-container-div">
                     <div class="individual-equipments">
                         <h3>HAL LCH</h3>
-                        <a
-                            href="https://en.wikipedia.org/wiki/HAL_Light_Combat_Helicopter"
-                            ><img
+                        <a href="https://en.wikipedia.org/wiki/HAL_Light_Combat_Helicopter"><img
                                 src="/images/indianAirforceEquipments/HAL Light Combat Helicopter.png"
-                                alt="HAL Light Combat Helicopter"
-                        /></a>
+                                alt="HAL Light Combat Helicopter" /></a>
                         <div class="equipment-info">
-                            <a
-                                href="https://en.wikipedia.org/wiki/HAL_Light_Combat_Helicopter"
-                                ><img
+                            <a href="https://en.wikipedia.org/wiki/HAL_Light_Combat_Helicopter"><img
                                     src="/images/Helicopters/HAL Light Combat Helicopter'.jpg"
-                                    alt="HAL Light Combat Helicopter"
-                            /></a>
+                                    alt="HAL Light Combat Helicopter" /></a>
                             <p>
                                 The <b>HAL Light Combat Helicopter (LCH)</b> is
                                 an Indian multi-role attack helicopter designed
@@ -614,29 +493,18 @@
                                 ceiling is the highest among all attack
                                 helicopters.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/HAL_Light_Combat_Helicopter"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/HAL_Light_Combat_Helicopter" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>Boeing Apache</h3>
-                        <a
-                            href="https://en.wikipedia.org/wiki/Boeing_AH-64_Apache"
-                            ><img
+                        <a href="https://en.wikipedia.org/wiki/Boeing_AH-64_Apache"><img
                                 src="/images/indianAirforceEquipments/Boeing AH-64 Apache.png"
-                                alt="Boeing AH-64 Apache"
-                        /></a>
+                                alt="Boeing AH-64 Apache" /></a>
                         <div class="equipment-info">
-                            <a
-                                href="https://en.wikipedia.org/wiki/Boeing_AH-64_Apache"
-                                ><img
-                                    src="/images/Helicopters/Boeing AH-64 Apache'.jpg"
-                                    alt="Boeing AH-64 Apache"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Boeing_AH-64_Apache"><img
+                                    src="/images/Helicopters/Boeing AH-64 Apache'.jpg" alt="Boeing AH-64 Apache" /></a>
                             <p>
                                 The <b>Boeing AH-64 Apache</b> (/əˈpætʃi/) is an
                                 American twin-turboshaft attack helicopter with
@@ -653,27 +521,17 @@
                                 significant systems redundancy to improve combat
                                 survivability.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Boeing_AH-64_Apache"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Boeing_AH-64_Apache" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>Mil Mi-24</h3>
-                        <a href="https://en.wikipedia.org/wiki/Mil_Mi-24"
-                            ><img
-                                src="/images/indianAirforceEquipments/Mil Mi-24.png"
-                                alt="Mil Mi-24"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/Mil_Mi-24"><img
+                                src="/images/indianAirforceEquipments/Mil Mi-24.png" alt="Mil Mi-24" /></a>
                         <div class="equipment-info">
-                            <a href="https://en.wikipedia.org/wiki/Mil_Mi-24"
-                                ><img
-                                    src="/images/Helicopters/Mil Mi-24'.jpg"
-                                    alt="Mil Mi-24"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Mil_Mi-24"><img
+                                    src="/images/Helicopters/Mil Mi-24'.jpg" alt="Mil Mi-24" /></a>
                             <p>
                                 The <b>Mil Mi-24</b> (Russian: Миль Ми-24; NATO
                                 reporting name: <b>Hind</b>) is a large
@@ -684,27 +542,17 @@
                                 1972 by the Soviet Air Force and its successors,
                                 along with 48 other nations.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Mil_Mi-24"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Mil_Mi-24" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>HAL Rudra</h3>
-                        <a href="https://en.wikipedia.org/wiki/HAL_Rudra"
-                            ><img
-                                src="/images/indianAirforceEquipments/HAL Rudra.png"
-                                alt="HAL Rudra"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/HAL_Rudra"><img
+                                src="/images/indianAirforceEquipments/HAL Rudra.png" alt="HAL Rudra" /></a>
                         <div class="equipment-info-right">
-                            <a href="https://en.wikipedia.org/wiki/HAL_Rudra"
-                                ><img
-                                    src="/images/Helicopters/HAL Rudra'.jpg"
-                                    alt="HAL Rudra"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/HAL_Rudra"><img
+                                    src="/images/Helicopters/HAL Rudra'.jpg" alt="HAL Rudra" /></a>
                             <p>
                                 The <b>HAL Rudra</b>, also known as
                                 <b>ALH-WSI</b>, is an armed version of HAL Dhruv
@@ -715,12 +563,8 @@
                                 mm rocket pods, anti-tank guided missiles and
                                 air-to-air missiles.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/HAL_Rudra"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/HAL_Rudra" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                 </div>
@@ -736,17 +580,11 @@
                 <div class="equipments-main-container-div">
                     <div class="individual-equipments">
                         <h3>Pilatus PC-7</h3>
-                        <a href="https://en.wikipedia.org/wiki/Pilatus_PC-7"
-                            ><img
-                                src="/images/indianAirforceEquipments/Pilatus PC-7.png"
-                                alt="Pilatus PC-7"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/Pilatus_PC-7"><img
+                                src="/images/indianAirforceEquipments/Pilatus PC-7.png" alt="Pilatus PC-7" /></a>
                         <div class="equipment-info">
-                            <a href="https://en.wikipedia.org/wiki/Pilatus_PC-7"
-                                ><img
-                                    src="/images/Trainer Aircraft/Pilatus PC-7'.jpg"
-                                    alt="Pilatus PC-7"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/Pilatus_PC-7"><img
+                                    src="/images/Trainer Aircraft/Pilatus PC-7'.jpg" alt="Pilatus PC-7" /></a>
                             <p>
                                 The <b>Pilatus PC-7 Turbo Trainer</b> is a
                                 low-wing tandem-seat training aircraft designed
@@ -755,28 +593,19 @@
                                 basic training functions including aerobatics,
                                 instrument, tactical and night flying.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Pilatus_PC-7"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Pilatus_PC-7" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>Pipistrel Virus</h3>
-                        <a href="https://en.wikipedia.org/wiki/Pipistrel_Virus"
-                            ><img
+                        <a href="https://en.wikipedia.org/wiki/Pipistrel_Virus"><img
                                 src="/images/indianAirforceEquipments/Pipistrel Virus.png"
-                                alt="Pipistrel Virus SW 80 Garud"
-                        /></a>
+                                alt="Pipistrel Virus SW 80 Garud" /></a>
                         <div class="equipment-info">
-                            <a
-                                href="https://en.wikipedia.org/wiki/Pipistrel_Virus"
-                                ><img
+                            <a href="https://en.wikipedia.org/wiki/Pipistrel_Virus"><img
                                     src="/images/Trainer Aircraft/Pipistrel Virus'.jpg"
-                                    alt="Pipistrel Virus SW 80 Garud"
-                            /></a>
+                                    alt="Pipistrel Virus SW 80 Garud" /></a>
                             <p>
                                 The <b>Pipistrel Virus</b> is a two-seat, single
                                 engine light aircraft, manufactured by Pipistrel
@@ -784,27 +613,17 @@
                                 ultralight, homebuilt kit, or light-sport
                                 aircraft.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/Pipistrel_Virus"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/Pipistrel_Virus" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>HAL Kiran</h3>
-                        <a href="https://en.wikipedia.org/wiki/HAL_Kiran"
-                            ><img
-                                src="/images/indianAirforceEquipments/HAL HJT-16 Kiran.png"
-                                alt="HAL Kiran"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/HAL_Kiran"><img
+                                src="/images/indianAirforceEquipments/HAL HJT-16 Kiran.png" alt="HAL Kiran" /></a>
                         <div class="equipment-info">
-                            <a href="https://en.wikipedia.org/wiki/HAL_Kiran"
-                                ><img
-                                    src="/images/Trainer Aircraft/HAL HJT-16 Kiran'.jpg"
-                                    alt="HAL Kiran"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/HAL_Kiran"><img
+                                    src="/images/Trainer Aircraft/HAL HJT-16 Kiran'.jpg" alt="HAL Kiran" /></a>
                             <p>
                                 The <b>HAL HJT-16 Kiran</b> ("Ray of light") is
                                 an Indian two-seat intermediate jet-powered
@@ -812,28 +631,17 @@
                                 aircraft company Hindustan Aeronautics Limited
                                 (HAL).
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/HAL_Kiran"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/HAL_Kiran" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>BAE Hawk</h3>
-                        <a href="https://en.wikipedia.org/wiki/BAE_Systems_Hawk"
-                            ><img
-                                src="/images/indianAirforceEquipments/BAE Systems Hawk.png"
-                                alt="BAE Hawk"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/BAE_Systems_Hawk"><img
+                                src="/images/indianAirforceEquipments/BAE Systems Hawk.png" alt="BAE Hawk" /></a>
                         <div class="equipment-info-right">
-                            <a
-                                href="https://en.wikipedia.org/wiki/BAE_Systems_Hawk"
-                                ><img
-                                    src="/images/Trainer Aircraft/BAE Systems Hawk'.jpg"
-                                    alt="BAE Hawk"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/BAE_Systems_Hawk"><img
+                                    src="/images/Trainer Aircraft/BAE Systems Hawk'.jpg" alt="BAE Hawk" /></a>
                             <p>
                                 The <b>BAE Systems Hawk</b> is a British
                                 single-engine, jet-powered advanced trainer
@@ -845,12 +653,8 @@
                                 training capacity and as a low-cost combat
                                 aircraft.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/BAE_Systems_Hawk"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/BAE_Systems_Hawk" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                 </div>
@@ -864,18 +668,12 @@
                 <div class="equipments-main-container-div">
                     <div class="individual-equipments">
                         <h3>IAI Heron TP</h3>
-                        <a href="https://en.wikipedia.org/wiki/IAI_Eitan"
-                            ><img
-                                src="/images/indianAirforceEquipments/IAI Eitan.png"
-                                alt="IAI Heron TP"
-                            />
+                        <a href="https://en.wikipedia.org/wiki/IAI_Eitan"><img
+                                src="/images/indianAirforceEquipments/IAI Eitan.png" alt="IAI Heron TP" />
                         </a>
                         <div class="equipment-info-bottom">
-                            <a href="https://en.wikipedia.org/wiki/IAI_Eitan"
-                                ><img
-                                    src="/images/UAV/IAI Eitan'.jpg"
-                                    alt="IAI Heron TP"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/IAI_Eitan"><img src="/images/UAV/IAI Eitan'.jpg"
+                                    alt="IAI Heron TP" /></a>
                             <p>
                                 The <b>IAI Eitan</b> (איתן – "Steadfast"; export
                                 designation <b>Heron TP</b>) is an unmanned
@@ -884,27 +682,17 @@
                                 Israel Aerospace Industries. The aircraft is a
                                 newer version of the IAI Heron.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/IAI_Eitan"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/IAI_Eitan" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>IAI Heron</h3>
-                        <a href="https://en.wikipedia.org/wiki/IAI_Heron"
-                            ><img
-                                src="/images/indianAirforceEquipments/IAI Heron.png"
-                                alt="IAI Heron"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/IAI_Heron"><img
+                                src="/images/indianAirforceEquipments/IAI Heron.png" alt="IAI Heron" /></a>
                         <div class="equipment-info-bottom">
-                            <a href="https://en.wikipedia.org/wiki/IAI_Heron"
-                                ><img
-                                    src="/images/UAV/IAI Heron'.jpg"
-                                    alt="IAI Heron"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/IAI_Heron"><img src="/images/UAV/IAI Heron'.jpg"
+                                    alt="IAI Heron" /></a>
                             <p>
                                 The <b>IAI Heron (Machatz-1)</b> is a
                                 medium-altitude long-endurance unmanned aerial
@@ -919,27 +707,17 @@
                                 advanced version, the Heron TP, is also known as
                                 the IAI Eitan.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/IAI_Heron"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/IAI_Heron" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>IAI Searcher</h3>
-                        <a href="https://en.wikipedia.org/wiki/IAI_Searcher"
-                            ><img
-                                src="/images/indianAirforceEquipments/IAI Searcher.png"
-                                alt="IAI Searcher"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/IAI_Searcher"><img
+                                src="/images/indianAirforceEquipments/IAI Searcher.png" alt="IAI Searcher" /></a>
                         <div class="equipment-info-bottom">
-                            <a href="https://en.wikipedia.org/wiki/IAI_Searcher"
-                                ><img
-                                    src="/images/UAV/IAI Searcher'.jpg"
-                                    alt="IAI Searcher"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/IAI_Searcher"><img
+                                    src="/images/UAV/IAI Searcher'.jpg" alt="IAI Searcher" /></a>
                             <p>
                                 The <b>IAI Searcher</b> (also known by the
                                 Hebrew name מרומית Meyromit - "Marsh tern", or
@@ -949,27 +727,17 @@
                                 it replaced the IMI Mastiff and IAI Scout UAVs
                                 then in service with the Israeli Army.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/IAI_Searcher"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/IAI_Searcher" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <div class="individual-equipments">
                         <h3>DRDO Lakshya</h3>
-                        <a href="https://en.wikipedia.org/wiki/DRDO_Lakshya"
-                            ><img
-                                src="/images/indianAirforceEquipments/DRDO Lakshya.png"
-                                alt="DRDO Lakshya"
-                        /></a>
+                        <a href="https://en.wikipedia.org/wiki/DRDO_Lakshya"><img
+                                src="/images/indianAirforceEquipments/DRDO Lakshya.png" alt="DRDO Lakshya" /></a>
                         <div class="equipment-info-bottom-right">
-                            <a href="https://en.wikipedia.org/wiki/DRDO_Lakshya"
-                                ><img
-                                    src="/images/UAV/DRDO Lakshya'.jfif"
-                                    alt="DRDO Lakshya"
-                            /></a>
+                            <a href="https://en.wikipedia.org/wiki/DRDO_Lakshya"><img
+                                    src="/images/UAV/DRDO Lakshya'.jfif" alt="DRDO Lakshya" /></a>
                             <p>
                                 <b>Lakshya</b> ("target" in Sanskrit) is an
                                 Indian remotely piloted high speed target drone
@@ -979,12 +747,8 @@
                                 reconnaissance of battlefield and target
                                 acquisition.
                             </p>
-                            <a
-                                href="https://en.wikipedia.org/wiki/DRDO_Lakshya"
-                                class="wikipedia-link"
-                                title="Know More about the Equipment"
-                                ><i class="fab fa-wikipedia-w"></i
-                            ></a>
+                            <a href="https://en.wikipedia.org/wiki/DRDO_Lakshya" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                 </div>
@@ -992,10 +756,11 @@
                     <a href="">SEE MORE</a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <!-- footer starts -->
-        <%- include('partials/footer')%>
-        <!-- footer ends -->
-    </body>
+                    <!-- footer starts -->
+                    <%- include('partials/footer')%>
+                        <!-- footer ends -->
+</body>
+
 </html>

@@ -15,15 +15,18 @@
                     <p>OP MILITARY INVENTORY</p>
                 </a>
                 <div class="navbar-nav">
-                    <a href="/" class="home">HOME</a>
-                    <a href="/feedback" class="feedback">FEEDBACK</a>
-                    <a href="/contact" class="contact">CONTACT</a>
+                    <a href="/" class="home nav-link">HOME</a>
+                    <a href="/feedback" class="feedback nav-link">FEEDBACK</a>
+                    <a href="/contact" class="contact nav-link">CONTACT</a>
+                    <% if(!currentUser) {%>
+                        <a href="/signin" class="auth-btn">SIGN IN</a>
+                        <% } else{%>
+                            <form action="/logout" method="post">
+                                <button class="auth-btn">LOG OUT</button>
+                            </form>
+                            <% } %>
                 </div>
-                <div class="sign-in-div">
-                    <button onclick="window.location.href='/signin'">
-                        SIGN IN
-                    </button>
-                </div>
+
             </div>
         </nav>
         <div class="banner">
@@ -39,33 +42,29 @@
     </header>
     <!-- end of header -->
     <!-- design -->
-    <div class="design">
+    <div class="container">
         <div class="title">
             <h2>RECENT UPDATES</h2>
         </div>
 
         <% for(let i=0;i<allBlogs.length;i++){ %>
-            <div class="design-item mb-4">
-                <div class="design-img">
-                    <img src="<%= allBlogs[i].thumbnailURL %>" alt="" />
+            <div class="design-item mb-4 row pb-2">
+                <div class="col-5">
+                    <a href="<%=allBlogs[i].link %>" target="_blank" class="design-img">
+                        <img src="<%= allBlogs[i].image_url || 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.mi_eFXd_Fcmu2zQ8oz5LEwAAAA%26pid%3DApi&f=1&ipt=0bfa5e8f28545487726d196864738d1d15d1c5df93b7d75b5e174359175931bf&ipo=images' %>"
+                            alt="article thumbnail" />
+                    </a>
                 </div>
-                <div class="headline">
+                <div class="headline col-7">
                     <h2>
-                        <a href="<%=allBlogs[i].articleURL %>" target="_blank">
-                            <%= allBlogs[i].headline %>
+                        <a href="<%=allBlogs[i].link %>" target="_blank">
+                            <%= allBlogs[i].title %>
                         </a>
                     </h2>
-                    <span>Published by <%= allBlogs[i].author %></span>
-                    <span>Published on <%=allBlogs[i].publishedDate %></span>
-                    <span>Last Edited on <%=allBlogs[i].lastModifiedDate %></span>
-
-                    <div class="mt-3">
-                        <a href="/blog/edit/<%=allBlogs[i]._id %>" class="d-inline-block align-middle"><i
-                                class="fa-solid fa-user-pen text-dark"></i></a>
-                        <form action="/blog/<%=allBlogs[i]._id %>?_method=DELETE" method="post" class="d-inline-block">
-                        </form>
-                        <button class="btn btn-dark btn-sm"><i class="fa-solid fa-trash-can"></i></button></form>
-                    </div>
+                    <% if(allBlogs[i].creator) {%>
+                        <span>Published by <%= allBlogs[i].creator %></span>
+                        <% } %>
+                            <span>Published on <%=allBlogs[i].pubDate %></span>
                 </div>
             </div>
             <% } %>

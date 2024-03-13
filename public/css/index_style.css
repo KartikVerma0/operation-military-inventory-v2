@@ -7,13 +7,13 @@
         font-size: 12px;
     }
 
-    .container {
+    .custom-container {
         background-image: url(../images/home-mobile-bg1.jpg);
     }
 }
 
 @media (min-width: 600px) {
-    .container {
+    .custom-container {
         background-image: url(../images/home-page-bg.jpg);
     }
 }
@@ -29,12 +29,19 @@ html {
 }
 /*front face starts*/
 
-.container {
+.custom-container {
     width: 100%;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
     position: relative;
+}
+
+.flash {
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .textbox {
@@ -43,7 +50,6 @@ html {
     padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
-    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     width: fit-content;
 }
 
@@ -57,18 +63,13 @@ html {
     }
 }
 
-.textbox:after {
-    content: "";
-    clear: both;
-}
-
 .textbox p {
     font-size: 3.125rem;
     font-weight: 600;
     font-family: sans-serif;
 }
 
-.textbox h1 {
+.textbox .heading {
     font-family: sans-serif;
     font-size: 5rem;
     line-height: 70px;
@@ -87,33 +88,27 @@ html {
     }
 }
 
-.textbox h3 {
+.textbox .sub-heading {
     font-size: 2.5rem;
     font-weight: 400;
     font-family: "poppins", sans-serif;
 }
 
-.explorebutton .btn {
-    width: 9.375rem;
-    height: 4.688rem;
+.explorebutton {
+    /* width: 9.375rem;
+    height: 4.688rem; */
     background-color: red;
     border-radius: 50px;
-    border-style: none;
-    margin-top: 20px;
-    display: block;
-    cursor: pointer;
-}
-
-.explorebutton .btn:hover {
-    background-color: rgb(213, 0, 0);
-}
-
-.explorebutton .btn a {
     color: white;
     text-decoration: none;
     font-size: 1.875rem;
-    display: block;
     font-family: "poppins", sans-serif;
+    padding: 1rem;
+    width: max-content;
+}
+
+.explorebutton:hover {
+    background-color: rgb(213, 0, 0);
 }
 
 /* nav bar starts */
@@ -122,43 +117,39 @@ html {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    padding-top: 2rem;
+    margin-top: 3.5rem;
     justify-content: center;
     align-items: center;
     width: 100%;
-    clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
 }
 
-.nav_bar a {
+.nav_bar .nav-link {
     text-decoration: none;
     color: white;
     font-size: 1.25rem;
     font-family: "poppins", sans-serif;
 }
 
-.nav_bar a:hover {
+.nav_bar .nav-link:hover {
     color: red;
 }
 
-.nav_bar button {
-    width: 6.25rem;
-    height: 3.125rem;
+.auth-btn {
+    padding: 0.65rem;
     background-color: rgba(255, 0, 0, 0.5);
     border-radius: 50px;
-    border-style: none;
     cursor: pointer;
-}
-
-.nav_bar button p {
     color: white;
     text-decoration: none;
     font-size: 1.25rem;
     font-weight: bold;
-    display: block;
+    display: flex;
+    justify-content: center;
     font-family: "poppins", sans-serif;
+    border-width: 0;
 }
 
-.nav_bar button:hover {
+.auth-btn:hover {
     background-color: rgba(255, 0, 0, 0.8);
 }
 

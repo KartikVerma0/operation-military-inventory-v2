@@ -3,14 +3,18 @@
             title="Operation Military Inventory" /></a>
     <p class="nav-logo">OP MILITARY INVENTORY</p>
     <div class="nav-links">
-        <a href="/">HOME</a>
-        <a href="/blog">BLOG</a>
-        <a href="/feedback">FEEDBACK</a>
-        <a href="/contact">CONTACT US</a>
-        <div class="sign-button">
-            <a href="/signin">
-                <h3>SIGN IN</h3>
-            </a>
-        </div>
+        <a href="/" class="nav-link">HOME</a>
+        <a href="/blog" class="nav-link">BLOG</a>
+
+        <% if(!currentUser){ %>
+            <a href="/signin" class="sign-button">SIGN IN</a>
+            <% }else{ %>
+                <a href="/equipments/new" class="nav-link">NEW EQUIPMENT</a>
+                <a href="/dashboard" class="nav-link">DASHBOARD</a>
+                <form action="/logout" method="post">
+                    <button class="sign-button">LOG OUT</button>
+                </form>
+                <% } %>
+
     </div>
 </div>

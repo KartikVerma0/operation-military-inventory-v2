@@ -16,11 +16,11 @@ router.get("/team", (req, res) => {
 
 //setup a post route to store feedbacks in mongo
 router.get("/feedback", (req, res) => {
-    res.render("feedback_page", { title: "Feedback" });
+    res.render("feedback_page");
 });
 
 router.get("/contact", (req, res) => {
-    res.render("contact_page", { title: "Contact Us" });
+    res.render("contact_page");
 });
 
 module.exports = router;

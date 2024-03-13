@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include('partials/commonCategoryPageHead',{title}) %>
+    <%- include('partials/commonCategoryPageHead',{title:equipments[0].category}) %>
         <script src="https://kit.fontawesome.com/0487bece73.js" crossorigin="anonymous"></script>
 </head>
 
@@ -13,27 +13,26 @@
 
         <div class="equipment-category-box">
             <h1>
-                <%= title.toUpperCase() %> :
+                <%= equipments[0].category.toUpperCase() %> :
             </h1>
             <div class="equipments-main-container-div">
-                <% for( let equipment in fulldata["services"][service]["category"][title] ){ %>
+                <% for( let equipment in equipments ){ %>
                     <div class="individual-equipments">
                         <h3>
-                            <%= equipment %>
+                            <%= equipments[equipment].name %>
                         </h3>
-                        <a href="<%= fulldata.services[service].category[title][equipment].preview.fullInfoLink %>"><img
-                                src="<%= fulldata.services[service].category[title][equipment].preview.imgSrc %>"
-                                alt="<%= equipment %>" /></a>
+                        <a href="<%= equipments[equipment].preview.fullInfoLink %>"><img
+                                src="<%= equipments[equipment].preview.icon.path %>"
+                                alt="<%= equipments[equipment].name %>" /></a>
                         <div class="equipment-info">
-                            <a href="<%= fulldata.services[service].category[title][equipment].preview.fullInfoLink %>"><img
-                                    src="<%= fulldata.services[service].category[title][equipment].preview.onHover.imgSrc %>"
-                                    alt="<%= equipment %>" /></a>
+                            <a href="<%= equipments[equipment].preview.fullInfoLink %>"><img
+                                    src="<%= equipments[equipment].preview.onHover.imgSrc %>"
+                                    alt="<%= equipments[equipment].name %>" /></a>
                             <p>
-                                <%- fulldata.services[service].category[title][equipment].preview.onHover.desc %>
+                                <%- equipments[equipment].preview.onHover.description %>
                             </p>
-                            <a href="<%= fulldata.services[service].category[title][equipment].preview.fullInfoLink %>"
-                                class="wikipedia-link" title="Know More about the Equipment"><i
-                                    class="fab fa-wikipedia-w"></i></a>
+                            <a href="<%= equipments[equipment].preview.fullInfoLink %>" class="wikipedia-link"
+                                title="Know More about the Equipment"><i class="fab fa-wikipedia-w"></i></a>
                         </div>
                     </div>
                     <% } %>

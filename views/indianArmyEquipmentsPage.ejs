@@ -3,65 +3,62 @@
 
 <head>
   <%- include('partials/commonServicePageHead',{title}) %>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css" />
 </head>
 
 <body>
   <!-- Navbar -->
   <%- include('partials/commonNavbar') %>
+    <div class="mt-4">
+      <%- include('partials/flash') %>
+    </div>
     <div class="page-heading">
       <h1>
         <%= title.toUpperCase()%>
       </h1>
     </div>
-    <% for( let category in fulldata["services"][service]["category"]) { %>
-      <div class="sections">
-        <div class="equipment-category-box">
-          <h1>
-            <%= category.toUpperCase() %> :
-          </h1>
-          <div class="equipments-main-container-div">
-            <% let numOfEquip=0 %>
-              <% for( let equipment in fulldata["services"][service]["category"][category] ) { %>
-                <% if(numOfEquip++==4){ %>
-                  <% break %>
-                    <%}%>
-                      <div class="individual-equipments">
-                        <h3>
-                          <%= equipment.toUpperCase()%>
-                        </h3>
-                        <a href="<%= fulldata["
-                          services"][service]["category"][category][equipment]["preview"]["fullInfoLink"]%>"><img
-                            src="<%= fulldata["
-                            services"][service]["category"][category][equipment]["preview"]["imgSrc"]%>" alt="<%=
-                            equipment.toUpperCase()%>" /></a>
-                        <div class="equipment-info">
-                          <a href="<%= fulldata["
-                            services"][service]["category"][category][equipment]["preview"]["fullInfoLink"]%>"><img
-                              src="<%= fulldata["
-                              services"][service]["category"][category][equipment]["preview"]["onHover"]["imgSrc"]%>"
-                            alt="<%= equipment.toUpperCase()%>" /></a>
-                          <p>
-                            <%-
-                              fulldata["services"][service]["category"][category][equipment]["preview"]["onHover"]["desc"]%>
-                          </p>
-                          <a href="<%= fulldata["
-                            services"][service]["category"][category][equipment]["preview"]["fullInfoLink"]%>"
-                            class="wikipedia-link" title="Know More about the Equipment"><i
-                              class="fab fa-wikipedia-w"></i></a>
-                        </div>
-                      </div>
 
-                      <% } %>
-          </div>
-          <div class="see-more-btn">
-            <a href="/equipments/IA/category/<%= category%>">SEE MORE</a>
+    <% const categories=serviceCategories[service]%>
+      <% for (let categoryIndex=1; categoryIndex < categories.length; categoryIndex++) { %>
+        <div class="sections">
+          <div class="equipment-category-box">
+            <h2 class="category-heading">
+              <%= categories[categoryIndex].toUpperCase() %> :
+            </h2>
+
+            <% let categoryEquipment=equipments.filter((equip)=>{
+              return equip.category===categories[categoryIndex]
+              }) %>
+
+              <div class="equipments-main-container-div">
+                <% let numOfEquip=0 %>
+                  <% for( let equipment in categoryEquipment ) { %>
+                    <%if(categoryEquipment[equipment].decomissionDetails.hasDecomissioned){%>
+                      <%continue%>
+                        <%}%>
+                          <% if(numOfEquip++==4){ %>
+                            <% break %>
+                              <%}%>
+                                <%if(categoryEquipment[equipment]){%>
+                                  <%-
+                                    include("partials/equipmentCard",{equipmentDecomissioned:categoryEquipment[equipment].decomissionDetails.hasDecomissioned,
+                                    equipmentName:categoryEquipment[equipment].name.toUpperCase(),
+                                    equipmentFullInfoLink:categoryEquipment[equipment].preview.fullInfoLink,
+                                    equipmentIconPath:categoryEquipment[equipment].preview.icon.path,
+                                    equipmentOnHoverImg:categoryEquipment[equipment].preview.onHover.imgSrc,
+                                    equipmentOnHoverDescription:categoryEquipment[equipment].preview.onHover.description})%>
+                                    <%}%>
+                                      <% } %>
+              </div>
+              <% if(categoryEquipment.length>4){ %>
+                <div class="see-more-btn">
+                  <a href="/equipments/<%= service %>/category/<%= categories[categoryIndex]%>">SEE
+                    MORE</a>
+                </div>
+                <%}%>
           </div>
         </div>
-      </div>
-      <% } %>
-        <!--        
+        <% } %>
+          <!--        
         
       
   <div class="sections">
@@ -1352,11 +1349,11 @@
       </div>
     </div>
     -->
-        </div>
+          </div>
 
-        <!-- footer starts -->
-        <%- include('partials/footer')%>
-          <!-- footer ends -->
+          <!-- footer starts -->
+          <%- include('partials/footer')%>
+            <!-- footer ends -->
 </body>
 
 </html>

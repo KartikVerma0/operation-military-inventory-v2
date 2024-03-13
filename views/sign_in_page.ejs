@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include('partials/commonHead',{title}) %>
+    <%- include('partials/commonHead',{title:"sign in"}) %>
 </head>
 
 <body>
@@ -11,39 +11,44 @@
         <!-- Navbar Ends -->
 
         <header>
-            <div class="hero">
-                <div class="form-box">
-                    <div class="button-box">
-                        <div id="btn"></div>
-                        <button type="button" class="togglebtn" onclick="login()">
-                            Login
-                        </button>
-                        <button type="button" class="togglebtn" onclick="register()">
-                            &ensp;&nbsp;Register
-                        </button>
+            <%- include("partials/flash") %>
+                <div class="hero">
+                    <div class="form-box">
+                        <div class="button-box">
+                            <div id="btn"></div>
+                            <button type="button" class="togglebtn" onclick="login()">
+                                Login
+                            </button>
+                            <button type="button" class="togglebtn" onclick="register()">
+                                &ensp;&nbsp;Register
+                            </button>
+                        </div>
+                        <div class="social-icons-login">
+                            <!-- social media icons -->
+                            <img src="images/fb.png" />
+                            <img src="images/tw.png" />
+                            <img src="images/gp.png" />
+                        </div>
+                        <form id="login" class="inputs" method="post" action="/signin">
+                            <input type="text" class="input-field" placeholder="User Name" required name="username" />
+                            <input type="Password" class="input-field" placeholder="Enter Password" required
+                                name="password" />
+
+                            <button type="submit" class="submit-btn">Log In</button>
+
+                        </form>
+                        <form id="register" class="inputs" method="post" action="/signup">
+                            <input type="text" class="input-field" placeholder="Full Name" required name="name" />
+                            <input type="text" class="input-field" placeholder="User Name" required name="username" />
+                            <input type="email" class="input-field" placeholder="Email Id" required name="email" />
+                            <input type="text" class="input-field" placeholder="Enter Password" required
+                                name="password" />
+                            <button type="submit" class="submit-btn">
+                                Register
+                            </button>
+                        </form>
                     </div>
-                    <div class="social-icons-login">
-                        <!-- social media icons -->
-                        <img src="images/fb.png" />
-                        <img src="images/tw.png" />
-                        <img src="images/gp.png" />
-                    </div>
-                    <form id="login" class="inputs" method="post" action="/signin">
-                        <input type="text" class="input-field" placeholder="User Name" required name="username" />
-                        <input type="Password" class="input-field" placeholder="Enter Password" required
-                            name="password" />
-                        <button type="submit" class="submit-btn">Log In</button>
-                    </form>
-                    <form id="register" class="inputs" method="post" action="/signup">
-                        <input type="text" class="input-field" placeholder="User Name" required name="username" />
-                        <input type="email" class="input-field" placeholder="Email Id" required name="email" />
-                        <input type="text" class="input-field" placeholder="Enter Password" required name="password" />
-                        <button type="submit" class="submit-btn">
-                            Register
-                        </button>
-                    </form>
                 </div>
-            </div>
         </header>
 
         <!-- footer starts -->

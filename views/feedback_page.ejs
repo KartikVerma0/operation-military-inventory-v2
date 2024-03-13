@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <%- include('partials/commonHead',{title}) %>
-    </head>
-    <body>
-        <!-- Navbar Starts -->
-        <%- include('partials/commonNavbar') %>
+
+<head>
+    <%- include('partials/commonHead',{title:"feedback"}) %>
+</head>
+
+<body>
+    <!-- Navbar Starts -->
+    <%- include('partials/commonNavbar') %>
         <!-- Navbar Ends -->
 
         <div id="feedback-box">
@@ -14,32 +16,17 @@
                 <div class="form-units">
                     <label for="name">Name:</label>
                     <br />
-                    <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Enter Name"
-                        required
-                    />
+                    <input type="text" name="name" id="name" placeholder="Enter Name" required />
                 </div>
                 <div class="form-units">
                     <label for="email">Email:</label>
                     <br />
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Enter email"
-                        required
-                    />
+                    <input type="email" name="email" id="email" placeholder="Enter email" required />
                 </div>
                 <div class="form-units">
                     <label for="message">Message:</label>
                     <br />
-                    <textarea
-                        id="message"
-                        placeholder="Enter Message"
-                    ></textarea>
+                    <textarea id="message" placeholder="Enter Message"></textarea>
                 </div>
                 <input type="submit" name="submit" id="submit-button" />
             </form>
@@ -47,6 +34,7 @@
 
         <!-- footer starts -->
         <%- include('partials/footer')%>
-        <!-- footer ends -->
-    </body>
+            <!-- footer ends -->
+</body>
+
 </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/commonHead',{title:"Admin-Dashboard"}) %>
+</head>
+
+<body>
+    <%- include('partials/commonNavbar') %>
+
+        <main class="container">
+            <div class="page-heading">
+                <h2>PENDING APPROVAL:</h2>
+            </div>
+            <div class="saved-equipments equipment-category-box mb-3">
+                <div class="equipments-main-container-div">
+                    <% let numOfEquip3=1 %>
+                        <% for( let equipment in unsavedEquipments ) { %>
+                            <% if(numOfEquip3++==4){ %>
+                                <% break %>
+                                    <%}%>
+                                        <%if(unsavedEquipments[equipment]){%>
+                                            <%- include("partials/equipmentCard",{equipmentDecomissioned:unsavedEquipments[equipment].decomissionDetails.hasDecomissioned,
+                                                equipmentName:unsavedEquipments[equipment].name.toUpperCase(),
+                                                equipmentFullInfoLink:unsavedEquipments[equipment].preview.fullInfoLink,
+                                                equipmentIconPath:unsavedEquipments[equipment].preview.icon.path,
+                                                equipmentOnHoverImg:unsavedEquipments[equipment].preview.onHover.imgSrc,
+                                                equipmentOnHoverDescription:unsavedEquipments[equipment].preview.onHover.description})%>
+                                                <%}%>
+                                                    <% } %>
+                </div>
+            </div>
+            <div class="page-heading">
+                <h2>YOUR CONTRIBUTIONS:</h2>
+            </div>
+            <div class="saved-equipments equipment-category-box mb-3">
+                <h2>SAVED EQUIPMENTS:</h2>
+                <div class="equipments-main-container-div">
+                    <%- include("partials/newEquipmentPlaceholder")%>
+                        <% let numOfEquip=1 %>
+                            <% for( let equipment in savedEquipments ) { %>
+                                <% if(numOfEquip++==4){ %>
+                                    <% break %>
+                                        <%}%>
+                                            <%if(savedEquipments[equipment]){%>
+                                                <%- include("partials/equipmentCard",{equipmentDecomissioned:savedEquipments[equipment].decomissionDetails.hasDecomissioned,
+                                                    equipmentName:savedEquipments[equipment].name.toUpperCase(),
+                                                    equipmentFullInfoLink:savedEquipments[equipment].preview.fullInfoLink,
+                                                    equipmentIconPath:savedEquipments[equipment].preview.icon.path,
+                                                    equipmentOnHoverImg:savedEquipments[equipment].preview.onHover.imgSrc,
+                                                    equipmentOnHoverDescription:savedEquipments[equipment].preview.onHover.description})%>
+                                                    <%}%>
+                                                        <% } %>
+                </div>
+            </div>
+            <div class="draft-equipments equipment-category-box mb-3">
+                <h2>DRAFT EQUIPMENTS:</h2>
+                <div class="equipments-main-container-div">
+                    <%- include("partials/newEquipmentPlaceholder")%>
+                        <% let numOfEquip2=1 %>
+                            <% for( let equipment in draftEquipments ) { %>
+                                <% if(numOfEquip2++==4){ %>
+                                    <% break %>
+                                        <%}%>
+                                            <%if(draftEquipments[equipment]){%>
+                                                <%- include("partials/equipmentCard",{equipmentDecomissioned:draftEquipments[equipment].decomissionDetails.hasDecomissioned,
+                                                    equipmentName:draftEquipments[equipment].name.toUpperCase(),
+                                                    equipmentFullInfoLink:draftEquipments[equipment].preview.fullInfoLink,
+                                                    equipmentIconPath:draftEquipments[equipment].preview.icon.path,
+                                                    equipmentOnHoverImg:draftEquipments[equipment].preview.onHover.imgSrc,
+                                                    equipmentOnHoverDescription:draftEquipments[equipment].preview.onHover.description})%>
+                                                    <%}%>
+                                                        <% } %>
+                </div>
+            </div>
+        </main>
+
+        <%- include("partials/footer") %>
+</body>
+
+</html>
