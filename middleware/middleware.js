@@ -12,8 +12,8 @@ function storeReturnTo(req, res, next) {
     next();
 }
 
-const { Equipment, UnsavedEquipment } = require("./models/equipment");
-const DraftEquipment = require("./models/draftEquipment");
+const { Equipment, UnsavedEquipment } = require("../models/equipment");
+const DraftEquipment = require("../models/draftEquipment");
 
 async function hasRights(req, res, next) {
     const { id } = req.params;
