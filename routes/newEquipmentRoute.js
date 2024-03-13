@@ -87,30 +87,37 @@ router
 
             const { equipmentIcon, images } = req.files;
 
-            const newEquipment = await new DraftEquipment({
-                service,
-                category,
-                subCategory,
-                name,
-                description,
-                images,
-                preview: {
-                    icon: equipmentIcon[0],
-                },
-                fullInfo: {
-                    learnMoreLink,
-                    users,
-                    working: {
-                        videoLink,
+            try {
+                const newEquipment = await new DraftEquipment({
+                    service,
+                    category,
+                    subCategory,
+                    name,
+                    description,
+                    images,
+                    preview: {
+                        icon: equipmentIcon[0],
                     },
-                },
-                decomissionDetails: {
-                    hasDecomissioned,
-                },
-                user: req.user,
-            }).save();
+                    fullInfo: {
+                        learnMoreLink,
+                        users,
+                        working: {
+                            videoLink,
+                        },
+                    },
+                    decomissionDetails: {
+                        hasDecomissioned,
+                    },
+                    user: req.user,
+                }).save();
 
-            res.redirect(`/equipments/preview/${newEquipment._id}?view=draft`);
+                return res.redirect(`/equipments/preview/${newEquipment._id}?view=draft`);
+            } catch {
+                req.flash("error", "Problem creating draft")
+                return res.redirect(`/equipments/preview/${newEquipment._id}?view=draft`);
+            }
+
+
         }
     );
 

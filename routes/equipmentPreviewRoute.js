@@ -21,7 +21,9 @@ router
         if (view == "unsaved") {
             equipment = await UnsavedEquipment.findById(id);
         }
-
+        if (equipment == undefined || equipment == null) {
+            return res.status(404).send("Invalid ID")
+        }
         res.render("equipmentPreview", { equipment, view });
     })
     .post(isLoggedIn, hasRights, async (req, res) => {
@@ -43,6 +45,9 @@ router
 
         if (view == "draft") {
             const equipment = await DraftEquipment.findById(id);
+            if (equipment == undefined || equipment == null) {
+                return res.status(404).send("Invalid ID")
+            }
             service = equipment.service;
             category = equipment.category;
             subCategory = equipment.subCategory;
@@ -90,6 +95,9 @@ router
                 return res.status(401).redirect("/dashboard");
             } else if (res.locals.currentUser.role === "administrator" || res.locals.currentUser.role === "moderator") {
                 const equipment = await UnsavedEquipment.findById(id);
+                if (equipment == undefined || equipment == null) {
+                    return res.status(404).send("Invalid ID")
+                }
                 service = equipment.service;
                 category = equipment.category;
                 subCategory = equipment.subCategory;
@@ -134,6 +142,9 @@ router
 
         if (view == "saved") {
             const equipment = await Equipment.findById(id);
+            if (equipment == undefined || equipment == null) {
+                return res.status(404).send("Invalid ID")
+            }
             service = equipment.service;
             // category = equipment.category;
             // name = equipment.name;
