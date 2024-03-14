@@ -1,11 +1,19 @@
-if (process.env.NODE_ENV != "production") {
-    require("dotenv").config();
-}
+require("dotenv").config();
 
 
-const { app, port } = require("./config/config")
-const { express, path, session, flash, methodOverride, mongoose, MongoStore, passport, LocalStrategy } = require("./config/utils")
-const connectToDB = require("./config/db")
+const express = require("express");
+const app = express();
+const port = 3000;
+
+
+const path = require("path");
+const mongoose = require("mongoose");
+const flash = require("connect-flash");
+const methodOverride = require("method-override");
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
+const passport = require("passport");
+const LocalStrategy = require("passport-local");
 
 const equipmentRouter = require("./routes/equipmentRoute");
 const pageRouter = require("./routes/pagesRoute");
@@ -14,21 +22,20 @@ const dashboardRouter = require("./routes/dashboardRoute");
 
 const User = require("./models/user");
 
-connectToDB();
 
-const cors = require("cors");
+mongoose
+    .connect(process.env.MONGO_URI)
+    .then(() => {
+        console.log("Database Connection Established");
+    })
+    .catch(() => {
+        console.log("Problem connecting to database");
+    });
 
-const corsConfig = {
-    origin: "*",
-    credential: true,
-    methods: ["GET", "PUT", "POST", "DELETE"]
 
-}
-app.options("", cors(corsConfig))
-app.use(cors(corsConfig));
-
-app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "public")));
 
 const sess = {
     secret: process.env.SESSION_SECRET,
@@ -39,9 +46,8 @@ const sess = {
         ttl: 14 * 24 * 60 * 60,
     }),
 };
-app.use(session(sess));
-app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
+app.use(session(sess));
 app.use(flash());
 app.use(methodOverride("_method"));
 app.use(passport.initialize());
