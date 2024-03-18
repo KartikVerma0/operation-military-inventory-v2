@@ -1,9 +1,11 @@
 {
     "name": "operation-military-inventory",
     "version": "1.0.0",
+    "type": "module",
     "description": "This Project/Website was made with the aim to provide Information about all the Equipment which the Indian Armed Forces hold. For Suggestions mail me at katik2129.be21@chitkara.edu.in  . <br>\r Click the link to visit the hoisted page : https://kartikverma0.github.io/operation-military-inventory/",
     "main": "index.js",
     "scripts": {
+        "dev": "open http://localhost:3000 && nodemon index.js",
         "start": "node index.js"
     },
     "keywords": [],
@@ -26,7 +28,8 @@
         "multer-storage-cloudinary": "^4.0.0",
         "passport": "^0.7.0",
         "passport-local": "^1.0.0",
-        "passport-local-mongoose": "^8.0.0"
+        "passport-local-mongoose": "^8.0.0",
+        "retry": "^0.13.1"
     },
     "devDependencies": {
         "nodemon": "^3.1.0"
