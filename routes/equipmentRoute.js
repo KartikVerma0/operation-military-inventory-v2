@@ -1,20 +1,14 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const cloudinary = require("cloudinary").v2;
-
-const equipmentEditRoute = require("./equipmentEditRoute");
-const newEquipmentRoute = require("./newEquipmentRoute");
-const equipmentPreviewRoute = require("./equipmentPreviewRoute");
-
-const { isLoggedIn, hasRights } = require("../middleware/middleware");
-
-const { Equipment, UnsavedEquipment } = require("../models/equipment");
-const DraftEquipment = require("../models/draftEquipment");
-const {
-    serviceCategories, subCategoriesArray
-} = require("../public/js/categoryArrayForBackend");
-
-const fulldata = require("../public/json/data.json");
+import cloudinary from "cloudinary";
+const { v2: cloudinaryV2 } = cloudinary;
+import equipmentEditRoute from "./equipmentEditRoute.js";
+import newEquipmentRoute from "./newEquipmentRoute.js";
+import equipmentPreviewRoute from "./equipmentPreviewRoute.js";
+import { isLoggedIn, hasRights } from "../middleware/middleware.js";
+import { Equipment, UnsavedEquipment } from "../models/equipment.js";
+import DraftEquipment from "../models/draftEquipment.js";
+import { serviceCategories, subCategoriesArray } from "../public/js/categoryArrayForBackend.js";
 
 router.use("/new", newEquipmentRoute);
 
@@ -28,7 +22,6 @@ router.get("/IA", async (req, res) => {
         title: "Indian Army Equipments",
         equipments,
         serviceCategories,
-        fulldata,
         service: "IA",
     };
     res.render("indianArmyEquipmentsPage", renderInfoObject);
@@ -41,7 +34,6 @@ router.get("/IAF", async (req, res) => {
         title: "Indian Airforce Equipments",
         equipments,
         serviceCategories,
-        fulldata,
         service: "IAF",
     };
     res.render("indianAirforceEquipments", renderInfoObject);
@@ -55,7 +47,6 @@ router.get("/IN", async (req, res) => {
         equipments,
         serviceCategories,
         subCategoriesArray,
-        fulldata,
         service: "IN",
     };
     res.render("indianNavyEquipmentsPage", renderInfoObject);
@@ -238,4 +229,4 @@ router.delete("/delete/:id", isLoggedIn, hasRights, async (req, res) => {
     }
 });
 
-module.exports = router;
+export default router;

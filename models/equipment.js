@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 const { Schema } = mongoose;
 
 const opts = { toJSON: { virtuals: true } };
@@ -117,4 +117,4 @@ const equipmentSchema = new mongoose.Schema({
 const UnsavedEquipment = mongoose.model("UnsavedEquipment", equipmentSchema);
 const Equipment = mongoose.model("Equipment", equipmentSchema);
 
-module.exports = { Equipment, UnsavedEquipment };
+export { Equipment, UnsavedEquipment };

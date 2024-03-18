@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+
 const { Schema } = mongoose;
 
 // Define the options for virtuals and other schema settings
@@ -127,4 +128,4 @@ const equipmentSchema = new mongoose.Schema({
 // Create DraftEquipment model with equipment schema
 const DraftEquipment = mongoose.model("DraftEquipment", equipmentSchema);
 
-module.exports = DraftEquipment;
+export default DraftEquipment;

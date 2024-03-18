@@ -1,10 +1,10 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
 
-const { Equipment, UnsavedEquipment } = require("../models/equipment");
-const DraftEquipment = require("../models/draftEquipment");
+import { Equipment, UnsavedEquipment } from "../models/equipment.js";
+import DraftEquipment from "../models/draftEquipment.js";
 
-const { isLoggedIn } = require("../middleware/middleware");
+import { isLoggedIn } from "../middleware/middleware.js";
 
 router.get("/dashboard", isLoggedIn, async (req, res) => {
     const id = res.locals.currentUser._id;
@@ -28,4 +28,4 @@ router.get("/dashboard", isLoggedIn, async (req, res) => {
     }
 });
 
-module.exports = router;
+export default router;

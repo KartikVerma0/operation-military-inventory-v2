@@ -195,4 +195,4 @@ const subCategoriesArray = {
     ],
 };
 
-module.exports = { serviceCategories, subCategoriesArray };
+export { serviceCategories, subCategoriesArray };
