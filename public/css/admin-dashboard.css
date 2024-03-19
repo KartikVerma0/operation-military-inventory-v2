@@ -117,7 +117,7 @@
 
 .equipment-category-box {
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -142,8 +142,8 @@
     width: 100%;
     height: 62%;
     display: flex;
-    /* justify-content: space-between; */
-    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 5rem;
 }
 
