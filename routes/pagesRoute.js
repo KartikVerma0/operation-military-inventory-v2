@@ -1,11 +1,12 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const blogRouter = require("./blogRoute");
+import blogRouter from "./blogRoute.js";
 
-const indexPageData = require("../public/json/indexPage.json");
+import indexPageData from "../public/json/indexPage.js";
+
 
 router.get("/", (req, res) => {
-    res.render("index", { categories: indexPageData["categories"] });
+    res.render("index", { categories: indexPageData });
 });
 
 router.use("/blog", blogRouter);
@@ -23,4 +24,4 @@ router.get("/contact", (req, res) => {
     res.render("contact_page");
 });
 
-module.exports = router;
+export default router;

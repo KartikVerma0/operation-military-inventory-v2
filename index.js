@@ -1,40 +1,60 @@
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
 
-const express = require("express");
+import express from "express";
 const app = express();
 const port = 3000;
 
+import { fileURLToPath } from "url";
+import path from "path";
+import mongoose from "mongoose";
+import flash from "connect-flash";
+import methodOverride from "method-override";
+import session from "express-session";
+import MongoStore from "connect-mongo";
+import passport from "passport";
+import { Strategy as LocalStrategy } from "passport-local";
 
-const path = require("path");
-const mongoose = require("mongoose");
-const flash = require("connect-flash");
-const methodOverride = require("method-override");
-const session = require("express-session");
-const MongoStore = require("connect-mongo");
-const passport = require("passport");
-const LocalStrategy = require("passport-local");
+import equipmentRouter from "./routes/equipmentRoute.js";
+import pageRouter from "./routes/pagesRoute.js";
+import authRouter from "./routes/authRoute.js";
+import dashboardRouter from "./routes/dashboardRoute.js";
 
-const equipmentRouter = require("./routes/equipmentRoute");
-const pageRouter = require("./routes/pagesRoute");
-const authRouter = require("./routes/authRoute");
-const dashboardRouter = require("./routes/dashboardRoute");
-
-const User = require("./models/user");
+import User from "./models/user.js";
 
 
-mongoose
-    .connect(process.env.MONGO_URI)
-    .then(() => {
+import retry from "retry";
+
+const connectWithRetry = async () => {
+    const operation = retry.operation({
+        retries: 5, // Number of retries
+        minTimeout: 1000, // Initial backoff delay (1 second)
+        maxTimeout: 5000 // Maximum backoff delay (5 seconds)
+    });
+
+    operation.attempt(async () => {
+        await mongoose.connect(process.env.MONGO_URI);
         console.log("Database Connection Established");
+    });
+};
+
+connectWithRetry()
+    .then(() => {
+        // Your application logic here
     })
-    .catch(() => {
-        console.log("Problem connecting to database");
+    .catch((error) => {
+        console.error("Failed to connect to database after retries:", error);
+        // Handle connection failures gracefully (e.g., exit or retry indefinitely)
     });
 
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.set("views", "views");
 app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "ejs");
+app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
 
 const sess = {

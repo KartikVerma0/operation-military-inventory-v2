@@ -1,10 +1,12 @@
-const express = require("express");
-const router = express.Router();
-const cloudinary = require("cloudinary").v2;
-const { CloudinaryStorage } = require("multer-storage-cloudinary");
-const multer = require("multer");
+import dotenv from "dotenv";
+dotenv.config();
 
-const { isLoggedIn, hasRights } = require("../middleware/middleware");
+import express from "express";
+const router = express.Router();
+import { v2 as cloudinary } from "cloudinary";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
+import multer from "multer";
+import { isLoggedIn, hasRights } from "../middleware/middleware.js";
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -38,8 +40,8 @@ const upload = multer({
     },
 });
 
-const { Equipment, UnsavedEquipment } = require("../models/equipment");
-const DraftEquipment = require("../models/draftEquipment");
+import { Equipment, UnsavedEquipment } from "../models/equipment.js";
+import DraftEquipment from "../models/draftEquipment.js";
 
 
 router
@@ -161,4 +163,4 @@ router
         }
     );
 
-module.exports = router;
+export default router;

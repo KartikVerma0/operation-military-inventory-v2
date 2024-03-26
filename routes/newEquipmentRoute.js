@@ -1,10 +1,13 @@
-const express = require("express");
-const router = express.Router();
-const cloudinary = require("cloudinary").v2;
-const { CloudinaryStorage } = require("multer-storage-cloudinary");
-const multer = require("multer");
+import dotenv from "dotenv";
+dotenv.config();
 
-const { isLoggedIn } = require("../middleware/middleware");
+import express from "express";
+const router = express.Router();
+import { v2 as cloudinary } from "cloudinary";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
+import multer from "multer";
+import { isLoggedIn } from "../middleware/middleware.js";
+
 
 // Configure cloudinary instance with your cloudinary credentials
 cloudinary.config({
@@ -39,7 +42,7 @@ const upload = multer({
     },
 });
 
-const DraftEquipment = require("../models/draftEquipment");
+import DraftEquipment from "../models/draftEquipment.js";
 
 router
     .route("/")
@@ -67,7 +70,7 @@ router
                     }
                     return res.status(400).json({ error: err.message });
                 } else if (err) {
-                    return res.status(500).json({ error: "Server error" });
+                    return res.status(500).json({ error: "Server error " + err });
                 }
                 next();
             });
@@ -121,4 +124,4 @@ router
         }
     );
 
-module.exports = router;
+export default router;

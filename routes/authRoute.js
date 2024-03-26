@@ -1,10 +1,8 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
-const passport = require("passport");
-
-const User = require("../models/user");
-
-const { storeReturnTo } = require("../middleware/middleware");
+import passport from "passport";
+import User from "../models/user.js";
+import { storeReturnTo } from "../middleware/middleware.js";
 
 //setup authentication
 router.get("/signin", (req, res) => {
@@ -52,4 +50,4 @@ router.post("/logout", (req, res) => {
     });
 });
 
-module.exports = router;
+export default router;

@@ -1,10 +1,11 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
 
-const { isLoggedIn, hasRights } = require("../middleware/middleware");
+import { isLoggedIn, hasRights } from "../middleware/middleware.js";
 
-const { Equipment, UnsavedEquipment } = require("../models/equipment");
-const DraftEquipment = require("../models/draftEquipment");
+import { Equipment, UnsavedEquipment } from "../models/equipment.js";
+import DraftEquipment from "../models/draftEquipment.js";
+
 
 router
     .route("/:id")
@@ -40,6 +41,7 @@ router
             videoLink,
             learnMoreLink,
             users,
+            user,
             hasDecomissioned
         } = {};
 
@@ -158,4 +160,4 @@ router
         res.redirect(`/equipments/${service}`);
     });
 
-module.exports = router;
+export default router;

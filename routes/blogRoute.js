@@ -1,9 +1,11 @@
-const express = require("express");
-const router = express.Router();
-const Blog = require("../models/blog");
-const { isLoggedIn } = require("../middleware/middleware");
+import dotenv from "dotenv";
+dotenv.config();
 
-const axios = require('axios');
+import express from "express";
+const router = express.Router();
+import Blog from "../models/blog.js";
+import { isLoggedIn } from "../middleware/middleware.js";
+import axios from 'axios';
 
 //setup crud for blog route
 router.get("/", async (req, res) => {
@@ -59,4 +61,4 @@ router.get("/", async (req, res) => {
 //     res.redirect("/blog");
 // });
 
-module.exports = router;
+export default router;

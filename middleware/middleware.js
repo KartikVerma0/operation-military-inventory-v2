@@ -12,8 +12,8 @@ function storeReturnTo(req, res, next) {
     next();
 }
 
-const { Equipment, UnsavedEquipment } = require("../models/equipment");
-const DraftEquipment = require("../models/draftEquipment");
+import { Equipment, UnsavedEquipment } from "../models/equipment.js";
+import DraftEquipment from "../models/draftEquipment.js";
 
 async function hasRights(req, res, next) {
     const { id } = req.params;
@@ -41,4 +41,4 @@ async function hasRights(req, res, next) {
     return res.status(403).send("Unauthorised access");
 }
 
-module.exports = { isLoggedIn, storeReturnTo, hasRights };
+export { isLoggedIn, storeReturnTo, hasRights };
