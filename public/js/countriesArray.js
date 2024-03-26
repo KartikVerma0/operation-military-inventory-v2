@@ -142,7 +142,7 @@ const users = [
     ["Poland", "PL"],
     ["Portugal", "PT"],
     ["Qatar", "QA"],
-    ["Republic of China (Taiwan)", "TW"]
+    ["Republic of China (Taiwan)", "TW"],
     ["Romania", "RO"],
     ["Russia", "RU"],
     ["Rwanda", "RW"],
